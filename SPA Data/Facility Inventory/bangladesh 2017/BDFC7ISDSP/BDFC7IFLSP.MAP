@@ -1,0 +1,2223 @@
+                                                  BDFC7IFLSP                                                  
+                                               BDFC7IFLSP_DICT                                                
+
+                                       BDFC7IFLSP.DCF                                                         
+                                    Last Modified:  9/17/2019  11:33:38 PM                                    
+
+--------------------------------------------------------------------------------------------------------------
+Level Name                    Level Label                                                  Type            Rec
+  Record Name                   Record Label                                              Value  Req  Max  Len
+--------------------------------------------------------------------------------------------------------------
+INVENTORY                     Inventory questionnaire                                                         
+  RECORD1                       RECORD1                                                       A  Yes    1  3396
+Level: Inventory questionnaire                         Record: RECORD1
+--------------------------------------------------------------------------------------------------------------
+                                                                                 Data Item            Dec Zero
+Item Name              Item Label                                     Start  Len Type Type  Occ  Dec Char Fill
+--------------------------------------------------------------------------------------------------------------
+FACIL             (id) Facility identification                            1    5    N    I    1    0   No   No
+                         (record type)                                    6    1   AN    I    1    0   No   No
+REGION                 Division                                           7    2    N    I    1    0   No   No
+                               1  Barisal
+                               2  Chittagong
+                               3  Dhaka
+                               4  Khulna
+                               5  Rajshahi
+                               6  Rangpur
+                               7  Sylhet
+                               8  Mymensingh
+DISTRICT               District (Zila)                                    9    2    N    I    1    0   No  Yes
+                               1   Bagerhat
+                               3   Bandarban
+                               4   Barguna
+                               6   Barisal
+                               9   Bhola (M)
+                               10  Bogra
+                               12  Brahmanbaria (M)
+                               13  Chandpur
+                               15  Chittagong
+                               18  Chuadandga
+                               19  Comilla
+                               22  Cox's Bazar
+                               26  Dhaka
+                               27  Dinajpur
+                               29  Faridpur
+                               30  Feni
+                               32  Gaibandha
+                               33  Gazipur
+                               35  Gopalganj
+                               36  Hobigonj (M)
+                               38  Joypurhat
+                               39  Jamalpur
+                               41  Jessore
+                               42  Jhaolkathi (M)
+                               44  Jhenaidah
+                               46  Khagrachari
+                               47  Khulna
+                               48  Kishoreganj
+                               49  Kurigram
+                               50  Kushtia
+                               51  Laxmipur (M)
+                               52  Lalmonirhat
+                               54  Madaripur
+                               55  Magura
+                               56  Manikganj
+                               57  Meherpur
+                               58  Moulavibazar
+                               59  Munshiganj
+                               61  Mymensingh
+                               64  Naogaon
+                               65  Narail
+                               67  Narayanganj
+                               68  Narsingdi
+                               69  Natore
+                               70  Chapai Nawabganj
+                               72  Netrokona
+                               73  Nilphamari
+                               75  Noakhali (M)
+                               76  Pabna
+                               77  Panchagarh
+                               78  Patuakhali
+                               79  Pirojpur (M)
+                               81  Rajshahi
+                               82  Rajbari
+                               84  Rangamati
+                               85  Rangpur
+                               86  Shariatpur
+                               87  Satkhira
+                               88  Sirajganj
+                               89  Shreepur
+                               90  Sunamganj
+                               91  Sylhet
+                               93  Tangail
+                               94  Thakurgaon
+FACTYPE                Facility type                                     11    2    N    I    1    0   No   No
+                               1   District Hospital (DH)
+                               2   Upzila Health Complex (UHC)
+                               3   Mother and Child Welfare Center (MCWC)
+                               4   Union Health and Family Welfare Center (UnHFWC)
+                               5   Union Health and Family Welfare Center (UnHFWC - Upgraded)
+                               6   Union Subcenter (UnSC) / Rural Dispensary
+                               8   Community Clinic
+                               9   NGO Clinic (other than Smiling Sun Clinics)
+                               10  Privtate Hospital (with >20 beds)
+                               11  NGO Hospital
+                               12  Smiling Sun Clinic of NGO Health Service Delivery Project (NHSDP)
+MGA                    Ownership (Managing authority)                    13    1    N    I    1    0   No   No
+                               1  Government/Public (MOHFW)
+                               2  Local Government
+                               3  NGO
+                               4  Private for Profit
+FTYPE                  Urban/rural                                       14    1    N    I    1    0   No   No
+                               1  Urban
+                               2  Rural
+IPD_OPD                Inpatient only                                    15    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+NUMVISIT               No. of visits                                     16    1    N    I    1    0   No   No
+                               1  1st visit
+                               2  2nd visit
+                               3  3rd visit
+                               4  4th visit
+                               5  5th visit
+DAY                    Day of interview                                  17    2    N    I    1    0   No   No
+                               1:31  
+MONTH                  Month of interview                                19    2    N    I    1    0   No   No
+                               5   May
+                               6   June
+                               7   July
+                               8   August
+                               9   Septemeber
+                               10  October
+                               11  November
+                               12  December
+YEAR                   Year of interview                                 21    4    N    I    1    0   No   No
+                               2017  
+INTVNO                 Interviewer number                                25    3    N    I    1    0   No  Yes
+                               12:16    Interviewer code
+                               22:26    
+                               32:36    
+                               42:46    
+                               52:56    
+                               62:66    
+                               72:76    
+                               82:86    
+                               92:96    
+                               102:106  
+                               112:116  
+                               122:126  
+                               132:136  
+                               142:146  
+                               152:156  
+                               162:166  
+                               172:176  
+                               182:186  
+                               192:196  
+                               202:206  
+                               212:216  
+                               222:226  
+                               232:236  
+                               242:246  
+                               252:256  
+                               262:266  
+                               272:276  
+                               282:286  
+                               292:296  
+                               302:306  
+                               312:316  
+                               322:326  
+                               332:336  
+                               342:346  
+                               352:356  
+                               362:366  
+                               372:376  
+                               382:386  
+                               392:396  
+                               402:406  
+                               412:416  
+                               422:426  
+                               432:436  
+                               442:446  
+                               452:456  
+                               462:466  
+                               472:476  
+                               482:486  
+                               492:496  
+                               502:506  
+                               512:516  
+                               522:526  
+                               532:536  
+                               542:546  
+                               552:556  
+                               562:566  
+                               572:576  
+                               582:586  
+                               592:596  
+                               602:606  
+                               612:616  
+                               622:626  
+RESULT                 Result of last visit                              28    1    N    I    1    0   No   No
+                               1  Begin interview/Facility Completed
+                               2  Facility respondent not available
+                               3  Postponed/Partially completed
+                               4  Facility Refused
+                               5  Closed/Not yet operational
+                               6  Other
+PROVDERS               Total provider selected for interview             29    2    N    I    1    0   No   No
+Q100                   Permission to interview                           31    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q101H                  Start hour                                        32    2    N    I    1    0   No  Yes
+                               6:22  
+Q101M                  Start minute                                      34    2    N    I    1    0   No  Yes
+                               0:59  
+FACWT                  Sample weight                                     36    8    N    I    1    0   No   No
+STEAMF                 Steam facility                                    44    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+STEAMC                 Steam capacity                                    45    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+STEAMA                 Steam A                                           46    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+STEAMB                 Steam B                                           47    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+STEAMT                 Steam timer                                       48    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+AUTOF                  Autoclave facility                                49    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+AUTOC                  Autoclave capacity                                50    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+AUTOWA                 AUTOClave wrapped A                               51    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+AUTOWB                 AUTOClave wrapped B                               52    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+AUTOUA                 AUTOClave unwrapped A                             53    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+AUTOUB                 AUTOClave unwrapped B                             54    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+AUTOT                  AUTOClave timer                                   55    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+PRESSE                 EXCellent pressure                                56    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+PRESSG                 Good pressure                                     57    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+TEMPE                  EXCellent TEMPErature                             58    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+TEMPG                  Good TEMPErature                                  59    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+DHSFAC                 Dry heat facility                                 60    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+DHSCAP                 Dry heat capacity                                 61    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+DHSA                   Dry heat A                                        62    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+DHSB                   Dry heat B                                        63    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+DHSC                   Dry heat C                                        64    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+DHST                   Dry heat timer                                    65    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+HLDFAC                 HLD facility                                      66    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+HLDCAP                 HLD capacity                                      67    1    N    I    1    0   No   No
+HLDA                   HLD A                                             68    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+HLDB                   HLD B                                             69    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+HLDC                   HLD C                                             70    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+HLDT                   HLD timer                                         71    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+CHEMF                  Chemical facilty                                  72    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+CHEMA                  Chemical A                                        73    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+CHEMB                  Chemical B                                        74    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+CHEMT                  Chemical timer                                    75    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+SRC                    Source for information                            76    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+FACEPI                 Facility offers EPI                               77    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+MODTMPFP               Facility offers any modern temporary FP           78    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+STERFP                 Facility offers sterilization                     79    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+PAFP                   Facility offers PA temporary FP                   80    1    N    I    1    0   No   No
+LAMFP                  Facility offers LAM FP                            81    1    N    I    1    0   No   No
+FACPMTCT               Facility offers PMTCT                             82    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+FACART                 Facility offers ART                               83    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+FACCSS                 Facility offers HIV care and support services     84    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+FACMICROSC             Facility has functional microscope                85    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+FACSLIDES              Facility has microscope slides                    86    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+FACTUBES               Facility has test tubes                           87    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+FACINCUB               Facility has functional incubator                 88    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+FACSHAKER              Facility has rotater/shaker                       89    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+FACHIVRDT              Facility offers HIV RDT                           90    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+FACHIVLAB              Facility offers HIV lab test                      91    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+FACHIVINTRNL           Facility offers HIV test internally               92    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+FACHIVEXTRNL           Facility offers HIV test external source          93    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+FACHIVTST              Facility offers HIV test (lab or RDT)             94    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+FACHIVDXTX             Facility offers HIV dx/tx                         95    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+FACDBS                 Facility offers dried blood spot testing          96    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+FACTBRDT               Facility offers TB RDT                            97    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+FACTBMICRO             Facility offers TB microscopy                     98    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+FACTBCULT              Facility offers TB culture                        99    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+FACTBXRAY              Facility offers TB xray                          100    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+FACTBINTRNL            Facility offers TB test internally               101    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+FACTBEXTRNL            Facility offers TB test external source          102    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+FACTBTST               Facility offers any TB test (lab or RDT)         103    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+FACTBDXTX              Facility offers TB dx/tx                         104    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+FACMALRDT              Facility offers malaria RDT                      105    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+FACMALLAB              Facility offers malaria lab test                 106    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+FACMALTST              Facility offers any malaria test (lab or RDT)    107    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+FACMALDXTX             Facility offers malaria dx/tx                    108    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+SHARPWASTE             Facility has good sharps waste disposal          109    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+MEDWASTE               Facility has good medical waste disposal         110    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+STEREQUIP              Facility has good sterilization equipment        111    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+HLDEQUIP               Facility has good high level disinfection (HLD)  112    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+SHARPSTORE             Facility has good sharps waste storage           113    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+MEDSTORE               Facility has good medical waste storage          114    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+ELIGPROV               Number of eligible providers (codes 1-9, result  115    2    N    I    1    0   No   No
+                               0:90  
+ELIGTRAIN              Number of providers with any training last 2 ye  117    2    N    I    1    0   No   No
+                               0:90  
+ELIGSUPERV             Number of providers supervised last 6 months     119    2    N    I    1    0   No   No
+                               0:90  
+ELIGBOTH               Number of providers with supervision & any trai  121    2    N    I    1    0   No   No
+                               0:90  
+PROVIMCI               IMCI training in last 24 months                  123    2    N    I    1    0   No   No
+                               0:90  
+PROVGM                 Growth management training  in last 24 months    125    2    N    I    1    0   No   No
+                               0:90  
+PROVEPI                EPI training in last 24 months                   127    2    N    I    1    0   No   No
+                               0:90  
+PROVANCT               ANC training in last 24 months                   129    2    N    I    1    0   No   No
+                               0:90  
+HEMOGLOB               Test: Hemoglobin                                 131    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+CD4                    Test: CD4                                        132    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+BLOODGLUC              Test: Blood glucose                              133    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+SYPHSEROL              Test: Syph serology                              134    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+STOOLMICRO             Test: Stool microscopy                           135    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+TOTFP                  Total de clients dans la liste FP                136    3    N    I    1    0   No   No
+                               0:100  
+                           (m) 999    
+TOTSC                  Total de clients dans la liste Enfants Malades   139    3    N    I    1    0   No   No
+                               0:100  
+                           (m) 999    
+ANYCAP                 Any sterilization/HLD capacity                   142    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+ANYKNOWL               Any sterilization/HLD knowledge                  143    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+ANYTIMER               Any sterilization/HLD timer                      144    1    N    I    1    0   No   No
+                               0  no
+                               1  yes
+FACEPI2                Facility offers EPI (All Vacc DPT, Polio, Measl  145    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+Q400V                  No. of vacant positions (Q400AA-Q400A)           146    3    N    I   95    0   No   No
+PROVIMCI1              IMCI training at any time                        431    2    N    I    1    0   No   No
+                               0:90  
+PROVGM1                Growth management training at any time           433    2    N    I    1    0   No   No
+                               0:90  
+PROVEPI1               EPI training at any time                         435    2    N    I    1    0   No   No
+                               0:90  
+PROVANCT1              ANC training at any time                         437    2    N    I    1    0   No   No
+                               0:90  
+PRVIMPAC               Training on IMPAC training in last 24 months     439    2    N    I    1    0   No   No
+                               0:90  
+PRVIMPAC1              Training on IMPAC training at any time           441    2    N    I    1    0   No   No
+                               0:90  
+PRVLD                  Training on routine care for labor and delivery  443    2    N    I    1    0   No   No
+                               0:90  
+PRVLD1                 Training on routine care for labor and delivery  445    2    N    I    1    0   No   No
+                               0:90  
+PRVAMTSL               Training on active management of child stage of  447    2    N    I    1    0   No   No
+                               0:90  
+PRVAMTSL1              Training on active management of child stage of  449    2    N    I    1    0   No   No
+                               0:90  
+PRVEMGOBS              Training on emergency obstetric care/lifesaving  451    2    N    I    1    0   No   No
+                               0:90  
+PRVEMGOBS1             Training on emergency obstetric care/lifesaving  453    2    N    I    1    0   No   No
+                               0:90  
+PRVPAC                 Training on post-abortion care in last 24 month  455    2    N    I    1    0   No   No
+                               0:90  
+PRVPAC1                Training on post-abortion care at any time       457    2    N    I    1    0   No   No
+                               0:90  
+PRVNEORES              Training on neonatal resuscitation in last 24 m  459    2    N    I    1    0   No   No
+                               0:90  
+PRVNEORES1             Training on neonatal resuscitation at any time   461    2    N    I    1    0   No   No
+                               0:90  
+Q102                   Services table                                   463    1    N    I   23    0   No   No
+                               1  Yes
+                               2  No
+Q110                   Routine in-patient care                          486    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q111                   Overnight observation                            487    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q112                   Number of overnight/in-patient beds              488    3    N    I    1    0   No   No
+                               0:990  
+                               990    More than 990
+                               998    Don't know
+Q113                   Number of total beds according to GOB circular/  491    3    N    I    1    0   No   No
+                               0:990  
+                               990    More than 990
+                               998    Don't know
+Q114                   Current number of beds with budget allocation    494    3    N    I    1    0   No   No
+                               0:990  
+                               990    More than 990
+                               998    Don't know
+Q200                   Processing equipment in facility                 497    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q201                   Location for processing equipment                498    1    N    I    1    0   No   No
+                               1  Only in this facility
+                               2  Both in facility and outside
+                               3  Only at an outside facility
+Q210                   Store meds (ARVs, vaccines, contraceptives)      499    1    N    I    1    0   No   No
+                               1  Yes
+                               2  Facility stocks no medicines
+Q212                   Storage of contraceptive commodities             500    1    N    I    1    0   No   No
+                               1  Stored in FP service area
+                               2  Stored with other medicines
+                               3  FP commodities not stocked
+Q214                   Storage of anti-TB medicines                     501    1    N    I    1    0   No   No
+                               1  Stored in TB service site
+                               2  Stored with other medicines
+                               3  TB medicines not stocked
+PROVLNF                Total lines for provider list                    502    2    N    I    1    0   No   No
+                               0     Postpone for now, will enter later
+                               1:99  
+Q300                   24-hour staff available or on call               504    1    N    I    1    0   No   No
+                               1  Yes, 24-Hour Staff
+                               2  No, 24-Hour Staff
+Q301                   Duty schedule or call list are maintained        505    1    N    I    1    0   No   No
+                               1  Yes
+                               2  Duty schedule not maintained
+Q302                   Duty schedule or call list observed              506    1    N    I    1    0   No   No
+                               1  Schedule observed
+                               2  Schedule reported not seen
+Q310                   Has landline telephone                           507    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q311                   Landline telephone observed                      508    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q312                   Landline telephone functioning                   509    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q313                   Has cellphone                                    510    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q314                   Cellphone observed                               511    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q315                   Cellphone functioning                            512    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q319                   Has computer                                     513    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q320                   Computer observed                                514    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q321                   Computer functioning                             515    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q322                   Access to email/internet                         516    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q323                   Access to internet at least 2 hours on days of   517    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q330                   Most commonly used source of water               518    2    N    I    1    0   No   No
+                               1   Piped into facility
+                               2   Piped onto facility grounds
+                               3   Public tap/ standpipe
+                               4   Tubewell/ borehole
+                               5   Protected dug well
+                               6   Unprotected dug well
+                               7   Protected spring
+                               8   Unprotected spring
+                               9   Rainwater
+                               10  Bottled water
+                               11  Cart with small tank/ drum
+                               12  Tanker truck
+                               13  Surface water (river/dam/lake/pond
+                               96  Other
+                               98  Don't know
+                               0   No water source
+Q331                   Water onsite                                     520    1    N    I    1    0   No   No
+                               1  Onsite
+                               2  Within 500 m of facility
+                               3  Beyond 500 m of facility
+Q332                   Routine time of year for water shortage          521    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q340                   Facility connected to central electrical grid    522    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q341                   Availability of electricity                      523    1    N    I    1    0   No   No
+                               1  Always available
+                               2  Sometimes interrupted
+                               8  Don't know
+Q342                   Other sources of electricity such as generator   524    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No other source
+Q343                   Type of other source of electricity              525    3   AN    I    1    0   No   No
+                               A    Fuel operated generator
+                               B    Battery operated generator
+                               C    Solar system
+                               X    OTHER
+Q345                   Functional generator                             528    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q346                   Fuel (or charged battery available               529    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q346A                  Routine maintenance of the generator             530    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No routine maintenance
+                               8  Don't know
+Q346B                  Responsible person for maintenance of generator  531    1    N    I    1    0   No   No
+                               1  Onsite staff
+                               2  Outside support
+                               3  Both outside and onsite staff
+                               8  Don't know
+Q346C                  Dedicated person for operating the generator     532    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q350                   External supervision                             533    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q351                   Last supervisory visit to facility               534    1    N    I    1    0   No   No
+                               1  Within the past 6 months
+                               2  More than 6 months ago
+Q351A                  Supervision visits received in last 6 months     535    2    N    I    1    0   No   No
+                               1      No. of visits
+                               2      
+                               3      
+                               4      
+                               5      
+                               6      
+                               7      
+                               8      
+                               9      
+                               10     
+                               11:90  No. of visits
+                               98     Don't know
+Q352                   Activities during supervisory visit              537    1    N    I    3    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q352A                  Maintain records of written comments by supervi  540    1    N    I    1    0   No   No
+                               1  Yes, records maintained
+                               2  No, records not maintained
+Q352B                  Comments observed                                541    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q352C                  Work with CHW                                    542    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q352D                  Facilty supervise CHW                            543    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q352E                  Monthly community level supervision schedule ex  544    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q352F                  Monthly community supervison schedule            545    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q352G                  No. of community level supervision visits in la  546    2    N    I    1    0   No   No
+                               0:94  No. of visits
+                               95    >= 95 times
+                               98    Don't know
+Q360                   Routine user fees                                548    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q361                   Fixed or separate fees                           549    1    N    I    1    0   No   No
+                               1  Fixed fee covering all services
+                               2  No, charge fee for separate items
+Q362                   Fee schedule                                     550    1    N    I   19    0   No   No
+                               1  Yes
+                               2  No
+Q363                   Fees posted                                      569    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No posted fees
+Q364                   Fees posted observed                             570    1    N    I    1    0   No   No
+                               1  Observed, All fees posted
+                               2  Observed, Some but not all fees posted
+Q364A                  Ever exempt for user fees                        571    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q364B                  Guidelines on exemption of user fees             572    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q364C                  Observe guidelines on exemption of user fees     573    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q370                   Source of revenue                                574   12   AN    I    1    0   No   No
+                               A             Ministry of Health
+                               B             Other public ministries
+                               C             Medical schemes (insurance)
+                               D             Social security fund
+                               E             Reimbursement by employer
+                               F             Government contribution to private
+                               G             Donor agencies/ NGOs
+                               H             Faith-based
+                               I             Community programs
+                               J             User fee
+                               X             Other
+                               Y             None
+Q400SN                 Serial number                                    586    2    N    I   99    0   No   No
+Q400AA                 a. No. of Sanctioned (expected) - CS             784    2    N    I   99    0   No   No
+Q400A                  b1. No. of posted staff                          982    2    N    I   99    0   No   No
+Q400B2                 b2. No. of deputed in/ attachment - CS          1180    2    N    I   99    0   No   No
+Q400B3                 b3. No. of deputed out - CS                     1378    2    N    I   99    0   No   No
+Q400B                  c. Number of part time                          1576    2    N    I   99    0   No   No
+Q400AAT                Total Sanctioned (expected)                     1774    3    N    I    1    0   No   No
+Q400AT                 Total posted                                    1777    3    N    I    1    0   No   No
+Q400B2T                Total deputed in/ attachment                    1780    3    N    I    1    0   No   No
+Q400B3T                Total deputed out                               1783    3    N    I    1    0   No   No
+Q400BT                 Total part time                                 1786    3    N    I    1    0   No   No
+Q430                   System to determine client opinions             1789    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q431                   Methods uses to elicit client opinions          1790   11   AN    I    1    0   No   No
+                               A            Suggestion box
+                               B            Client survey form
+                               C            Client interview form
+                               D            Official meeting with community leaders
+                               E            Informal discussion with clients/ community
+                               F            Email
+                               G            Facility's website
+                               H            Letters from clients/ community
+                               I            Text/SMS messages/calls
+                               X            Other
+                               Z            Don't know
+Q440                   Routine QA activities                           1801    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q441                   Official record of QA activities in past year   1802    1    N    I    1    0   No   No
+                               1  Yes,
+                               2  No records not maintained
+Q442                   Official record of QA activities in past year - 1803    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+Q450                   Functional ambulance at facility                1804    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q451                   Functional ambulance at facility - observed     1805    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q452                   Ambulance available elsewhere                   1806    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q453                   Fuel available                                  1807    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q454A                  Number of ambulance                             1808    2    N    I    1    0   No   No
+                               0     None
+                               1:20  
+Q454B                  Number of Richaw Van                            1810    2    N    I    1    0   No   No
+                               0     None
+                               1:15  
+Q454C                  Number of Boat                                  1812    2    N    I    1    0   No   No
+                               0     None
+                               1:15  
+Q454D                  Number of Engine boat                           1814    2    N    I    1    0   No   No
+                               0     None
+                               1:15  
+Q454E                  Number of Speed boat                            1816    2    N    I    1    0   No   No
+                               0     None
+                               1:15  
+Q454F                  Number of Auto/Three wheeler                    1818    2    N    I    1    0   No   No
+                               0     None
+                               1:15  
+Q454X                  Number of other vehicles                        1820    2    N    I    1    0   No   No
+                               0     None
+                               1:15  
+Q460                   System to compile health services data          1822    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q461A                  Facility regularly compiles information (core-Q 1823    1    N    I   16    0   No   No
+                               1  Yes
+                               2  No
+Q461B                  Frequency of compilation (core-Q462)            1839    1    N    I   16    0   No   No
+                               1  Monthly or more often
+                               2  Every 2-3 months
+                               3  Every 4-6 months
+                               4  Less often than every 6 months
+Q461C                  Copy of most recent report seen (core-Q463)     1855    1    N    I   16    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+Q464                   Designated person for health statistics         1871    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No dedicated person
+Q465                   Designated person for health statistics         1872    1    N    I    1    0   No   No
+                               1  Data manager/HMIS person/Statistician
+                               2  Facility in-charge
+                               3  Other service provider
+Q471                   Number of live discharges last full-month       1873    4    N    I    1    0   No   No
+                               0:9990  
+                               9990    More than 9990
+                               9998    Don't know
+Q472                   Number of outpatient client visits last full mo 1877    4    N    I    1    0   No   No
+                               0:9990  
+                               9990    More than 9990
+                               9998    Don't know
+Q501A                  Use and availability                            1881    1    N    I    9    0   No   No
+                               1  Used Observed
+                               2  Used Reported not seen
+                               3  Not used/Not available
+Q501B                  Equipment functioning                           1890    1    N    I    9    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q502A                  Method used                                     1899    1    N    I    5    0   No   No
+                               1  Used
+                               2  Not used
+Q502B                  Temperature                                     1904    3    N    I    5    0   No   No
+                               30:600  
+                               666     Automatic
+                               998     Don't know
+Q502C                  Pressure                                        1919    3    N    I    5    0   No   No
+                               1:650  
+                               666    Automatic
+                               998    Don't know
+Q502D                  Units of pressure                               1934    1    N    I    5    0   No   No
+                               1  KG/sq cm
+                               2  ATM pressure
+                               3  Kilopascal lb/in2
+                               4  mm HG
+                               8  Don't know
+Q502E                  Time not wrapped                                1939    3    N    I    5    0   No   No
+                               5:600  
+                               666    Automatic
+                               995    Not used
+                               998    Don't know
+Q502F                  Time wrapped                                    1954    3    N    I    5    0   No   No
+                               10:650  
+                               666     Automatic
+                               995     Not used
+                               998     Don't know
+Q502G                  Chemical used                                   1969    2    N    I    5    0   No   No
+                               1   Alcohol
+                               2   Betadine
+                               3   Chlorine
+                               4   Cidex
+                               5   Formaldehyde
+                               6   Gluteraldehyde
+                               7   Lysol
+                               98  Don't know
+Q503                   Guidelines for sterilization                    1979    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q504                   Guidelines for sterilization - observed         1980    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q600                   Disposal of sharps waste                        1981    2    N    I    1    0   No   No
+                               2   Incinerator, 2-chamber industrial (800-1000+ C)
+                               3   Incinerator, 1-chamber drum/ brick
+                               4   Open burning, Flat gound no protection
+                               5   Open burning, pit or protected ground
+                               6   Dump no burning, flat ground, no protection
+                               7   Dump no burning, covered pit or pit latrine
+                               8   Dump no burning, open pit, no protection
+                               9   Dump no burning, protected ground or pit
+                               10  Remove offsite, stored in covered container
+                               11  Remove offsite, stored in other protected environment
+                               12  Remove offsite, stored unprotected
+                               95  Never have sharps waste
+                               96  Other
+Q601                   Disposal of medical waste                       1983    2    N    I    1    0   No   No
+                               1   Same as for sharps items
+                               2   Incinerator, 2-chamber industrial  (800-1000+ C)
+                               3   Incinerator, 1-chamber drum/ brick
+                               4   Open burning, Flat gound no protection
+                               5   Open burning, pit or protected ground
+                               6   Dump no burning, flat ground, no protection
+                               7   Dump no burning, covered pit or pit latrine
+                               8   Dump no burning, open pit, no protection
+                               9   Dump no burning, protected ground or pit
+                               10  Remove offsite, stored in covered container
+                               11  Remove offsite, stored in other protected environment
+                               12  Remove offsite, stored unprotected
+                               95  Never have other medical waste
+                               96  Other
+Q603                   Sharps waste disposal site                      1985    1    N    I    1    0   No   No
+                               1  No waste visible
+                               2  Waste visible, but protected area
+                               3  Waste visible, not protected area
+                               8  Waste site not inspected
+Q605                   Medical waste disposal site                     1986    1    N    I    1    0   No   No
+                               1  No waste visible
+                               2  Waste visible, but protected area
+                               3  Waste visible, not protected area
+                               8  Waste site not inspected
+Q607                   Incinerator observation                         1987    1    N    I    1    0   No   No
+                               1  Incinerator observed
+                               2  Incinerator reported not seen
+Q608                   Incinerator functional                          1988    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q609                   Fuel available                                  1989    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q610                   Guidelines for waste management in service area 1990    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No guideline available
+Q611                   Guidelines for waste management in service area 1991    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q620                   Toilet available for client use                 1992    2    N    I    1    0   No   No
+                               11  Flush to piped sewer system
+                               12  Flush to septic tank
+                               13  Flush to pit latrine
+                               14  Flush to somewhere else
+                               15  Flush don't know where
+                               21  Ventilated improved pit latrine
+                               22  Pit latrine with slab
+                               23  Pit latrine without slab/ open pit
+                               31  Composting toilet
+                               41  Bucket toilet
+                               51  Hanging toilet/ hanging latrine
+                               61  No functioning facility/bush/field
+Q620A                  Observation of toilet                           1994   11   AN    I    1    0   No   No
+                               A            Privacy: Unlocked door when not in use
+                               B            Privacy: Can be locked from inside when use
+                               C            Privacy: Toilet stall have walls without major holes
+                               D            Function: Water available
+                               E            Function: Soap available
+                               F            Function: No crack or leak in the toilet structure
+                               G            Function: Hole or pit is not blocked
+                               H            Cleanliness: Dry
+                               I            Cleanliness: Minimal odor
+                               J            Cleanliness: Clean appearance
+                               K            Cleanliness: Cleaning products visible
+Q620B                  Seperate toilet for female clients              2005    1    N    I    1    0   No   No
+                               1  Yes, seperate toilet for female clients
+                               2  No seperate toilet for female clients,only combined
+Q700A                  Availability of basic supplies                  2006    1    N    I   25    0   No   No
+                               1  Observed
+                               2  Reported not seen
+                               3  Not available
+Q700B                  Basic supplies functioning                      2031    1    N    I   25    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q710                   Precaution and condition of client examination  2056    1    N    I   13    0   No   No
+                               1  Observed
+                               2  Reported not seen
+                               3  Not available
+Q711                   Setting of examination room                     2069    1    N    I    1    0   No   No
+                               1  Private room
+                               2  Other room with auditory/visual privacy
+                               3  Visual privacy only
+                               4  No privacy
+Q720                   Protected client waiting area                   2070    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No protected client waiting area
+Q801                   Anemia testing                                  2071    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q802A                  Anemia equipment used                           2072    1    N    I    7    0   No   No
+                               1  Yes
+                               2  No
+Q802B                  Observed equipment                              2079    1    N    I    7    0   No   No
+                               1  Observed
+                               2  Reported not seen
+                               3  Not available
+Q802C                  Functioning                                     2086    1    N    I    7    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q829                   Blood cholesterol level testing                 2093    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q830                   Blood glucose tests                             2094    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q831A                  Glucose equipment used                          2095    1    N    I    2    0   No   No
+                               1  Yes
+                               2  No
+Q831B                  Observed equipment                              2097    1    N    I    2    0   No   No
+                               1  Observed
+                               2  Reported not seen
+                               3  Not available
+Q831C                  Functioning                                     2099    1    N    I    2    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q832                   Lever or renal function tests                   2101    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q833                   Blood chemistry analyzer                        2102    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q834                   Blood chemistry analyzer - Observed             2103    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q835                   Blood chemistry analyzer - Functioning          2104    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q836                   Urine chemistry testing/ urine pregnancy tests  2105    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q837A                  Dipsticks used                                  2106    1    N    I    3    0   No   No
+                               1  Yes
+                               2  No
+Q837B                  Dipsticks observed                              2109    1    N    I    3    0   No   No
+                               1  Observed, at least 1 valid
+                               2  Available, none valid
+                               3  Reported available, not seen
+                               4  None available today
+Q838                   Send blood/ urine outside                       2112    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q839A                  Tests outside                                   2113    1    N    I    4    0   No   No
+                               1  Yes
+                               2  No
+Q839B                  Record of outside test results                  2117    1    N    I    4    0   No   No
+                               1  Yes
+                               2  No
+Q840A                  Parasite equipment used                         2121    1    N    I    8    0   No   No
+                               1  Yes
+                               2  No
+Q840B                  Parasite equipment observed                     2129    1    N    I    8    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Normally available, not today
+Q840C                  Functioning                                     2137    1    N    I    8    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q848                   Gram staining                                   2145    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q849A                  Gram staining used                              2146    1    N    I    4    0   No   No
+                               1  Yes
+                               2  No
+Q849B                  Gram staining available                         2150    1    N    I    4    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Normally available, not today
+Q850                   Specimens sent outside for staining or malaria  2154    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q851A                  Send specimen outside for test                  2155    1    N    I    4    0   No   No
+                               1  Yes
+                               2  No
+Q851B                  Record of test results observed                 2159    1    N    I    4    0   No   No
+                               1  Yes
+                               2  No
+Q852                   Stool microscopy                                2163    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q853A                  Equipment used                                  2164    1    N    I    3    0   No   No
+                               1  Yes
+                               2  No
+Q853B                  Equipment available                             2167    1    N    I    3    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Normally available, not today
+Q854                   Syphilis tests                                  2170    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q855                   Syphilis rapid diagnostic test (RDT) kit        2171    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q856                   Observe Syphilis rapid test kit observed        2172    1    N    I    1    0   No   No
+                               1  Observed, at least 1 valid
+                               2  Observed, none valid
+                               3  Reported available, not seen
+                               4  None available today
+Q857                   Conduct any other syphilis testing              2173    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q858A                  Test conducted                                  2174    1    N    I    5    0   No   No
+                               1  Yes
+                               2  No
+Q858B                  Items for test available                        2179    1    N    I    5    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Not available
+Q858C                  Functioning                                     2184    1    N    I    5    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q859                   Chlamydia test                                  2189    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q860A                  Chlamydia test conducted                        2190    1    N    I    2    0   No   No
+                               1  Yes
+                               2  No
+Q860B                  Items for test available                        2192    1    N    I    2    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Not available
+Q861                   TB tests                                        2194    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q862A                  TB test used                                    2195    1    N    I    8    0   No   No
+                               1  Yes
+                               2  No
+Q862B                  TB equipment available                          2203    1    N    I    8    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Normally available, not today
+Q862C                  Functioning                                     2211    1    N    I    8    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q863                   Use TB diagnostic test                          2219    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q864                   Observe TB rapid diagnostic test (RDT) kit      2220    1    N    I    1    0   No   No
+                               1  Observed, at least 1 valid
+                               2  Observed, none valid
+                               3  Reported available, not seen
+                               4  Non available today
+Q865                   Maintain any sputum containers                  2221    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q866                   Observe sample sputum container                 2222    1    N    I    1    0   No   No
+                               1  Observe
+                               3  Reported not seen
+                               4  None available today
+Q867                   Sputum sent outside for TB testing              2223    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q868                   Record of outside sputum tests                  2224    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q869                   Record of outside sputum tests - observed       2225    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+Q870                   System for internal/ external QC for TB sputum  2226    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q871                   Type of quality control practice                2227    1    N    I    1    0   No   No
+                               1  Internal QC/QA only
+                               2  External QC/QA only
+                               3  Both, internal and external QC/QA
+                               4  Send slide for re-reading
+                               6  Other
+Q872                   Record of results from QC procedures for TB spu 2228    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q873                   Record maintained for IQC/EQC/Both              2229    1    N    I    1    0   No   No
+                               1  Records for IQC / IQA only
+                               2  Records for EQC / EQA only
+                               3  Records for both QC / QA procedures
+Q880                   Perform diagnostic X-rays                       2230    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q881A                  Imaging Equipment used                          2231    1    N    I    5    0   No   No
+                               1  Yes
+                               2  No
+Q881B                  Equipment available                             2236    1    N    I    5    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Normally available, not today
+Q881C                  Equipment working order                         2241    1    N    I    5    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q901                   Antibiotics drugs                               2246    1    N    I   38    0   No   No
+                               1  Observed at least 1 valid
+                               2  Observed, but none valid
+                               3  Reported available, not seen
+                               4  Not available today/Don't know
+                               5  Never available
+Q902                   Worm infestation drugs                          2284    1    N    I    5    0   No   No
+                               1  Observed at least 1 valid
+                               2  Observed, but none valid
+                               3  Reported available, not seen
+                               4  Not available today/Don't know
+                               5  Never available
+Q903                   Drugs for Non communicable diseases             2289    1    N    I   47    0   No   No
+                               1  Observed at least 1 valid
+                               2  Observed, but none valid
+                               3  Reported available, not seen
+                               4  Not available today/Don't know
+                               5  Never available
+Q904                   Anti-fungal medicines                           2336    1    N    I   11    0   No   No
+                               1  Observed at least 1 valid
+                               2  Observed, but none valid
+                               3  Reported available, not seen
+                               4  Not available today/Don't know
+                               5  Never available
+Q906                   Maternal and child health drugs                 2347    1    N    I   26    0   No   No
+                               1  Observed at least 1 valid
+                               2  Observed, but none valid
+                               3  Reported available, not seen
+                               4  Not available today/Don't know
+                               5  Never available
+Q907                   Intravenous fluids                              2373    1    N    I    6    0   No   No
+                               1  Observed at least 1 valid
+                               2  Observed, but none valid
+                               3  Reported available, not seen
+                               4  Not available today/Don't know
+                               5  Never available
+Q908                   Fever reducing and pain medicines               2379    1    N    I   17    0   No   No
+                               1  Observed at least 1 valid
+                               2  Observed, but none valid
+                               3  Reported available, not seen
+                               4  Not available today/Don't know
+                               5  Never available
+Q909                   Storage condition: Antibiotics & general medici 2396    1    N    I    5    0   No   No
+                               1  Yes
+                               2  No
+Q910                   Medicines organized (FIFO) - Antibiotics & gene 2401    1    N    I    1    0   No   No
+                               1  Yes, all medicines
+                               2  Yes, only some medicines
+                               3  No
+Q911                   System used to monitor amount of meds received, 2402    1    N    I    1    0   No   No
+                               1  Computer system updated daily
+                               2  Ledger/ stock card updated daily
+                               3  Computer system not updated daily, but there is daily record of distributed 
+                               4  Ledger/ stock card not updated daily, but there is a daily record of distrib
+                               6  Other
+Q912                   Supply items                                    2403    1    N    I    8    0   No   No
+                               1  Observed
+                               2  Reported not seen
+                               3  Not available
+Q921                   Contraceptives                                  2411    1    N    I   11    0   No   No
+                               1  Observed at least 1 valid
+                               2  Observed, but none valid
+                               3  Reported available, not seen
+                               4  Not available today/Don't know
+                               5  Never available
+Q922                   Storage conditions of contraceptives            2422    1    N    I    5    0   No   No
+                               1  Yes
+                               2  No
+Q923                   Medicines organized (FIFO) - conraceptive       2427    1    N    I    1    0   No   No
+                               1  Yes, all commodities
+                               2  Not all commodities
+                               3  No
+Q924                   System used to monitor amount of meds received, 2428    1    N    I    1    0   No   No
+                               1  Computer system updated daily
+                               2  Ledger/ stock card updated daily
+                               3  Computer system not updated daily, but there is daily record of distributed 
+                               4  Ledger/ stock card not updated daily, but there is a daily record of distrib
+                               6  Other system
+Q931                   Anti TB drugs                                   2429    1    N    I   10    0   No   No
+                               1  Observed at least 1 valid
+                               2  Observed, but none valid
+                               3  Reported available, not seen
+                               4  Not available today/Don't know
+                               5  Never available
+Q1001A                 Days/month immunization is available at facilit 2439    2    N    I    6    0   No   No
+                               0     No service
+                               1:31  
+Q1001B                 Days/month immunization is available through ou 2451    2    N    I    6    0   No   No
+                               0     No service
+                               1:31  
+Q1002                  National guidelines available                   2463    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1003                  Observe national guidelines available           2464    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1004                  Other guidelines                                2465    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1005                  Observe other guidelines                        2466    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1006                  Items for immunization available                2467    1    N    I    3    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Not available
+Q1007                  Routinely store vaccines                        2470    1    N    I    1    0   No   No
+                               1  Routinely store vaccines
+                               2  Stores no vaccines
+Q1008                  Refrigerator available - observec               2471    1    N    I    1    0   No   No
+                               1  Refrigerator observed
+                               2  Refrigerator not observed
+Q1009                  Cold-chain monitoring system                    2472    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1010                  Observe cold-chain monitoring system            2473    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1011                  Temp record completed past 30 days              2474    1    N    I    1    0   No   No
+                               1  Yes completed
+                               2  No, not completed
+Q1012                  Vaccines available                              2475    1    N    I    6    0   No   No
+                               1  Observed, at least 1 valid
+                               2  Observed available , none valid
+                               3  Reported available, not seen
+                               4  Not available today/Don't know
+                               5  Never available
+Q1013                  Temperature of refrigerator for vaccines        2481    1    N    I    1    0   No   No
+                               1  Between +2 and +8 degrees
+                               2  Above +8 degrees
+                               3  Below +2 degrees
+                               4  Thermometer not functional
+                               5  No Thermometer
+Q1014                  Vaccine carriers                                2482    1    N    I    1    0   No   No
+                               1  One set
+                               2  Two or more sets
+                               3  None
+Q1015                  Ice packs for vaccine carriers                  2483    1    N    I    1    0   No   No
+                               1  One set
+                               2  Two or more sets
+                               3  No ice packs, use purchased ice
+                               4  No ice packs
+Q1016A                 Days/month TT for adolescent available at facil 2484    2    N    I    1    0   No   No
+                               0     No service
+                               1:31  
+Q1016B                 Days/month TT for adolescent available through  2486    2    N    I    1    0   No   No
+                               0     No service
+                               1:31  
+Q1017                  National guidelines available for adolescent va 2488    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1018                  Observe national guidelines available           2489    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1019                  Other guidelines for adolescent vaccinations    2490    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1020                  Observe other guidelines                        2491    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1021                  TT vaccine available                            2492    1    N    I    1    0   No   No
+                               1  Observed, at least 1 valid
+                               2  Observed available , none valid
+                               3  Reported available, not seen
+                               4  Not available today/Don't know
+                               5  Never available
+Q1022A                 Days/month TT for mother available at facility  2493    2    N    I    1    0   No   No
+                               0     No service
+                               1:31  
+Q1022B                 Days/month TT for mother available through outr 2495    2    N    I    1    0   No   No
+                               0     No service
+                               1:31  
+Q1023                  National guidelines available for mother vaccin 2497    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1024                  Observe national guidelines available           2498    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1025                  Other guidelines for adolescent vaccinations    2499    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1026                  Observe other guidelines                        2500    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1027                  TT vaccine available                            2501    1    N    I    1    0   No   No
+                               1  Observed, at least 1 valid
+                               2  Observed available , none valid
+                               3  Reported available, not seen
+                               4  Not available today/Don't know
+                               5  Never available
+Q1050                  Data is already recorded for already assessed r 2502    2    N    I    1    0   No   No
+                               11  GENERAL INFORMATION  [Q710]
+                               13  CHILD CURATIVE CARE  [Q1251]
+                               14  FAMILY PLANNING  [Q1351]
+                               15  ANTENATAL CARE  [Q1451]
+                               17  DELIVERY  [Q1651]
+                               19  TUBERCULOSIS  [Q1951]
+                               22  NCD  [Q2351]
+                               31  NOT PREVIOUSLY SEEN
+Q1051                  Precaution and condition in client examination  2504    1    N    I   13    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Not available
+Q1052                  Setting of examination room                     2517    1    N    I    1    0   No   No
+                               1  Private room
+                               2  Other room with auditory/visual privacy
+                               3  Visual privacy only
+                               4  No privacy
+Q1101A                 Days/month child growth monitoring is available 2518    2    N    I    1    0   No   No
+                               0:30  
+Q1101B                 Days/month immunization is available through ou 2520    2    N    I    1    0   No   No
+                               0:30  
+Q1102                  Guidelines for growth monitoring available      2522    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1103                  Guidelines for growth monitoring observed       2523    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1103A                 Guidelines for SAM and MAM available            2524    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1103B                 Guidelines for SAM and MAM observed             2525    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1104A                 Items available                                 2526    1    N    I    6    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Not available
+Q1104B                 Items functioning                               2532    1    N    I    6    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q1201A                 Days/month child curative care is available at  2538    2    N    I    1    0   No   No
+                               0:31  
+Q1201B                 Days/month child curative care is available thr 2540    2    N    I    1    0   No   No
+                               0:31  
+Q1202                  Services provided at facility                   2542    1    N    I   12    0   No   No
+                               1  Yes
+                               2  No
+Q1203                  Follow IMCI guidelines                          2554    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1203A                 Follow IMCI guidelines                          2555    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1204                  IMCI guidelines available                       2556    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1205                  IMCI guidelines observed                        2557    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1206                  Other guidelines available                      2558    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1207                  Other guidelines observed                       2559    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1208                  Routine sick child observations before consult  2560    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1209                  Routine activities                              2561    1    N    I    9    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Not routinely conducted
+                               8  Don't know
+Q1210A                 Items available                                 2570    1    N    I   11    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Not available
+Q1210B                 Items functioning                               2581    1    N    I   11    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q1211                  Visual aids for sick child service              2592    1    N    I    5    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Not available
+Q1212                  Individual health cards                         2597    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1213                  Observe Individual health cards                 2598    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1250                  Data is already recorded for already assessed r 2599    2    N    I    1    0   No   No
+                               11  GENERAL INFORMATION  [Q710]
+                               12  CHILD VACCINATION  [Q1051]
+                               14  FAMILY PLANNING  [Q1351]
+                               15  ANTENATAL CARE  [Q1451]
+                               17  DELIVERY  [Q1651]
+                               19  TUBERCULOSIS  [Q1951]
+                               22  NCD  [Q2351]
+                               31  NOT PREVIOUSLY SEEN
+Q1251                  Precaution and condition in client examination  2601    1    N    I   13    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Not available
+Q1252                  Setting of examination room                     2614    1    N    I    1    0   No   No
+                               1  Private room
+                               2  Other room with auditory/visual privacy
+                               3  Visual privacy only
+                               4  No privacy
+Q1254                  Dedicated room/area for adolescent health servi 2615    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1255                  Setting of examination room for adolescent      2616    1    N    I    1    0   No   No
+                               1  Private room
+                               2  Other room with auditory/visual privacy
+                               3  Visual privacy only
+                               4  No privacy
+Q1256                  Days per week adolescent health service availab 2617    1    N    I    1    0   No   No
+                               0  Less than once a week
+                               1  One day per week
+                               2  Two days per week
+                               3  Three days per week
+                               4  Four days per week
+                               5  Five days per week
+                               6  Six days per week
+                               7  All seven days a week
+Q1257                  Adolescent health guidelines available          2618    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1258                  Adolescent health  guidelines observed          2619    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1259                  Other adolescent health guidelines available    2620    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1260                  Other adolescent health guidelines observed     2621    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1262                  Dedicated room/area for nutrition service       2622    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1263                  Setting of examination room for nutrition servi 2623    1    N    I    1    0   No   No
+                               1  Private room
+                               2  Other room with auditory/visual privacy
+                               3  Visual privacy only
+                               4  No privacy
+Q1264                  Days per week nutrition service available       2624    1    N    I    1    0   No   No
+                               0  Less than once a week
+                               1  One day per week
+                               2  Two days per week
+                               3  Three days per week
+                               4  Four days per week
+                               5  Five days per week
+                               6  Six days per week
+                               7  All seven days a week
+Q1265                  Nutrition service guidelines available          2625    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1266                  Nutrition service guidelines observed           2626    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1267                  Other nutrition service guidelines available    2627    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1268                  Other nutrition service guidelines observed     2628    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1301                  Number of days family planning services offered 2629    2    N    I    1    0   No   No
+                               1:31  
+Q1302                  Family planning methods provided/counseled      2631    1    N    I   15    0   No   No
+                               1  Provide (stock the commodity)
+                               2  Prescribe/ counsel/ refer
+                               3  No
+Q1303                  FP guidelines/manual                            2646    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1304                  Observe FP guidelines/manual                    2647    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1305                  Other guidelines                                2648    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1306                  Observe other guidelines                        2649    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1307                  Individual records/cards for clients            2650    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1308                  Observe Individual records/cards for clients    2651    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1309                  Routine actions for clients                     2652    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1310                  Type of routine actions                         2653    1    N    I    3    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Not routinely done
+                               8  Don't know
+Q1311                  FP providers routeinly dx/tx STIs               2656    1    N    I    1    0   No   No
+                               1  Routinely diagnose and treat STIs
+                               2  Diagnose but refer elsewhere for treatment
+                               3  Refer elsewhere in facility for diagnosis and treatment
+                               4  Refer outside facility for diagnosis and treatment
+                               5  No diagnosis, treatment or referral
+Q1314A                 FP equipment available                          2657    1    N    I    9    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Not available
+Q1314B                 FP equipment functioning                        2666    1    N    I    9    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q1316                  IUD/implant equipment                           2675    1    N    I    5    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Not available
+Q1318                  IUD equipment                                   2680    1    N    I   12    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Not available
+Q1320                  Implant equipment                               2692    1    N    I   12    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Not available
+Q1321                  Equipment placed in the FP services processed f 2704    1    N    I    1    0   No   No
+                               1  FP service site
+                               2  Central location in facility
+                               3  Both locations
+                               4  No equipment processed in facility
+Q1322                  Final processing method used for FP equipment   2705    6   AN    I    1    0   No   No
+                               A       Autocave
+                               B       Dry heat sterilization
+                               C       Soak in chlorine solution
+                               D       Boil or steam
+                               E       Wash with soap and water
+                               F       Soak in other chemical solution
+Q1350                  Data is already recorded for already assessed r 2711    2    N    I    1    0   No   No
+                               11  GENERAL INFORMATION  [Q710]
+                               12  CHILD VACCINATION  [Q1051]
+                               13  CHILD CURATIVE CARE  [Q1251]
+                               15  ANTENATAL CARE  [Q1451]
+                               17  DELIVERY  [Q1651]
+                               19  TUBERCULOSIS  [Q1951]
+                               22  NCD  [Q2351]
+                               31  NOT PREVIOUSLY SEEN
+Q1351                  Precaution and condition in client examination  2713    1    N    I   13    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Not available
+Q1352                  Setting of FP service room                      2726    1    N    I    1    0   No   No
+                               1  Private room
+                               2  Other room with auditory/visual privacy
+                               3  Visual privacy only
+                               4  No privacy
+Q1353B                 Room/area for Vasectomy already assessed room/a 2727    2    N    I    1    0   No   No
+                               11  ROOM / AREA WILL BE ASSESSED IN Q1353H (NA)
+                               31  NOT PREVIOUSLY ASSESSED
+Q1353CA                Vasectomy equipment available                   2729    1    N    I   44    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Not available
+Q1353CB                Vasectomy equipment functioning                 2773    1    N    I   44    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q1353DA                Vasectomy items available                       2817    1    N    I    5    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Not available
+Q1353DB                Vasectomy  items functioning                    2822    1    N    I    5    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q1353E                 Vasectomymedicine available                     2827    1    N    I    4    0   No   No
+                               1  Observed, at least 1 valid
+                               2  Observed available , none valid
+                               3  Reported available, not seen
+                               4  Not available today/Don't know
+                               5  Never available
+Q1353G                 Room/area for Tubal Ligation already assessed r 2831    2    N    I    1    0   No   No
+                               11  ROOM / AREA ASSESSED IN Q1353C
+                               31  NOT PREVIOUSLY ASSESSED IN Q1353C
+Q1353HA                Tubal Ligation equipment available              2833    1    N    I   44    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Not available
+Q1353HB                Tubal Ligation equipment functioning            2877    1    N    I   44    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q1353IA                Tubal Ligation items available                  2921    1    N    I   17    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Not available
+Q1353IB                Tubal Ligation items functioning                2938    1    N    I   17    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q1353J                 Tubal Ligation medicine available               2955    1    N    I    9    0   No   No
+                               1  Observed, at least 1 valid
+                               2  Observed available , none valid
+                               3  Reported available, not seen
+                               4  Not available today/Don't know
+                               5  Never available
+Q1401                  Number of days ANC available in facility        2964    2    N    I    1    0   No   No
+                               1:30  
+Q1402                  Services offered                                2966    1    N    I    6    0   No   No
+                               1  Yes
+                               2  No
+Q1406                  Tests offered                                   2972    1    N    I    6    0   No   No
+                               1  Observed, at least 1 valid
+                               2  Observed available , none valid
+                               3  Reported available, not seen
+                               4  Not available today
+                               5  No or Never available
+                               6  Available elsewhere in facility
+Q1408                  ANC providers routinely dx,tx RTIs/STIs         2978    1    N    I    1    0   No   No
+                               1  Routinely diagnose and treat RTIs/STIs
+                               2  Diagnose but refer elsewhere for treatment
+                               3  Refer elsewhere in facility for diagnosis and treatment
+                               4  Refer outside facility for diagnosis and treatment
+                               5  No diagnosis, treatment or referral
+Q1409                  ANC guidelines/manuals                          2979    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1410                  ANC guidelines/manual observed                  2980    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1411                  Other ANC guidelines/forms/register             2981    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1412                  Other ANC guidelines/forms/register observed    2982    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1415                  Visual aids for client education                2983    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1416                  Visual aids for client education observed       2984    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1417                  Individual cards maintained                     2985    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1418                  Individual cards maintained observed            2986    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1419                  System of routine actions for clients           2987    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1420                  Specific routine actions                        2988    1    N    I   12    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Activity not routinely done
+                               8  Don't know
+Q1421A                 ANC equipment available                         3000    1    N    I    8    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Not available
+Q1421B                 ANC equipment functioning                       3008    1    N    I    8    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q1422                  Medicine available today                        3016    1    N    I    7    0   No   No
+                               1  Observed, at least 1 valid
+                               2  Observed available , none valid
+                               3  Reported available, not seen
+                               4  Not available today/Don't know
+                               5  Never available
+Q1450                  Data is already recorded for already assessed r 3023    2    N    I    1    0   No   No
+                               11  GENERAL INFORMATION  [Q710]
+                               12  CHILD VACCINATION  [Q1051]
+                               13  CHILD CURATIVE CARE  [Q1251]
+                               14  FAMILY PLANNING  [Q1351]
+                               17  DELIVERY  [Q1651]
+                               19  TUBERCULOSIS  [Q1951]
+                               22  NCD  [Q2351]
+                               31  NOT PREVIOUSLY SEEN
+Q1451                  Precaution and condition in client examination  3025    1    N    I   13    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Not available
+Q1452                  Setting of ANC service                          3038    1    N    I    1    0   No   No
+                               1  Private room
+                               2  Other room with auditory/visual privacy
+                               3  Visual privacy only
+                               4  No privacy
+Q1454                  Dedicated room/area for PNC service             3039    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1455                  Setting of examination room for PNC service     3040    1    N    I    1    0   No   No
+                               1  Private room
+                               2  Other room with auditory/visual privacy
+                               3  Visual privacy only
+                               4  No privacy
+Q1456                  Days per week PNC service available             3041    1    N    I    1    0   No   No
+                               0  Less than once a week
+                               1  One day per week
+                               2  Two days per week
+                               3  Three days per week
+                               4  Four days per week
+                               5  Five days per week
+                               6  Six days per week
+                               7  All seven days a week
+Q1457                  PNC service guidelines available                3042    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1458                  PNC service guidelines observed                 3043    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1459                  Other PNC service guidelines available          3044    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1460                  Other PNC service guidelines observed           3045    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1461                  Postpartum FP guidelines available              3046    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1462                  Postpartum FP guidelines observed               3047    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1601                  24-hour staff in facility or on-call            3048    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1602                  Duty schedule/call list for 24-hour staff       3049    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1603                  Duty schedule/call list for 24-hour staff obser 3050    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1604A                 Interventions ever carried out in facilty       3051    1    N    I    8    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q1604B                 Interventions carried out in past 3 months      3059    1    N    I    8    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q1605                  National gujidelines for IMPAC                  3067    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1606                  National gujidelines for IMPAC observed         3068    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1607                  National guidelines for CEmOC                   3069    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1608                  National guidelines for CEmOC observed          3070    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1609                  Guidelines for management of pre-term labor     3071    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1610                  Guidelines for management of pre-term labor obs 3072    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1611                  Practice Kangaroo Mother Care in low-weight bab 3073    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1612                  Separate room or space for Kangaroo Mother Care 3074    1    N    I    1    0   No   No
+                               1  Yes, separate room
+                               2  Yes, integrated
+Q1613                  Use partographs to monitor labor/delivery       3075    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No use of partograph
+Q1614                  Routinely or selectively use partograph         3076    1    N    I    1    0   No   No
+                               1  Routinely
+                               2  Selectively
+Q1615                  Number of dedicated maternity beds              3077    3    N    I    1    0   No   No
+                               0:990  
+                               998    Don't know
+Q1616                  Number of dedicated delivery beds               3080    3    N    I    1    0   No   No
+                               0:990  
+                               998    Don't know
+Q1617                  Regular reviews of maternal or newborn deaths o 3083    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No, does not participate
+Q1618                  Reviews of mother, newborn or both              3084    1    N    I    1    0   No   No
+                               1  For mothers only
+                               2  For newborns only
+                               3  For both mothers and newborns
+Q1619                  Frequency of maternal deaths/near-misses review 3085    2    N    I    1    0   No   No
+                               1:52  Every .. weeks
+                               53    Only when case occurs
+                               98    Don't know
+Q1621                  Frequency of newborn deaths/near misses reviews 3087    2    N    I    1    0   No   No
+                               1:52  Every .. weeks
+                               53    Only when case occurs
+                               95    Always with maternal reviews
+                               98    Don't know
+Q1622A                 Delivery area equipment available               3089    1    N    I   15    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Not available
+Q1622B                 Equipment functioning                           3104    1    N    I   15    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q1623                  Other delivery items available                  3119    1    N    I   13    0   No   No
+                               1  Observed
+                               2  Reported not seen
+                               3  Not available
+Q1623A                 Routinely provide AMTSL                         3132    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1624                  Routine newborn activities                      3133    1    N    I   16    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q1625                  Medicines in delivery area                      3149    1    N    I   10    0   No   No
+                               1  Observed, at least 1 valid
+                               2  Observed available , none valid
+                               3  Reported available, not seen
+                               4  Not available today/Don't know
+                               5  Never available
+Q1650                  Data is already recorded for already assessed r 3159    2    N    I    1    0   No   No
+                               11  GENERAL INFORMATION  [Q710]
+                               12  CHILD VACCINATION  [Q1051]
+                               13  CHILD CURATIVE CARE  [Q1251]
+                               14  FAMILY PLANNING  [Q1351]
+                               15  ANTENATAL CARE  [Q1451]
+                               19  TUBERCULOSIS  [Q1951]
+                               22  NCD  [Q2351]
+                               31  NOT PREVIOUSLY SEEN
+Q1651                  Precaution and condition in client examination  3161    1    N    I   13    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Not available
+Q1652                  Setting of delivery service room                3174    1    N    I    1    0   No   No
+                               1  Private room
+                               2  Other room with auditory/visual privacy
+                               3  Visual privacy only
+                               4  No privacy
+Q1901                  Days/ month TB services offered                 3175    2    N    I    1    0   No   No
+                               1:30  
+Q1902                  Providers dx TB                                 3177    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1903                  Most common method of TB dx                     3178    1    N    I    1    0   No   No
+                               1  Sputum smear only
+                               2  X-Ray only
+                               3  Either sputum or X-Ray
+                               4  Both sputum and X-Ray
+                               5  Clinical symptoms only
+Q1904                  Providers refer outside facility for TB dx      3179    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1905                  Facility has agreement with referral facility f 3180    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1906                  Register of referred clients for TB dx          3181    1    N    I    1    0   No   No
+                               1  Yes
+                               2  Register not kept
+Q1907                  Register of referred clients for TB dx observed 3182    1    N    I    1    0   No   No
+                               1  Register seen (paper)
+                               2  Register seen (electronic)
+                               3  Register reported, not seen
+Q1908                  Providers prescribe tx for TB or manage TB clie 3183    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1909                  Treatment strategy                              3184    1    N    I    1    0   No   No
+                               1  2M intensive phase, 4M continuation phase
+                               2  6M intensive phase
+                               3  Follow up clients only after first 2m intensive observation elsewhere
+                               4  Diagnose and treat while inpatient, discharge elsewhere for F-up
+                               5  Provide full treatment, with no routine direct observation phase
+                               6  Diagnose, prescribe/ provide medicines only, no F/up
+                               7  Diagnose only, no treatment or prescription of medicine
+Q1911                  System for testing TB clients for HIV           3185    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No system
+Q1912                  System for testing TB clients for HIV observed  3186    1    N    I    1    0   No   No
+                               1  System or register observed
+                               2  System or register reported, not seen
+Q1913                  HIV rapid test kit available                    3187    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1914                  Observe HIV rapid test kit available            3188    1    N    I    1    0   No   No
+                               1  Observed, at least 1 valid
+                               2  Observed, none valid
+                               3  Reported available, not seen
+                               4  None available today
+Q1915                  National guidelines for TB dx/tx                3189    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1916                  National guidelines for TB dx/tx observed       3190    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1917                  Guidelines for management of HIV and TB co-infe 3191    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1918                  Guidelines for management of HIV and TB co-infe 3192    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1919                  Guidelines related to MDR-TB tx                 3193    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1920                  Guidelines related to MDR-TB tx observed        3194    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q1922                  Maintain any sputum containers                  3195    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q1923                  Maintain any sputum containers observed         3196    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported available, not seen
+                               4  None available today
+Q1950                  Data is already recorded for already assessed r 3197    2    N    I    1    0   No   No
+                               11  GENERAL INFORMATION  [Q710]
+                               12  CHILD VACCINATION  [Q1051]
+                               13  CHILD CURATIVE CARE  [Q1251]
+                               14  FAMILY PLANNING  [Q1351]
+                               15  ANTENATAL CARE  [Q1451]
+                               17  DELIVERY  [Q1651]
+                               22  NCD  [Q2351]
+                               31  NOT PREVIOUSLY SEEN
+Q1951                  Precaution and condition in client examination  3199    1    N    I   13    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Not available
+Q1952                  Setting of examination room                     3212    1    N    I    1    0   No   No
+                               1  Private room
+                               2  Other room with auditory/visual privacy
+                               3  Visual privacy only
+                               4  No privacy
+Q2301                  Providers dx or manage diabetes                 3213    1    N    I    1    0   No   No
+                               1  YES, DIAGNOSE ONLY
+                               2  YES, TREAT ONLY
+                               3  YES, DIAGNOSE AND TREAT
+                               4  NO
+Q2302                  National guidelines for diabetes                3214    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q2303                  National guidelines for diabetes observed       3215    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q2304                  Other guidelines for diabetes                   3216    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q2305                  Other guidelines for diabetes observed          3217    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q2310                  Providers dx or manage hypertension/cardio-vasc 3218    1    N    I    1    0   No   No
+                               1  YES, DIAGNOSE ONLY
+                               2  YES, TREAT ONLY
+                               3  YES, DIAGNOSE AND TREAT
+                               4  NO
+Q2311                  National guidelines for hypertension/cardio-vas 3219    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q2312                  National guidelines for hypertension/cardio-vas 3220    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q2313                  Other guidelines for hypertension/cardio-vascul 3221    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q2314                  Other guidelines for hypertension/cardio-vascul 3222    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q2315                  Providers dx or manage coronary heart disease   3223    1    N    I    1    0   No   No
+                               1  YES, DIAGNOSE ONLY
+                               2  YES, TREAT ONLY
+                               3  YES, DIAGNOSE AND TREAT
+                               4  NO
+Q2316                  National guidelines for coronary heart disease  3224    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q2317                  National guidelines for coronary heart disease  3225    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q2318                  Other guidelines for coronary heart disease     3226    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q2319                  Other guidelines forcoronary heart disease obse 3227    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q2320                  Providers dx or manage chronic respiratory dise 3228    1    N    I    1    0   No   No
+                               1  YES, DIAGNOSE ONLY
+                               2  YES, TREAT ONLY
+                               3  YES, DIAGNOSE AND TREAT
+                               4  NO
+Q2321                  National guidelines for chronic respiratory dis 3229    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q2322                  National guidelines for chronic respiratory dis 3230    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q2323                  Other guidelines for chronic respiratory diseas 3231    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q2324                  Other guidelines for chronic respiratory diseas 3232    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q2325                  Providers dx or manage cervical cancer          3233    1    N    I    1    0   No   No
+                               1  YES
+                               2  NO
+Q2326                  National guidelines for cervical cancer         3234    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q2327                  National guidelines for chronic respiratory dis 3235    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q2328                  Other guidelines for cervical cancer            3236    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q2329                  Other guidelines for cervical cancer disease bs 3237    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q2330                  Asses the room/area for basic supplies & equipm 3238    1    N    I    1    0   No   No
+                               1  General information section [Q700]
+                               2  Not previously seen
+Q2331A                 Availability of basic supplies                  3239    1    N    I   21    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Not available
+Q2331B                 Basic supplies functioning                      3260    1    N    I   21    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q2350                  Data is already recorded for already assessed r 3281    2    N    I    1    0   No   No
+                               11  GENERAL INFORMATION  [Q710]
+                               12  CHILD VACCINATION  [Q1051]
+                               13  CHILD CURATIVE CARE  [Q1251]
+                               14  FAMILY PLANNING  [Q1351]
+                               15  ANTENATAL CARE  [Q1451]
+                               17  DELIVERY  [Q1651]
+                               19  TUBERCULOSIS  [Q1951]
+                               31  NOT PREVIOUSLY SEEN
+Q2351                  Precaution and condition in client examination  3283    1    N    I   13    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Not available
+Q2352                  Setting of examination room                     3296    1    N    I    1    0   No   No
+                               1  Private room
+                               2  Other room with auditory/visual privacy
+                               3  Visual privacy only
+                               4  No privacy
+Q2501                  C-section provider present or on-call 24 hours  3297    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q2502                  Duty schedule or call list for 24-hr for C-sect 3298    1    N    I    1    0   No   No
+                               1  Yes
+                               2  24-hr duty schedule not maintained
+Q2503                  Duty schedule or call list for 24-hr for C-sect 3299    1    N    I    1    0   No   No
+                               1  Schedule observed
+                               2  Schedule reported, not seen
+Q2504                  Anesthetist present or on-call 24 hours         3300    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q2505                  Duty schedule or call list for 24-hr for Anesth 3301    1    N    I    1    0   No   No
+                               1  Yes
+                               2  24-hr duty schedule not maintained
+Q2506                  Duty schedule or call list for 24-hr for Anesth 3302    1    N    I    1    0   No   No
+                               1  Schedule observed
+                               2  Schedule reported, not seen
+Q2507                  Has CS been performed during past 3 months      3303    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q2510A                 Anesthesia equipment available                  3304    1    N    I   20    0   No   No
+                               1  Observed
+                               2  Reported, not seen
+                               3  Not available
+Q2510B                 Anesthesia equipment functioning                3324    1    N    I   20    0   No   No
+                               1  Yes
+                               2  No
+                               8  Don't know
+Q2601                  Reagents available in facility                  3344    1    N    I    5    0   No   No
+                               1  Observed, at least 1 valid
+                               2  Observed available , none valid
+                               3  Reported available, not seen
+                               4  Not available today/Don't know
+                               5  Never available
+Q2701                  Source of blood for transfusion                 3349    5   AN    I    1    0   No   No
+                               A      Medical college hospital blood bank
+                               B      District hospital blood bank
+                               C      Blood bank in the facility
+                               D      Relatives donating directly
+                               E      Red crescent
+                               X      Other sources
+Q2702                  Blood transfusion an obstetric context during p 3354    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q2710                  Blood screening                                 3355    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q2711                  Blood screening location                        3356    1    N    I    1    0   No   No
+                               1  Only in this facility
+                               2  Only at an external facility
+                               3  Both internally and externally
+Q2712                  Screening for specific diseases                 3357    1    N    I    5    0   No   No
+                               1  Always
+                               2  Sometimes
+                               3  Rarely
+                               4  No
+Q2713                  Send blood outside for screening                3362    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q2714A                 Blood sent out for specific diseases            3363    1    N    I    5    0   No   No
+                               1  Yes
+                               2  No
+Q2714B                 Record of outside test for specific diseases    3368    1    N    I    5    0   No   No
+                               1  Yes
+                               2  No
+Q2720                  Facility has run out of blood in past 3 months  3373    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q2721                  Refrigerator for storing blood                  3374    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q2722                  Refrigerator for storing blood observed         3375    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q2723                  Temperature of refrigerator for blood           3376    1    N    I    1    0   No   No
+                               1  Between +2 and +6 degrees
+                               2  Above +6 degrees
+                               3  Below +2 degrees
+                               4  Thermometer not functional
+Q2724                  Guidelines on appropriate use of blood & safe t 3377    1    N    I    1    0   No   No
+                               1  Yes
+                               2  No
+Q2725                  Guidelines on appropriate use of blood & safe t 3378    1    N    I    1    0   No   No
+                               1  Observed
+                               2  Reported not seen
+Q2725A                 Reagents available in facility                  3379    1    N    I    2    0   No   No
+                               1  Observed, at least 1 valid
+                               2  Observed available , none valid
+                               3  Reported available, not seen
+                               4  Not available today/Don't know
+                               5  Never available
+Q3000                  Facility cleanliness table                      3381    1    N    I   12    0   No   No
+                               1  Yes
+                               2  No
+ENDHH                  Ending hour                                     3393    2    N    I    1    0   No  Yes
+                               6:22  
+ENDMM                  Ending minute                                   3395    2    N    I    1    0   No  Yes
+                               0:59  
+--------------------------------------------------------------------------------------------------------------
+Relation Name         Primary               Linked by             Secondary             Linked by
+--------------------------------------------------------------------------------------------------------------
