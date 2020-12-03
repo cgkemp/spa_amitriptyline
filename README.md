@@ -1,2 +1,2 @@
-# spa_ami
+# spa_amitriptyline
 Service Provision Assessment Amitriptyline Analysis
