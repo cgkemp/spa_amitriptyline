@@ -12,16 +12,11 @@ congo <- readRDS("congo.Rds")
 haiti <- readRDS("haiti.Rds")
 malawi <- readRDS("malawi.Rds")
 nepal <- readRDS("nepal.Rds")
-senegal2012 <- readRDS("senegal2012.Rds")
-senegal2014 <- readRDS("senegal2014.Rds")
-senegal2015 <- readRDS("senegal2015.Rds")
-senegal2016 <- readRDS("senegal2016.Rds")
-senegal2017 <- readRDS("senegal2017.Rds")
-senegal2018 <- readRDS("senegal2018.Rds")
+senegal <- readRDS("senegal.Rds")
 tanzania <- readRDS("tanzania.Rds")
 
 
-df <- bind_rows(afghanistan, bangladesh, congo, haiti, malawi, nepal, senegal2012, senegal2014, senegal2015, senegal2016, senegal2017, senegal2017, senegal2018, tanzania)
+df <- bind_rows(afghanistan, bangladesh, congo, haiti, malawi, nepal, senegal, tanzania)
 
 df <- df %>%
   mutate("psychiatristsper100k" = case_when(

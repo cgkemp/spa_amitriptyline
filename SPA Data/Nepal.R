@@ -3,6 +3,17 @@ rm(list = ls())
 library("tidyverse")
 library("haven")
 library("dplyr")
+library(foreign)
+library(ggplot2)
+library(SpatialEpi)
+library(readstata13)
+library(xlsx)
+library(doBy)
+library(gdistance)
+library(abind)
+library(rje)
+library(malariaAtlas)
+library(raster)
 
 setwd("~/GitHub/spa_amitriptyline/SPA Data")
 
@@ -132,5 +143,40 @@ df_spatial <- read.dbf("Facility Inventory/nepal 2015/geo/NPGE71FLSR.dbf") %>%
 
 nepal <- nepal %>%
   left_join(df_spatial, by="facility_number")
+
+#Add travel time to central MOH
+shape <- shapefile("Facility Inventory/nepal 2015/geo/npl_admbnda_adm0_nd_20201117.shp")
+plot(shape, main="Shape for Clipping")
+friction <- malariaAtlas::getRaster(
+  surface = "A global friction surface enumerating land-based travel speed for a nominal year 2015",
+  shp = shape)
+malariaAtlas::autoplot_MAPraster(friction)
+T <- gdistance::transition(friction, function(x) 1/mean(x), 8) 
+T.GC <- gdistance::geoCorrection(T)    
+point.locations <- read.csv(file = "Facility Inventory/nepal 2015/geo/moh_location.csv")
+names(point.locations) <- c("X_COORD", "Y_COORD", "name")
+coordinates(point.locations) <- ~ X_COORD + Y_COORD
+proj4string(point.locations) <- proj4string(shape)
+points <- as.matrix(point.locations@coords)
+access.raster <- gdistance::accCost(T.GC, points)
+p <- malariaAtlas::autoplot_MAPraster(access.raster, 
+                                      shp_df=shape, printed=F)
+full_plot <- p[[1]] + geom_point(data=data.frame(point.locations@coords), 
+                                 aes(x=X_COORD, y=Y_COORD)) +
+  scale_fill_gradientn(colors = rev(rje::cubeHelix(gamma=1.0, 
+                                                   start=1.5, 
+                                                   r=-1.0, 
+                                                   hue=1.5, 
+                                                   n=16)), 
+                       name="Minutes \n of Travel") + 
+  ggtitle("Travel Time to MOH") +
+  theme(axis.text=element_blank(),
+        panel.border=element_rect(fill=NA, color="white"))
+print(full_plot)
+loc <- nepal[,c("longitude", "latitude")]
+travel_time <- raster::extract(access.raster, loc)
+nepal <- cbind(nepal, travel_time)
+nepal <- nepal %>%
+  mutate(travel_time = na_if(travel_time, Inf))
 
 saveRDS(nepal, "nepal.rds")
