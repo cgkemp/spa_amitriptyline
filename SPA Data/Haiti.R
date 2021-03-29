@@ -115,12 +115,12 @@ haiti <- df %>%
                 ownership = V008,
                 month = V081,
                 year = V082) %>%
-  select(province, district, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
+  dplyr::select(province, district, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
          total_staff, power, improved_water, improved_sanitation, email, computer, general_opd_private_room, ncd_private_room, country, worldbank)
 
 #Import SPA lat/long
 df_spatial <- read.dbf("Facility Inventory/ht 2017/geo/HTGE7BFLSR.dbf") %>%
-  select(facility_number = SPAFACID, province_name = ADM1NAME, district_name = SPAREGNA, facility_type_name = SPATYPEN, ownership_name = SPAMANGN, latitude = LATNUM, longitude = LONGNUM) %>%
+  dplyr::select(facility_number = SPAFACID, province_name = ADM1NAME, district_name = SPAREGNA, facility_type_name = SPATYPEN, ownership_name = SPAMANGN, latitude = LATNUM, longitude = LONGNUM) %>%
   mutate(latitude = na_if(latitude,0),
          longitude = na_if(longitude,0))
 
@@ -132,7 +132,8 @@ shape <- shapefile("Facility Inventory/ht 2017/geo/hti_admbnda_adm0_cnigs_201811
 plot(shape, main="Shape for Clipping")
 friction <- malariaAtlas::getRaster(
   surface = "A global friction surface enumerating land-based travel speed for a nominal year 2015",
-  shp = shape)
+  #shp = shape,
+  extent = matrix(c("-74.5", "18","-71.5", "20.5"), nrow = 2, ncol = 2, dimnames = list(c("x", "y"), c("min", "max"))))
 malariaAtlas::autoplot_MAPraster(friction)
 T <- gdistance::transition(friction, function(x) 1/mean(x), 8) 
 T.GC <- gdistance::geoCorrection(T)    
@@ -162,6 +163,65 @@ haiti <- cbind(haiti, travel_time)
 haiti <- haiti %>%
   mutate(travel_time = na_if(travel_time, Inf))
 
+
+#Import cluster lat/long
+
+df_clusterlatlong <- read.dbf("DHS/Haiti/HTGE71FL/HTGE71FL.dbf") %>%
+  dplyr::select(cluster_id = DHSCLUST, latitude = LATNUM, longitude = LONGNUM) %>%
+  filter(latitude != 0 & longitude != 0)
+
+#Import DHS data
+df_hh <- read_sas("DHS/Haiti/HTHR71SD/HTHR71FL.SAS7BDAT")
+
+#Collapse DHS SES data to cluster level
+
+ggplot(df_hh, aes(x=HV271)) + geom_histogram()
+df_clusterses <- summaryBy(HV271 ~ HV001, FUN=c(mean,median,sd), data=df_hh)
+ggplot(df_clusterses, aes(x=HV271.mean)) + geom_histogram()
+ggplot(df_clusterses, aes(x=HV271.mean, y=HV271.median)) + geom_point()
+names(df_clusterses) <- c("cluster_id", "hh.wealthindex.mean", "hh.wealthindex.median", "hh.wealthindex.sd")
+
+#Merge cluster lat/long and SES info
+
+df_cluster <- merge(df_clusterlatlong, df_clusterses, by="cluster_id")
+
+#Convert lat/long to coords in km
+
+df_cluster[, c("xvar", "yvar")] <- latlong2grid( 
+  df_cluster[, c("longitude", "latitude")]
+)
+
+haiti[, c("xvar", "yvar")] <- latlong2grid( 
+  haiti[, c("longitude", "latitude")]
+)
+
+#Minimum Euclidean distance function
+
+dist <- function(x1, y1, x2, y2) {
+  ((x1-x2)^2 + (y1-y2)^2)^0.5
+}
+
+dist.merge <- function(x, y, xeast, xnorth, yeast, ynorth){
+  tmp <- t(apply(x[,c(xeast, xnorth)], 1, function(x, y){
+    dists <- apply(y, 1, function(x, y) dist(x[2],
+                                             x[1], y[2], y[1]), x)
+    cbind(1:nrow(y), dists)[dists == min(dists),,drop=F][1,]
+  }
+  , y[,c(yeast, ynorth)]))
+  tmp <- cbind(x, min.dist=tmp[,2], y[tmp[,1],-match(c(yeast,
+                                                       ynorth), names(y))])
+  row.names(tmp) <- NULL
+  tmp
+}
+
+
+#Join data based on minimum Euclidean distance
+df_cluster <- df_cluster %>%
+  dplyr::select(-latitude, -longitude)
+haiti <- dist.merge(haiti, df_cluster, 'xvar', 'yvar', 'xvar', 'yvar') 
+
+ggplot(haiti, aes(x=min.dist)) + geom_histogram()
+ggplot(haiti, aes(x=travel_time, y=hh.wealthindex.mean)) + geom_point() + geom_smooth()
 
 saveRDS(haiti, "haiti.rds")
   

@@ -111,12 +111,12 @@ afghanistan <- df %>%
                 ownership = v008,
                 month = v081,
                 year = v082) %>%
-  select(province, district, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
+  dplyr::select(province, district, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
          total_staff, power, improved_water, improved_sanitation, email, computer, general_opd_private_room, ncd_private_room, country, worldbank)
 
 #Import SPA lat/long
 df_spatial <- read.dbf("Facility Inventory/Afghanistan 18-19 spa/geo/AFGE7ADTSR.dbf") %>%
-  select(facility_number = SPAFACID, province_name = ADM1NAME, district_name = SPAREGNA, facility_type_name = SPATYPEN, ownership_name = SPAMANGN, latitude = LATNUM, longitude = LONGNUM) %>%
+  dplyr::select(facility_number = SPAFACID, province_name = ADM1NAME, district_name = SPAREGNA, facility_type_name = SPATYPEN, ownership_name = SPAMANGN, latitude = LATNUM, longitude = LONGNUM) %>%
   mutate(latitude = na_if(latitude,0),
          longitude = na_if(longitude,0))
 
@@ -128,7 +128,8 @@ shape <- shapefile("Facility Inventory/Afghanistan 18-19 spa/geo/afg_admbnda_adm
 plot(shape, main="Shape for Clipping")
 friction <- malariaAtlas::getRaster(
   surface = "A global friction surface enumerating land-based travel speed for a nominal year 2015",
-  shp = shape)
+  #shp = shape,
+  extent = matrix(c("60", "29","76", "39"), nrow = 2, ncol = 2, dimnames = list(c("x", "y"), c("min", "max"))))
 malariaAtlas::autoplot_MAPraster(friction)
 T <- gdistance::transition(friction, function(x) 1/mean(x), 8) 
 T.GC <- gdistance::geoCorrection(T)    

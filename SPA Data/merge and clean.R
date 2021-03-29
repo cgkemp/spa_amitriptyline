@@ -80,12 +80,20 @@ mutate("mddpercentprevalence" = case_when(
  mutate(month=factor(month),
         year=factor(year),
         ownership=factor(ownership, levels = c(1,2,3,4), labels = c("Government/Public", "NGO/Private Not-For-Profit", "Private-For-Profit", "Mission/Faith-Based")),
-        facility_type=factor(facility_type),
+        facility_type=factor(facility_type, levels=c("hospital", "primary", "other")),
         country=factor(country),
         worldbank=factor(worldbank)) %>%
   mutate(staffcat = cut(total_staff, breaks=c(-Inf, 5, 10, 25, Inf)))
 
 df$ownership[df$ownership == 9] <- NA ##Fix 1 facility in DRC
+
+df <- df %>%
+  group_by(country) %>%
+  mutate(travel_quartile = ntile(travel_time, 4),
+         hhwealth_quartile = ntile(hh.wealthindex.mean, 4),
+         travel_decile = ntile(travel_time, 10),
+         hhwealth_decile = ntile(hh.wealthindex.mean, 10))
+  
 
 library(foreign)
 write.dta(df, "clean_stata.dta")

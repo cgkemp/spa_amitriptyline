@@ -14,6 +14,9 @@ library(abind)
 library(rje)
 library(malariaAtlas)
 library(raster)
+library(devtools)
+install_github("ropensci/rdhs")
+library(rdhs)
 
 setwd("~/GitHub/spa_amitriptyline/SPA Data")
 
@@ -120,7 +123,7 @@ bangladesh <- df %>%
                 ownership = MGA,
                 month = MONTH,
                 year = YEAR) %>%
-  select(province, district, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
+  dplyr::select(province, district, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
          total_staff, power, improved_water, improved_sanitation, email, computer, general_opd_private_room, ncd_private_room, country, worldbank)
 
 library(foreign)
@@ -128,7 +131,7 @@ library(SpatialEpi)
 
 #Import SPA lat/long
 df_spatial <- read.dbf("Facility Inventory/bangladesh 2017/geo/BDGE7IFLSR.dbf") %>%
-  select(facility_number = SPAFACID, province_name = ADM1NAME, district_name = SPAREGNA, facility_type_name = SPATYPEN, ownership_name = SPAMANGN, latitude = LATNUM, longitude = LONGNUM) %>%
+  dplyr::select(facility_number = SPAFACID, province_name = ADM1NAME, district_name = SPAREGNA, facility_type_name = SPATYPEN, ownership_name = SPAMANGN, latitude = LATNUM, longitude = LONGNUM) %>%
   mutate(latitude = na_if(latitude,0),
          longitude = na_if(longitude,0))
 
@@ -141,7 +144,8 @@ shape <- shapefile("Facility Inventory/bangladesh 2017/geo/bgd_admbnda_adm0_bbs_
 plot(shape, main="Shape for Clipping")
 friction <- malariaAtlas::getRaster(
   surface = "A global friction surface enumerating land-based travel speed for a nominal year 2015",
-  shp = shape)
+  #shp = shape,
+  extent = matrix(c("88", "20","93", "27"), nrow = 2, ncol = 2, dimnames = list(c("x", "y"), c("min", "max"))))
 malariaAtlas::autoplot_MAPraster(friction)
 T <- gdistance::transition(friction, function(x) 1/mean(x), 8) 
 T.GC <- gdistance::geoCorrection(T)    
@@ -174,22 +178,19 @@ bangladesh <- bangladesh %>%
 ###Link to DHS Sampling Clusters
 #Import cluster lat/long
 
-df_clusterlatlong <- read.dbf("DHS/BD_2014_DHS_12072020_1917_150437/BDGE71FL/BDGE71FL.dbf") %>%
+df_clusterlatlong <- read.dbf("DHS/Bangladesh/BDGE71FL/BDGE71FL.dbf") %>%
   dplyr::select(cluster_id = DHSCLUST, latitude = LATNUM, longitude = LONGNUM) %>%
   filter(latitude != 0 & longitude != 0)
 
-#Import DHS 2014 data
-
-####FIX BELOW HERE
-
-df_hh <- read.dta13("DHS/BD_2014_DHS_12072020_1917_150437/dhs2012household.dta")
+#Import DHS data
+df_hh <- read_sas("DHS/Bangladesh/BDHR7RSD/BDHR7RFL.SAS7BDAT")
 
 #Collapse DHS SES data to cluster level
 
-ggplot(df_hh, aes(x=hv271)) + geom_histogram()
-df_clusterses <- summaryBy(hv271 ~ hv001, FUN=c(mean,median,sd), data=df_hh)
-ggplot(df_clusterses, aes(x=hv271.mean)) + geom_histogram()
-ggplot(df_clusterses, aes(x=hv271.mean, y=hv271.median)) + geom_point()
+ggplot(df_hh, aes(x=HV271)) + geom_histogram()
+df_clusterses <- summaryBy(HV271 ~ HV001, FUN=c(mean,median,sd), data=df_hh)
+ggplot(df_clusterses, aes(x=HV271.mean)) + geom_histogram()
+ggplot(df_clusterses, aes(x=HV271.mean, y=HV271.median)) + geom_point()
 names(df_clusterses) <- c("cluster_id", "hh.wealthindex.mean", "hh.wealthindex.median", "hh.wealthindex.sd")
 
 #Merge cluster lat/long and SES info
@@ -202,17 +203,8 @@ df_cluster[, c("xvar", "yvar")] <- latlong2grid(
   df_cluster[, c("longitude", "latitude")]
 )
 
-#Import facility lat/long
-
-df_facility <- read.xlsx("Health_FacilityList_MMS_forChris_19jan2018.xlsx", 1)
-
-df_facility$f_latx[df_facility$f_latx == 0] = NA
-df_facility$f_longx[df_facility$f_longx == 0] = NA
-
-#Convert lat/long to coords in km
-
-df_facility[, c("xvar", "yvar")] <- latlong2grid( 
-  df_facility[, c("f_longx", "f_latx")]
+bangladesh[, c("xvar", "yvar")] <- latlong2grid( 
+  bangladesh[, c("longitude", "latitude")]
 )
 
 #Minimum Euclidean distance function
@@ -236,13 +228,12 @@ dist.merge <- function(x, y, xeast, xnorth, yeast, ynorth){
 
 
 #Join data based on minimum Euclidean distance
-df_facility <- dist.merge(df_facility, df_cluster, 'xvar', 'yvar', 'xvar', 'yvar')
+df_cluster <- df_cluster %>%
+  dplyr::select(-latitude, -longitude)
+bangladesh <- dist.merge(bangladesh, df_cluster, 'xvar', 'yvar', 'xvar', 'yvar') 
 
-qplot(x=min.dist, data=df_facility, geom="histogram")
+ggplot(bangladesh, aes(x=min.dist)) + geom_histogram()
 
-mean(na.omit(df_facility$min.dist))
-sd(na.omit(df_facility$min.dist))
 
-write.csv(df_facility, file="facilities-with-ses.csv")
-
+#Save data
 saveRDS(bangladesh, "bangladesh.rds")

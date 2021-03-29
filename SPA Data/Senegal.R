@@ -2,7 +2,6 @@ rm(list = ls())
 
 library("tidyverse")
 library("haven")
-library("dplyr")
 library(foreign)
 library(ggplot2)
 library(SpatialEpi)
@@ -109,7 +108,7 @@ senegal2012 <- df2012 %>%
                 ownership = V008,
                 month = V081,
                 year = V082) %>%
-  select(province, district, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
+  dplyr::select(province, district, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
          total_staff, power, improved_water, improved_sanitation, email, computer, general_opd_private_room, ncd_private_room, country, worldbank)
 
 library(foreign)
@@ -117,7 +116,7 @@ library(SpatialEpi)
 
 #Import SPA lat/long
 df_spatial <- read.dbf("Facility Inventory/SN_2012-13_SPA_07272020_336_150437/geo/SNGE6IFLSR.dbf") %>%
-  select(facility_number = SPAFACID, province_name = ADM1NAME, district_name = SPAREGNA, facility_type_name = SPATYPEN, ownership_name = SPAMANGN, latitude = LATNUM, longitude = LONGNUM) %>%
+  dplyr::select(facility_number = SPAFACID, province_name = ADM1NAME, district_name = SPAREGNA, facility_type_name = SPATYPEN, ownership_name = SPAMANGN, latitude = LATNUM, longitude = LONGNUM) %>%
   mutate(latitude = na_if(latitude,0),
          longitude = na_if(longitude,0))
 
@@ -212,12 +211,12 @@ FACTYPE== 4 ~ "other")) %>%
                 ownership = MGA,
                 month = MONTH,
                 year = YEAR) %>%
-  select(province, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
+  dplyr::select(province, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
          total_staff, power, improved_water, improved_sanitation, email, computer, general_opd_private_room, ncd_private_room, country, worldbank)
 
 #Import SPA lat/long
 df_spatial <- read.dbf("Facility Inventory/SN_2014_SPA_07272020_336_150437/geo/SNGE71FLSR.dbf") %>%
-  select(facility_number = SPAFACID, province_name = ADM1NAME, district_name = SPAREGNA, facility_type_name = SPATYPEN, ownership_name = SPAMANGN, latitude = LATNUM, longitude = LONGNUM) %>%
+  dplyr::select(facility_number = SPAFACID, province_name = ADM1NAME, district_name = SPAREGNA, facility_type_name = SPATYPEN, ownership_name = SPAMANGN, latitude = LATNUM, longitude = LONGNUM) %>%
   mutate(latitude = na_if(latitude,0),
          longitude = na_if(longitude,0))
 
@@ -312,12 +311,12 @@ senegal2015 <- df2015 %>%
                 ownership = MGA,
                 month = MONTH,
                 year = YEAR) %>%
-  select(province, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
+  dplyr::select(province, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
          total_staff, power, improved_water, improved_sanitation, email, computer, general_opd_private_room, ncd_private_room, country, worldbank)
 
 #Import SPA lat/long
 df_spatial <- read.dbf("Facility Inventory/SN_2015_SPA_07272020_336_150437/geo/SNGE7AFLSR.dbf") %>%
-  select(facility_number = SPAFACID, province_name = ADM1NAME, district_name = SPAREGNA, facility_type_name = SPATYPEN, ownership_name = SPAMANGN, latitude = LATNUM, longitude = LONGNUM) %>%
+  dplyr::select(facility_number = SPAFACID, province_name = ADM1NAME, district_name = SPAREGNA, facility_type_name = SPATYPEN, ownership_name = SPAMANGN, latitude = LATNUM, longitude = LONGNUM) %>%
   mutate(latitude = na_if(latitude,0),
          longitude = na_if(longitude,0))
 
@@ -411,12 +410,12 @@ senegal2016 <- df2016 %>%
                 ownership = MGA,
                 month = MONTH,
                 year = YEAR) %>%
-  select(province, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
+  dplyr::select(province, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
          total_staff, power, improved_water, improved_sanitation, email, computer, general_opd_private_room, ncd_private_room, country, worldbank)
 
 #Import SPA lat/long
 df_spatial <- read.dbf("Facility Inventory/SN_2016_SPA_07272020_337_150437/geo/SNGE7IFLSR.dbf") %>%
-  select(facility_number = SPAFACID, province_name = ADM1NAME, district_name = SPAREGNA, facility_type_name = SPATYPEN, ownership_name = SPAMANGN, latitude = LATNUM, longitude = LONGNUM) %>%
+  dplyr::select(facility_number = SPAFACID, province_name = ADM1NAME, district_name = SPAREGNA, facility_type_name = SPATYPEN, ownership_name = SPAMANGN, latitude = LATNUM, longitude = LONGNUM) %>%
   mutate(latitude = na_if(latitude,0),
          longitude = na_if(longitude,0))
 
@@ -510,7 +509,7 @@ senegal2017 <- df2017 %>%
                 ownership = MGA,
                 month = MONTH,
                 year = YEAR) %>%
-  select(province, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
+  dplyr::select(province, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
          total_staff, power, improved_water, improved_sanitation, email, computer, general_opd_private_room, ncd_private_room, country, worldbank)
 
 #NO GEO DATA
@@ -602,7 +601,7 @@ senegal2018 <- df2018 %>%
                 ownership = MGA,
                 month = MONTH,
                 year = YEAR) %>%
-  select(province, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
+  dplyr::select(province, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
          total_staff, power, improved_water, improved_sanitation, email, computer, general_opd_private_room, ncd_private_room, country, worldbank)
 
 #NO GEO DATA
@@ -694,19 +693,35 @@ senegal2019 <- df2019 %>%
                 ownership = MGA,
                 month = MONTH,
                 year = YEAR) %>%
-  select(province, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
+  dplyr::select(province, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
          total_staff, power, improved_water, improved_sanitation, email, computer, general_opd_private_room, ncd_private_room, country, worldbank)
 
 saveRDS(senegal2019, "senegal2019.rds")
 
-senegal <- bind_rows(senegal2012, senegal2014, senegal2015, senegal2016, senegal2017, senegal2017, senegal2018)
+#Not including Senegal 2017-2019 as no geographical data, no way to ID duplicate facilities)
+
+senegal <- bind_rows(senegal2012, senegal2014, senegal2015, senegal2016)
+
+#Remove duplicates from Senegal 2012-2016
+senegal <- senegal %>%
+  group_by(latitude, longitude) %>% 
+  mutate(dupe = n()>1) %>%
+  arrange(latitude, longitude) %>%
+  filter(row_number()==n() | is.na(latitude)) %>%
+  dplyr::select(-dupe)
+
+#Fix lat/long in 1 facility
+senegal <- senegal %>%
+  mutate(latitude= if_else(latitude== -17.376675, 14.780725, latitude),
+         longitude=if_else(longitude== 14.780725, -17.376675, longitude))
 
 #Add travel time to central MOH
 shape <- shapefile("Facility Inventory/SN_2012-13_SPA_07272020_336_150437/geo/sen_admbnda_adm0_1m_gov_ocha_20190426.shp")
 plot(shape, main="Shape for Clipping")
 friction <- malariaAtlas::getRaster(
   surface = "A global friction surface enumerating land-based travel speed for a nominal year 2015",
-  shp = shape)
+  #shp = shape,
+  extent = matrix(c("-18", "12","-11", "17"), nrow = 2, ncol = 2, dimnames = list(c("x", "y"), c("min", "max"))))
 malariaAtlas::autoplot_MAPraster(friction)
 T <- gdistance::transition(friction, function(x) 1/mean(x), 8) 
 T.GC <- gdistance::geoCorrection(T)    
@@ -732,8 +747,125 @@ full_plot <- p[[1]] + geom_point(data=data.frame(point.locations@coords),
 print(full_plot)
 loc <- senegal[,c("longitude", "latitude")]
 travel_time <- raster::extract(access.raster, loc)
-senegal <- cbind(senegal, travel_time)
+senegal <- cbind(senegal, travel_time=travel_time)
 senegal <- senegal %>%
   mutate(travel_time = na_if(travel_time, Inf))
+
+#2012
+#Import cluster lat/long
+df_clusterlatlong <- read.dbf("DHS/Senegal 2012/SNGE6AFL/SNGE6AFL.dbf") %>%
+  dplyr::select(cluster_id = DHSCLUST, latitude = LATNUM, longitude = LONGNUM) %>%
+  filter(latitude != 0 & longitude != 0)
+#Import DHS data
+df_hh <- read_sas("DHS/Senegal 2012/SNHR6DSD/SNHR6DFL.SAS7BDAT")
+#Collapse DHS SES data to cluster level
+ggplot(df_hh, aes(x=HV271)) + geom_histogram()
+df_clusterses <- summaryBy(HV271 ~ HV001, FUN=c(mean,median,sd), data=df_hh)
+ggplot(df_clusterses, aes(x=HV271.mean)) + geom_histogram()
+ggplot(df_clusterses, aes(x=HV271.mean, y=HV271.median)) + geom_point()
+names(df_clusterses) <- c("cluster_id", "hh.wealthindex.mean", "hh.wealthindex.median", "hh.wealthindex.sd")
+#Merge cluster lat/long and SES info
+df_cluster2012 <- merge(df_clusterlatlong, df_clusterses, by="cluster_id")
+
+#2014
+#Import cluster lat/long
+df_clusterlatlong <- read.dbf("DHS/Senegal 2014/SNGE71FL/SNGE71FL.dbf") %>%
+  dplyr::select(cluster_id = DHSCLUST, latitude = LATNUM, longitude = LONGNUM) %>%
+  filter(latitude != 0 & longitude != 0)
+#Import DHS data
+df_hh <- read_sas("DHS/Senegal 2014/SNHR70SD/SNHR70FL.SAS7BDAT")
+#Collapse DHS SES data to cluster level
+ggplot(df_hh, aes(x=HV271)) + geom_histogram()
+df_clusterses <- summaryBy(HV271 ~ HV001, FUN=c(mean,median,sd), data=df_hh)
+ggplot(df_clusterses, aes(x=HV271.mean)) + geom_histogram()
+ggplot(df_clusterses, aes(x=HV271.mean, y=HV271.median)) + geom_point()
+names(df_clusterses) <- c("cluster_id", "hh.wealthindex.mean", "hh.wealthindex.median", "hh.wealthindex.sd")
+#Merge cluster lat/long and SES info
+df_cluster2014 <- merge(df_clusterlatlong, df_clusterses, by="cluster_id")
+
+#2015
+#Import cluster lat/long
+df_clusterlatlong <- read.dbf("DHS/Senegal 2015/SNGE7AFL/SNGE7AFL.dbf") %>%
+  dplyr::select(cluster_id = DHSCLUST, latitude = LATNUM, longitude = LONGNUM) %>%
+  filter(latitude != 0 & longitude != 0)
+#Import DHS data
+df_hh <- read_sas("DHS/Senegal 2015/SNHR7HSD/SNHR7HFL.SAS7BDAT")
+#Collapse DHS SES data to cluster level
+ggplot(df_hh, aes(x=HV271)) + geom_histogram()
+df_clusterses <- summaryBy(HV271 ~ HV001, FUN=c(mean,median,sd), data=df_hh)
+ggplot(df_clusterses, aes(x=HV271.mean)) + geom_histogram()
+ggplot(df_clusterses, aes(x=HV271.mean, y=HV271.median)) + geom_point()
+names(df_clusterses) <- c("cluster_id", "hh.wealthindex.mean", "hh.wealthindex.median", "hh.wealthindex.sd")
+#Merge cluster lat/long and SES info
+df_cluster2015 <- merge(df_clusterlatlong, df_clusterses, by="cluster_id")
+
+#2016
+#Import cluster lat/long
+df_clusterlatlong <- read.dbf("DHS/Senegal 2016/SNGE7IFL/SNGE7IFL.dbf") %>%
+  dplyr::select(cluster_id = DHSCLUST, latitude = LATNUM, longitude = LONGNUM) %>%
+  filter(latitude != 0 & longitude != 0)
+#Import DHS data
+df_hh <- read_sas("DHS/Senegal 2016/SNHR7ISD/SNHR7IFL.SAS7BDAT")
+#Collapse DHS SES data to cluster level
+ggplot(df_hh, aes(x=HV271)) + geom_histogram()
+df_clusterses <- summaryBy(HV271 ~ HV001, FUN=c(mean,median,sd), data=df_hh)
+ggplot(df_clusterses, aes(x=HV271.mean)) + geom_histogram()
+ggplot(df_clusterses, aes(x=HV271.mean, y=HV271.median)) + geom_point()
+names(df_clusterses) <- c("cluster_id", "hh.wealthindex.mean", "hh.wealthindex.median", "hh.wealthindex.sd")
+#Merge cluster lat/long and SES info
+df_cluster2016 <- merge(df_clusterlatlong, df_clusterses, by="cluster_id")
+
+df_cluster <- bind_rows(df_cluster2012, df_cluster2014, df_cluster2015, df_cluster2016)
+df_cluster$cluster_id <- seq(1:825)
+library(ggmap)
+senegalmap <- get_stamenmap(bbox = c(left = -18, bottom = 12, 
+                                right = -11, top = 17),  
+                       zoom = 8,
+                       maptype = "toner-lite") 
+ggmap(senegalmap, extent='device') +
+  geom_point(data=df_cluster2012, aes(x=longitude, y=latitude, color="2012")) +
+  geom_point(data=df_cluster2014, aes(x=longitude, y=latitude, color="2014")) +
+  geom_point(data=df_cluster2015, aes(x=longitude, y=latitude, color="2015")) +
+  geom_point(data=df_cluster2016, aes(x=longitude, y=latitude, color="2016"))
+  
+
+#Convert lat/long to coords in km
+
+df_cluster[, c("xvar", "yvar")] <- latlong2grid( 
+  df_cluster[, c("longitude", "latitude")]
+)
+
+senegal[, c("xvar", "yvar")] <- latlong2grid( 
+  senegal[, c("longitude", "latitude")]
+)
+
+#Minimum Euclidean distance function
+
+dist <- function(x1, y1, x2, y2) {
+  ((x1-x2)^2 + (y1-y2)^2)^0.5
+}
+
+dist.merge <- function(x, y, xeast, xnorth, yeast, ynorth){
+  tmp <- t(apply(x[,c(xeast, xnorth)], 1, function(x, y){
+    dists <- apply(y, 1, function(x, y) dist(x[2],
+                                             x[1], y[2], y[1]), x)
+    cbind(1:nrow(y), dists)[dists == min(dists),,drop=F][1,]
+  }
+  , y[,c(yeast, ynorth)]))
+  tmp <- cbind(x, min.dist=tmp[,2], cluster_id=tmp[,1])
+  y <<- y
+  row.names(tmp) <- NULL
+  tmp
+}
+
+#Join data based on minimum Euclidean distance
+df_cluster <- df_cluster %>%
+  dplyr::select(-latitude, -longitude)
+senegal <- dist.merge(senegal, df_cluster, 'xvar', 'yvar', 'xvar', 'yvar') 
+senegal <- senegal %>%
+  left_join(dplyr::select(y, c(-xvar, -yvar)), by="cluster_id")
+ggplot(senegal, aes(x=min.dist)) + geom_histogram()
+ggplot(senegal, aes(x=travel_time, y=hh.wealthindex.mean)) + geom_point() + geom_smooth()
+
 
 saveRDS(senegal, "senegal.rds")
