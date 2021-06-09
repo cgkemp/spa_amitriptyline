@@ -1,0 +1,2309 @@
+                                                   BDHR7RFL                                                   
+                                                BDHR7RFL_DICT                                                 
+
+                                        BDHR7RFL.DCF                                                          
+                                    Last Modified:  8/19/2020  9:24:39 AM                                     
+
+--------------------------------------------------------------------------------------------------------------
+Level Name                    Level Label                                                  Type            Rec
+  Record Name                   Record Label                                              Value  Req  Max  Len
+--------------------------------------------------------------------------------------------------------------
+HOUSEHOLD                     HOUSEHOLD                                                                       
+  RECORD1                       RECORD1                                                          Yes    1  6994
+Level: HOUSEHOLD                                       Record: RECORD1
+--------------------------------------------------------------------------------------------------------------
+                                                                                 Data Item            Dec Zero
+Item Name              Item Label                                     Start  Len Type Type  Occ  Dec Char Fill
+--------------------------------------------------------------------------------------------------------------
+HHID              (id) Case Identification                                1   12   AN    I    1    0   No   No
+                         (record type)                                    0    0   AN    I    1    0   No   No
+HV000                  Country code and phase                            13    3   AN    I    1    0   No   No
+HV001                  Cluster number                                    16    6    N    I    1    0   No   No
+HV002                  Household number                                  22    6    N    I    1    0   No   No
+HV003                  Respondent's line number (answering Household q   28    3    N    I    1    0   No   No
+                               0      Incomplete household
+                               1:999  
+HV004                  Ultimate area unit                                31    4    N    I    1    0   No   No
+HV005                  Household sample weight (6 decimals)              35    8    N    I    1    0   No   No
+HV006                  Month of interview                                43    2    N    I    1    0   No   No
+                               1:12  
+HV007                  Year of interview                                 45    4    N    I    1    0   No   No
+                               2017:2018  
+HV008                  Date of interview (CMC)                           49    4    N    I    1    0   No   No
+HV008A                 Date of interview Century Day Code (CDC)          53    5    N    I    1    0   No   No
+HV009                  Number of household members                       58    2    N    I    1    0   No   No
+                               0:90  
+HV010                  Number of eligible women in household             60    2    N    I    1    0   No   No
+                               0:20  
+HV011                  NA - Number of eligible men in household          62    2    N    I    1    0   No   No
+                               0:20  
+HV012                  Number of de jure members                         64    2    N    I    1    0   No   No
+                               0:90  
+HV013                  Number of de facto members                        66    2    N    I    1    0   No   No
+                               0:90  
+HV014                  Number of children 5 and under (de jure)          68    2    N    I    1    0   No   No
+                               0:20  
+HV015                  Result of household interview                     70    1    N    I    1    0   No   No
+                               1  Completed
+                               2  No Household member/no competent member at home
+                               3  Entire Household absent for extended period of time
+                               4  Postponed
+                               5  Refused
+                               6  Dwelling vacant or address not a dwelling
+                               7  Dwelling destroyed
+                               8  Dwelling not found
+                               9  Other
+HV016                  Day of interview                                  71    2    N    I    1    0   No   No
+                               1:31  
+HV017                  Number of visits                                  73    1    N    I    1    0   No   No
+                               1:8  
+                           (m) 9    Missing
+HV018                  Interviewer identification                        74    5    N    I    1    0   No   No
+HV019                  Keyer identification                              79    3    N    I    1    0   No   No
+HV020                  Ever-married sample                               82    1    N    I    1    0   No   No
+                               0  All woman sample
+                               1  Ever married sample
+HV021                  Primary sampling unit                             83    4    N    I    1    0   No   No
+HV022                  Sample strata for sampling errors                 87    4    N    I    1    0   No   No
+                               1   Barisal - City corporation
+                               2   Barisal - Other urban
+                               3   Barisal - Rural
+                               4   Chittagong - City corporation
+                               5   Chittagong - Other urban
+                               6   Chittagong - Rural
+                               7   Dhaka - City corporation
+                               8   Dhaka - Other urban
+                               9   Dhaka - Rural
+                               10  Khulna - City corporation
+                               11  Khulna - Other urban
+                               12  Khulna - Rural
+                               13  Mymensingh - Other urban
+                               14  Mymensingh - Rural
+                               15  Rajshahi - City corporation
+                               16  Rajshahi - Other urban
+                               17  Rajshahi - Rural
+                               18  Rangpur - Other urban
+                               19  Rangpur - Rural
+                               20  Sylhet - City corporation
+                               21  Sylhet - Other urban
+                               22  Sylhet - Rural
+HV023                  Stratification used in sample design              91    2    N    I    1    0   No   No
+                               1   Barisal - City corporation
+                               2   Barisal - Other urban
+                               3   Barisal - Rural
+                               4   Chittagong - City corporation
+                               5   Chittagong - Other urban
+                               6   Chittagong - Rural
+                               7   Dhaka - City corporation
+                               8   Dhaka - Other urban
+                               9   Dhaka - Rural
+                               10  Khulna - City corporation
+                               11  Khulna - Other urban
+                               12  Khulna - Rural
+                               13  Mymensingh - Other urban
+                               14  Mymensingh - Rural
+                               15  Rajshahi - City corporation
+                               16  Rajshahi - Other urban
+                               17  Rajshahi - Rural
+                               18  Rangpur - Other urban
+                               19  Rangpur - Rural
+                               20  Sylhet - City corporation
+                               21  Sylhet - Other urban
+                               22  Sylhet - Rural
+HV024                  Division                                          93    2    N    I    1    0   No   No
+                               1  Barisal
+                               2  Chittagong
+                               3  Dhaka
+                               4  Khulna
+                               5  Mymensingh
+                               6  Rajshahi
+                               7  Rangpur
+                               8  Sylhet
+HV025                  Type of place of residence                        95    1    N    I    1    0   No   No
+                               1  Urban
+                               2  Rural
+HV026                  NA - Place of residence                           96    1    N    I    1    0   No   No
+                               0  Capital, large city
+                               1  Small city
+                               2  Town
+                               3  Countryside
+                           (m) 9  Missing
+HV027                  Household selected for male interview             97    1    N    I    1    0   No   No
+                               0  Not selected
+                               1  Men's survey
+                               2  Husband's survey
+HV028                  Household weight for male subsample (6 decimals   98    8    N    I    1    0   No   No
+HV030                  Field supervisor                                 106    5    N    I    1    0   No   No
+HV031                  Field editor                                     111    5    N    I    1    0   No   No
+HV032                  Office editor                                    116    3    N    I    1    0   No   No
+HV035                  Number of eligible children for height and weig  119    2    N    I    1    0   No   No
+                               0:20  
+HV040                  Cluster altitude in meters                       121    4    N    I    1    0   No   No
+                           (m) 9999  Missing
+HV041                  Total adults measured                            125    2    N    I    1    0   No   No
+                               0:20  
+HV042                  Household selected for hemoglobin                127    1    N    I    1    0   No   No
+                               0  Not selected
+                               1  Selected
+HV044                  NA - Household selected for Domestic Violence m  128    1    N    I    1    0   No   No
+                               0  Household not selected
+                               1  Household selected
+                          (na)    Not applicable
+HV045A                 NA - Language of questionnaire                   129    3    N    I    1    0   No   No
+                               1  English
+                               2  Language 2
+                               3  Language 3
+                               4  Language 4
+                               5  Language 5
+                               6  Language 6
+HV045B                 NA - Language of interview                       132    3    N    I    1    0   No   No
+                               1  English
+                               2  Language 2
+                               3  Language 3
+                               4  Language 4
+                               5  Language 5
+                               6  Language 6
+HV045C                 NA - Native language of respondent               135    3    N    I    1    0   No   No
+                               1  English
+                               2  Language 2
+                               3  Language 3
+                               4  Language 4
+                               5  Language 5
+                               6  Language 6
+HV046                  NA - Translator used                             138    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+HV801                  Time interview started (hhmm - 24 hour clock)    139    4    N    I    1    0   No   No
+                               500:2330  
+                           (m) 9999      Missing
+HV802                  Time interview ended (hhmm - 24 hour clock)      143    4    N    I    1    0   No   No
+                               500:2330  
+                           (m) 9999      Missing
+HV803                  Length of interview in minutes                   147    2    N    I    1    0   No   No
+                               0:94  
+                               95    95+
+                               96    2+ visits
+                               97    Inconsistent
+                           (m) 99    Missing
+HV804                  Number of visits for biomarker                   149    1    N    I    1    0   No   No
+                               1:8  
+                           (m) 9    Missing
+HV807D                 Day of biomarker visit                           150    2    N    I    1    0   No   No
+                               1:31  
+HV807M                 Month of biomarker visit                         152    2    N    I    1    0   No   No
+                               1:12  
+HV807Y                 Year of biomarker visit                          154    4    N    I    1    0   No   No
+                               2017:2018  
+HV807C                 Date of biomarker (CMC)                          158    4    N    I    1    0   No   No
+HV807A                 Date of biomarker Century Day Code (CDC)         162    5    N    I    1    0   No   No
+HV201                  Source of drinking water                         167    2    N    I    1    0   No   No
+                               10  PIPED WATER
+                               11  Piped into dwelling
+                               12  Piped to yard/plot
+                               13  Piped to neighbor
+                               14  Public tap/standpipe
+                               20  TUBE WELL WATER
+                               21  Tube well or borehole
+                               30  DUG WELL (OPEN/PROTECTED)
+                               31  Protected well
+                               32  Unprotected well
+                               40  SURFACE FROM SPRING
+                               41  Protected spring
+                               42  Unprotected spring
+                               43  River/dam/lake/ponds/stream/canal/irrigation channel
+                               51  Rainwater
+                               61  Tanker truck
+                               62  Cart with small tank
+                               71  Bottled water
+                               96  Other
+                           (m) 99  Missing
+HV202                  NA - Source of non-drinking water                169    2    N    I    1    0   No   No
+                               10  PIPED WATER
+                               11  Piped into dwelling
+                               12  Piped to yard/plot
+                               13  Piped to neighbor
+                               14  Public tap/standpipe
+                               20  TUBE WELL WATER
+                               21  Tube well or borehole
+                               30  DUG WELL (OPEN/PROTECTED)
+                               31  Protected well
+                               32  Unprotected well
+                               40  SURFACE FROM SPRING
+                               41  Protected spring
+                               42  Unprotected spring
+                               43  River/dam/lake/ponds/stream/canal/irrigation channel
+                               51  Rainwater
+                               61  Tanker truck
+                               62  Cart with small tank
+                               71  Bottled water
+                               96  Other
+                           (m) 99  Missing
+HV201A                 NA - Water not available for at least a day las  171    1    N    I    1    0   No   No
+                               0  No, not interrupted for a full day
+                               1  Yes, interrupted for a full day or more
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV204                  NA - Time to get to water source (minutes)       172    3    N    I    1    0   No   No
+                               0:500  
+                               996    On premises
+                               998    Don't know
+                           (m) 999    Missing
+                          (na)        Not applicable
+HV205                  Type of toilet facility                          175    2    N    I    1    0   No   No
+                               10  FLUSH TOILET
+                               11  Flush to piped sewer system
+                               12  Flush to septic tank
+                               13  Flush to pit latrine
+                               14  Flush to somewhere else
+                               15  Flush, don't know where
+                               20  PIT TOILET LATRINE
+                               21  Ventilated Improved Pit latrine (VIP)
+                               22  Pit latrine with slab
+                               23  Pit latrine without slab/open pit
+                               30  NO FACILITY
+                               31  No facility/bush/field
+                               41  Composting toilet
+                               42  Bucket toilet
+                               43  Hanging toilet/latrine
+                               96  Other
+                           (m) 99  Missing
+HV206                  Has electricity                                  177    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+HV207                  Has radio                                        178    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+HV208                  Has television                                   179    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+HV209                  Has refrigerator                                 180    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+HV210                  Has bicycle                                      181    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+HV211                  Has motorcycle/scooter                           182    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+HV212                  Has car/truck/minibus                            183    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+HV213                  Main floor material                              184    2    N    I    1    0   No   No
+                               10  NATURAL
+                               11  Earth/sand
+                               12  Dung
+                               20  RUDIMENTARY
+                               21  Wood planks
+                               22  Palm/bamboo
+                               30  FINISHED
+                               31  Parquet or polished wood
+                               32  Vinyl or asphalt strips
+                               33  Ceramic tiles
+                               34  Cement
+                               35  Carpet
+                               96  Other
+                           (m) 99  Missing
+HV214                  Main wall material                               186    2    N    I    1    0   No   No
+                               10  NATURAL
+                               11  No walls
+                               12  Cane/palm/trunks
+                               13  Dirt
+                               20  RUDIMENTARY
+                               21  Bamboo with mud
+                               22  Stone with mud
+                               23  Uncovered adobe
+                               24  Plywood
+                               25  Cardboard
+                               26  Reused wood
+                               30  FINISHED
+                               31  Tin
+                               32  Cement
+                               33  Stone with lime/cement
+                               34  Bricks
+                               35  Cement blocks
+                               36  Wood planks/shingles
+                               96  Other
+                           (m) 99  Missing
+HV215                  Main roof material                               188    2    N    I    1    0   No   No
+                               10  NATURAL
+                               11  No roof
+                               12  Thatch/palm leaf
+                               13  Sod
+                               20  RUDIMENTARY
+                               21  Rustic mat
+                               22  Palm/bamboo
+                               23  Wood planks
+                               24  Cardboard
+                               30  FINISHED
+                               31  Metal
+                               32  Wood
+                               33  Calamine/cement fiber
+                               34  Ceramic tiles
+                               35  Cement
+                               36  Roofing shingles
+                               96  Other
+                           (m) 99  Missing
+HV216                  Number of rooms used for sleeping                190    2    N    I    1    0   No   No
+                               0:24  
+                           (m) 99    Missing
+HV217                  Relationship structure                           192    1    N    I    1    0   No   No
+                               0  No adults
+                               1  One adult
+                               2  Two adults, opposite sex
+                               3  Two adults, same sex
+                               4  Three+ related adults
+                               5  Unrelated adults
+HV218                  Line number of head of household                 193    2    N    I    1    0   No   No
+                               1:90  
+HV219                  Sex of head of household                         195    1    N    I    1    0   No   No
+                               1  Male
+                               2  Female
+                           (m) 9  Missing
+HV220                  Age of head of household                         196    2    N    I    1    0   No   No
+                               0:96  
+                               97    97+
+                               98    Don't know
+                           (m) 99    Missing
+HV221                  Has telephone (land-line)                        198    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+HV225                  Share toilet with other households               199    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+HV226                  Type of cooking fuel                             200    2    N    I    1    0   No   No
+                               1   Electricity
+                               2   LPG
+                               3   Natural gas
+                               4   Biogas
+                               5   Kerosene
+                               6   Coal, lignite
+                               7   Charcoal
+                               8   Wood
+                               9   Straw/shrubs/grass
+                               10  Agricultural crop
+                               11  Animal dung
+                               95  No food cooked in house
+                               96  Other
+                           (m) 99  Missing
+HV227                  NA - Has mosquito bed net for sleeping           202    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+HV228                  NA - Children under 5 slept under mosquito bed   203    1    N    I    1    0   No   No
+                               0  No
+                               1  All children
+                               2  Some children
+                               3  No net in household
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV230A                 Place where household members wash their hands   204    1    N    I    1    0   No   No
+                               1  Observed, fixed place
+                               2  Observed, mobile place
+                               3  Not observed: not in dwelling
+                               4  Not observed: no permission to see
+                               5  Not observed: other reason
+                           (m) 9  Missing
+HV230B                 Presence of water at hand washing place          205    1    N    I    1    0   No   No
+                               0  Water not available
+                               1  Water is available
+                           (m) 9  Missing
+HV232                  Items present: Soap or detergent                 206    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+HV232B                 Items present: Ash, mud, sand                    207    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+HV232C                 NA - Items present: CS                           208    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+HV232D                 NA - Items present: CS                           209    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+HV232E                 NA - Items present: CS                           210    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+HV232Y                 Items present: None                              211    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: no cleansing agent observed
+                           (m) 9  Missing
+                          (na)    NotAppl
+HV234                  NA - Result of salt test for iodine (PPM)        212    3    N    I    1    0   No   No
+                               0    0 PPM (no iodine)
+                               7    Below 15 PPM
+                               15   15 PPM and above
+                               30   30 PPM
+                               994  Salt not tested
+                               995  No salt in household
+                           (m) 999  Missing
+HV234A                 NA - Result of salt test for iodine              215    1    N    I    1    0   No   No
+                               0  No iodine
+                               1  Iodine present
+                               3  No salt in household
+                               6  Salt not tested
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV235                  Location of source for water                     216    1    N    I    1    0   No   No
+                               1  In own dwelling
+                               2  In own yard/plot
+                               3  Elsewhere
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV236                  NA - Person fetching water                       217    1    N    I    1    0   No   No
+                               1  Adult woman
+                               2  Adult man
+                               3  Female child under 15 years old
+                               4  Male child under 15 years old
+                               6  Other
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV237                  Anything done to water to make safe to drink     218    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV237A                 Water usually treated by: boil                   219    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV237B                 Water usually treated by: add bleach/chlorine    220    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV237C                 Water usually treated by: strain through a clot  221    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV237D                 Water usually treated by: use water filter       222    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV237E                 Water usually treated by: solar disinfection     223    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV237F                 Water usually treated by: let it stand and sett  224    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV237G                 NA - Water usually treated by: CS                225    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV237H                 NA - Water usually treated by: CS                226    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV237I                 NA - Water usually treated by: CS                227    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV237J                 NA - Water usually treated by: CS                228    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV237K                 NA - Water usually treated by: CS                229    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV237X                 Water usually treated by: other                  230    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV237Z                 Water usually treated by: don't know             231    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: don't know what is done to water
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV238                  Number of households sharing toilet              232    2    N    I    1    0   No   No
+                               2:9  
+                               95   10 or more households
+                               98   Don't know
+                           (m) 99   Missing
+                          (na)      Not applicable
+HV238A                 Location of toilet facility                      234    1    N    I    1    0   No   No
+                               1  In own dwelling
+                               2  In own yard/plot
+                               3  Elsewhere
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV239                  NA - Food cooked on stove or open fire           235    1    N    I    1    0   No   No
+                               1  Open fire
+                               2  Open stove
+                               3  Closed stove with chimney
+                               6  Other
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV240                  NA - Household has a chimney, hood or neither    236    1    N    I    1    0   No   No
+                               0  Neither chimney or hood
+                               1  Chimney
+                               2  Hood
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV241                  Food cooked in the house/ separate building/ ou  237    1    N    I    1    0   No   No
+                               1  In the house
+                               2  In a separate building
+                               3  Outdoors
+                               6  Other
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV242                  Household has separate room used as kitchen      238    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV243A                 Has mobile telephone                             239    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+HV243B                 NA - Has watch                                   240    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+HV243C                 NA - Has animal-drawn cart                       241    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+HV243D                 Has boat with a motor                            242    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+HV243E                 Has a computer                                   243    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+HV244                  Owns land usable for agriculture                 244    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+HV245                  Hectares of agricultural land (1 decimal)        245    3    N    I    1    0   No   No
+                               0:949  
+                               950    95 or more
+                               998    Unknown
+                           (m) 999    Missing
+                          (na)        Not applicable
+HV246                  Owns livestock, herds or farm animals            248    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+HV246A                 NA - Owns cattle                                 249    2    N    I    1    0   No   No
+                               0     None
+                               1:94  
+                               95    95 or more
+                               98    Unknown
+                           (m) 99    Missing
+                          (na)       Not applicable
+HV246B                 Owns cows/ bulls                                 251    2    N    I    1    0   No   No
+                               0     None
+                               1:94  
+                               95    95 or more
+                               98    Unknown
+                           (m) 99    Missing
+                          (na)       Not applicable
+HV246C                 NA - Owns horses/ donkeys/ mules                 253    2    N    I    1    0   No   No
+                               0     None
+                               1:94  
+                               95    95 or more
+                               98    Unknown
+                           (m) 99    Missing
+                          (na)       Not applicable
+HV246D                 NA - Owns goats                                  255    2    N    I    1    0   No   No
+                               0     None
+                               1:94  
+                               95    95 or more
+                               98    Unknown
+                           (m) 99    Missing
+                          (na)       Not applicable
+HV246E                 NA - Owns sheep                                  257    2    N    I    1    0   No   No
+                               0     None
+                               1:94  
+                               95    95 or more
+                               98    Unknown
+                           (m) 99    Missing
+                          (na)       Not applicable
+HV246F                 Owns chickens/poultry                            259    2    N    I    1    0   No   No
+                               0     None
+                               1:94  
+                               95    95 or more
+                               98    Unknown
+                           (m) 99    Missing
+                          (na)       Not applicable
+HV246G                 Owns buffalo                                     261    2    N    I    1    0   No   No
+                               0     None
+                               1:94  
+                               95    95 or more
+                               98    Unknown
+                           (m) 99    Missing
+                          (na)       Not applicable
+HV246H                 Owns other farm animals                          263    2    N    I    1    0   No   No
+                               0     None
+                               1:94  
+                               95    95 or more
+                               98    Unknown
+                           (m) 99    Missing
+                          (na)       Not applicable
+HV246I                 Owns goat/sheep                                  265    2    N    I    1    0   No   No
+                               0     None
+                               1:94  
+                               95    95 or more
+                               98    Unknown
+                           (m) 99    Missing
+                          (na)       Not applicable
+HV246J                 NA - Owns CS                                     267    2    N    I    1    0   No   No
+                               0     None
+                               1:94  
+                               95    95 or more
+                               98    Unknown
+                           (m) 99    Missing
+                          (na)       Not applicable
+HV246K                 NA - Owns CS                                     269    2    N    I    1    0   No   No
+                               0     None
+                               1:94  
+                               95    95 or more
+                               98    Unknown
+                           (m) 99    Missing
+                          (na)       Not applicable
+HV247                  Has bank account                                 271    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+HV252                  NA - Frequency household members smoke inside t  272    1    N    I    1    0   No   No
+                               0  Never
+                               1  Daily
+                               2  Weekly
+                               3  Monthly
+                               4  Less than once a month
+                           (m) 9  Missing
+HV253                  NA - Has dwelling been sprayed against mosquito  273    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV253A                 NA - Dwelling sprayed by: government worker/pro  274    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV253B                 NA - Dwelling sprayed by: private company        275    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV253C                 NA - Dwelling sprayed by: NGO                    276    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV253D                 NA - Dwelling sprayed by: CS                     277    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV253E                 NA - Dwelling sprayed by: CS                     278    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV253F                 NA - Dwelling sprayed by: CS                     279    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV253G                 NA - Dwelling sprayed by: CS                     280    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV253H                 NA - Dwelling sprayed by: CS                     281    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV253X                 NA - Dwelling sprayed by: other                  282    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV253Z                 NA - Dwelling sprayed by: don't know             283    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: don't know who sprayed the dwelling
+                               8  Don't know if it was sprayed
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV270                  Wealth index combined                            284    1    N    I    1    0   No   No
+                               1  Poorest
+                               2  Poorer
+                               3  Middle
+                               4  Richer
+                               5  Richest
+HV271                  Wealth index factor score combined (5 decimals)  285    8    N    I    1    0   No   No
+HV270A                 Wealth index for urban/rural                     293    1    N    I    1    0   No   No
+                               1  Poorest
+                               2  Poorer
+                               3  Middle
+                               4  Richer
+                               5  Richest
+HV271A                 Wealth index factor score for urban/rural (5 de  294    8    N    I    1    0   No   No
+HML1                   NA - Number of mosquito bed nets                 302    2    N    I    1    0   No   No
+                               0:97  
+                               98    Don't know
+                           (m) 99    Missing
+                          (na)       Not applicable
+HML1A                  NA - Number of mosquito bed nets with specific   304    1    N    I    1    0   No   No
+                               0:7  
+                          (na)      Not applicable
+HML2                   NA - Number of children under mosquito bed net   305    2    N    I    1    0   No   No
+                               0:50  
+                           (m) 99    Missing
+                          (na)       Not applicable
+SHLOCAL                Locality                                         307    1    N    I    1    0   No   No
+                               1  Rural
+                               2  City Corportation
+                               3  Other Urban
+SHELIG                 Household eligible for glucose/BP                308    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+SHADULT                Total adults aged 18+                            309    2    N    I    1    0   No   No
+                               0:25  
+                          (na)       Not applicable
+SHLOCAL2               Locality-original                                311    1    N    I    1    0   No   No
+                               1  Rural
+                               2  City Corportation
+                               3  Other Urban
+SH119                  Owns a homestead                                 312    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SH121B                 Has solar electricity                            313    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SH121I                 Has almirah/warddrobe                            314    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SH121J                 Has electric fan                                 315    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SH121K                 Has DVD/CD player                                316    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SH121L                 Has water pump                                   317    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SH121M                 Has IPS/generator                                318    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SH121N                 Has air conditioner                              319    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SH122B                 Has autobike/tempo/CNG                           320    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SH122C                 Has rickshaw/van                                 321    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SH122G                 Has canoe/boat without motor                     322    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SH125                  Observed place for handwashing                   323    1    N    I    1    0   No   No
+                               1  Observed, fixed place within dwelling
+                               2  Observed, fixed place not within dwelling
+                               3  Observed, no fixed place
+                               4  Not observed, not in dwelling/yard/plot
+                               5  Not observed, no permission to see
+                               7  Not observed, other reason
+                           (m) 9  Missing
+                          (na)    Not applicable
+SH127A                 Observe type of place for hand washing           324    1    N    I    1    0   No   No
+                               1  Covered space (inside dwelling)
+                               2  Open space, not shared
+                               3  Open space, shared
+                           (m) 9  Missing
+                          (na)    Not applicable
+HVIDX                  Line number                                      325    2    N    I   30    0   No   No
+                               1:90  
+HV101                  Relationship to head                             385    2    N    I   30    0   No   No
+                               1   Head
+                               2   Wife or husband
+                               3   Son/daughter
+                               4   Son/daughter-in-law
+                               5   Grandchild
+                               6   Parent
+                               7   Parent-in-law
+                               8   Brother/sister
+                               9   Co-spouse
+                               10  Other relative
+                               11  Adopted/foster child
+                               12  Not related
+                               13  Niece/nephew by blood
+                               14  Niece/nephew by marriage
+                               98  Don't know
+                           (m) 99  Missing
+HV102                  Usual resident                                   445    1    N    I   30    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+HV103                  Slept last night                                 475    1    N    I   30    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+HV104                  Sex of household member                          505    1    N    I   30    0   No   No
+                               1  Male
+                               2  Female
+                           (m) 9  Missing
+HV105                  Age of household members                         535    2    N    I   30    0   No   No
+                               0:94  
+                               95    95+
+                               98    Don't know
+                           (m) 99    Missing
+HV106                  Highest educational level attained               595    1    N    I   30    0   No   No
+                               0  No education, preschool
+                               1  Primary
+                               2  Secondary
+                               3  Higher
+                               8  Don't know
+                           (m) 9  Missing
+HV107                  Highest year of education completed              625    2    N    I   30    0   No   No
+                               0:20  
+                               98    Don't know
+                           (m) 99    Missing
+                          (na)       Not applicable
+HV108                  Education completed in single years              685    2    N    I   30    0   No   No
+                               0:25  
+                               97    Inconsistent
+                               98    Don't know
+                           (m) 99    Missing
+HV109                  Educational attainment                           745    1    N    I   30    0   No   No
+                               0  No education
+                               1  Incomplete primary
+                               2  Complete primary
+                               3  Incomplete secondary
+                               4  Complete secondary
+                               5  Higher
+                               8  Don't know
+                           (m) 9  Missing
+HV110                  NA - Member still in school                      775    1    N    I   30    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+HV111                  NA - Mother alive                                805    1    N    I   30    0   No   No
+                               0  No
+                               1  Yes
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV112                  NA - Mother's line number                        835    2    N    I   30    0   No   No
+                               0     Mother not in household
+                               1:90  
+                           (m) 99    Missing
+                          (na)       Not applicable
+HV113                  NA - Father alive                                895    1    N    I   30    0   No   No
+                               0  No
+                               1  Yes
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV114                  NA - Father's line number                        925    2    N    I   30    0   No   No
+                               0     Father not in household
+                               1:90  
+                           (m) 99    Missing
+                          (na)       Not applicable
+HV115                  Current marital status                           985    1    N    I   30    0   No   No
+                               0  Never married
+                               1  Married
+                               2  Living together
+                               3  Widowed
+                               4  Divorced
+                               5  Not living together
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV116                  Currently, formerly, never married              1015    1    N    I   30    0   No   No
+                               0  Never married
+                               1  Currently married
+                               2  Formerly/ever married
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV117                  Eligibility for female interview                1045    1    N    I   30    0   No   No
+                               0  Not eligible
+                               1  Eligible
+                          (na)    Not applicable
+HV118                  NA - Eligibility for male interview             1075    1    N    I   30    0   No   No
+                               0  Not eligible
+                               1  Eligible
+                          (na)    Not applicable
+HV120                  Children eligibility for height/weight and hemo 1105    1    N    I   30    0   No   No
+                               0  Not eligible
+                               1  Eligible
+                          (na)    Not applicable
+HV121                  Member attended school during current school ye 1135    1    N    I   30    0   No   No
+                               0  No
+                               1  Currently attending
+                               2  Attended at some time
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV122                  Educational level during current school year    1165    1    N    I   30    0   No   No
+                               0  No education, preschool
+                               1  Primary
+                               2  Secondary
+                               3  Higher
+                               8  Don't know
+                           (m) 9  Missing
+HV123                  Grade of education during current school year   1195    2    N    I   30    0   No   No
+                               0:20  
+                               98    Don't know
+                           (m) 99    Missing
+                          (na)       Not applicable
+HV124                  Education in single years - current school year 1255    2    N    I   30    0   No   No
+                               0:20  
+                               97    Inconsistent
+                               98    Don't know
+                           (m) 99    Missing
+HV125                  NA - Member attended school during previous sch 1315    1    N    I   30    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+HV126                  NA - Educational level during previous school y 1345    1    N    I   30    0   No   No
+                               0  No education, preschool
+                               1  Primary
+                               2  Secondary
+                               3  Higher
+                               8  Don't know
+                           (m) 9  Missing
+HV127                  NA - Grade of education during previous school  1375    2    N    I   30    0   No   No
+                               0:20  
+                               98    Don't know
+                           (m) 99    Missing
+                          (na)       Not applicable
+HV128                  NA - Education in single years - previous schoo 1435    2    N    I   30    0   No   No
+                               0:20  
+                               97    Inconsistent
+                               98    Don't know
+                           (m) 99    Missing
+HV129                  NA - School attendance status                   1495    1    N    I   30    0   No   No
+                               0  Never attended
+                               1  Entered school
+                               2  Advanced
+                               3  Repeating
+                               4  Dropout
+                               5  Left school 2+ years ago
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HV140                  Member has a birth certificate                  1525    1    N    I   30    0   No   No
+                               0  Neither certificate or registered
+                               1  Has certificate
+                               2  Registered
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+IDXH4                  Index to Household Schedule                     1555    2    N    I   30    0   No   No
+                               1:90  
+SH13                   Work status                                     1615    1    N    I   30    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SH14A                  National ID card                                1645    1    N    I   30    0   No   No
+                               0  No
+                               1  Yes
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+SH15                   Mobile phone                                    1675    1    N    I   30    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SH16                   Woman selected for biomarkers                   1705    1    N    I   30    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SH18                   Woman selected for bp/glucose                   1735    1    N    I   30    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SH19                   Woman selected for w/h/bp/glucose               1765    1    N    I   30    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SH20                   Man selected for w/h/bp/glucose                 1795    1    N    I   30    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+HA0                    Index to Household Schedule                     1825    2    N    I    6    0   No   No
+                               1:90  
+HA1                    Woman's age in years                            1837    2    N    I    6    0   No   No
+                               15:49  
+HA2                    Woman's weight in kilograms (1 decimal)         1849    4    N    I    6    0   No   No
+                               200:2000  
+                               9994      Not present
+                               9995      Refused
+                               9996      Other
+                           (m) 9999      Missing
+                          (na)           Not applicable
+HA3                    Woman's height in centimeters (1 decimal)       1873    4    N    I    6    0   No   No
+                               500:2200  
+                               9994      Not present
+                               9995      Refused
+                               9996      Other
+                           (m) 9999      Missing
+                          (na)           Not applicable
+HA4                    Height/Age percentile                           1897    4    N    I    6    0   No   No
+                               0:9997  
+                               9998    Flagged cases
+                           (m) 9999    Missing
+                          (na)         Not applicable
+HA5                    Height/Age standard deviation                   1921    4    N    I    6    0   No   No
+                               -600:600  
+                               9998      Flagged cases
+                           (m) 9999      Missing
+                          (na)           Not applicable
+HA6                    Height/Age percent ref. median                  1945    5    N    I    6    0   No   No
+                               7500:12000  
+                               99998       Flagged cases
+                           (m) 99999       Missing
+                          (na)             Not applicable
+HA11                   Weight/Height standard deviation (DHS)          1975    4    N    I    6    0   No   No
+                               -400:600  
+                               9998      Flagged cases
+                           (m) 9999      Missing
+                          (na)           Not applicable
+HA12                   Weight/Height percent ref. median (DHS)         1999    5    N    I    6    0   No   No
+                               5500:25000  
+                               99998       Flagged cases
+                           (m) 99999       Missing
+                          (na)             Not applicable
+HA12A                  Weight/Height percent ref. median (Fog)         2029    5    N    I    6    0   No   No
+                               6000:30000  
+                               99998       Flagged cases
+                           (m) 99999       Missing
+                          (na)             Not applicable
+HA12B                  Weight/Height percent ref. median (WHO)         2059    5    N    I    6    0   No   No
+                               6000:30000  
+                               99998       Flagged cases
+                           (m) 99999       Missing
+                          (na)             Not applicable
+HA13                   Result of measurement - height/weight           2089    1    N    I    6    0   No   No
+                               0  Measured
+                               3  Not present
+                               4  Refused
+                               6  Other
+                           (m) 9  Missing
+HA21                   Fieldworker measurer code                       2095    5    N    I    6    0   No   No
+HA32                   Date of birth (CMC)                             2125    4    N    I    6    0   No   No
+HA33                   Completeness of HA32 information                2149    1    N    I    6    0   No   No
+                               0  Month, year and day
+                               1  Month and year - information complete
+                               2  Month and age - year imputed
+                               3  Year and age - month imputed
+                               4  Year and age - year ignored
+                               5  Year - age/month imputed
+                               6  Age - year/month imputed
+                               7  Month - age/year imputed
+                               8  None - all imputed
+                          (na)    Not applicable
+HA35                   NA - Smoking (cigarettes in last 24 hours)      2155    2    N    I    6    0   No   No
+                               0     Doesn't smoke
+                               1:79  
+                               80    80+
+                               94    Smokes pipes, cigars, etc
+                           (m) 99    Missing
+                          (na)       Not applicable
+HA40                   Body Mass Index                                 2167    4    N    I    6    0   No   No
+                               1200:6000  
+                               9998       Flagged cases
+                           (m) 9999       Missing
+                          (na)            Not applicable
+HA41                   Rohrer's index                                  2191    4    N    I    6    0   No   No
+                               600:7000  
+                               9998      Flagged cases
+                           (m) 9999      Missing
+                          (na)           Not applicable
+HA50                   NA - Under age 18                               2215    1    N    I    6    0   No   No
+                               1  Under age 18
+                               2  Age 18 or older
+                           (m) 9  Missing
+                          (na)    Not applicable
+HA51                   NA - Line number of parent/caretaker            2221    2    N    I    6    0   No   No
+                               0     Not in household
+                               1:50  
+                           (m) 99    Missing
+                          (na)       Not applicable
+HA52                   NA - Read consent statement - hemoglobin        2233    1    N    I    6    0   No   No
+                               1  Granted
+                               2  Parent/other responsible refused
+                               3  Respondent refused
+                               4  Adult/parent not present
+                               5  Minor not present
+                           (m) 9  Missing
+                          (na)    Not applicable
+HA53                   NA - Hemoglobin level (g/dl - 1 decimal)        2239    3    N    I    6    0   No   No
+                               0:900  
+                               994    Not present
+                               995    Refused
+                               996    Other
+                           (m) 999    Missing
+                          (na)        Not applicable
+HA54                   Currently pregnant                              2257    1    N    I    6    0   No   No
+                               0  No/don't know
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+HA55                   NA - Result of measurement - hemoglobin         2263    1    N    I    6    0   No   No
+                               0  Measured
+                               3  Not present
+                               4  Refused
+                               6  Other
+                           (m) 9  Missing
+                          (na)    Not applicable
+HA56                   NA - Hemoglobin level adjusted for altitude and 2269    3    N    I    6    0   No   No
+                               997  Inconsistent
+                           (m) 999  Missing
+                          (na)      Not applicable
+HA57                   NA - Anemia level                               2287    1    N    I    6    0   No   No
+                               1  Severe
+                               2  Moderate
+                               3  Mild
+                               4  Not anemic
+                           (m) 9  Missing
+                          (na)    Not applicable
+HA58                   NA - Agrees to referral - anemia                2293    1    N    I    6    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+HA60                   Marital status                                  2299    1    N    I    6    0   No   No
+                               1  Never in union
+                               2  Other
+                           (m) 9  Missing
+                          (na)    Not applicable
+HA61                   NA - Read consent statement - HIV               2305    1    N    I    6    0   No   No
+                               1  Granted
+                               2  Parent/other responsible refused
+                               3  Respondent refused
+                               4  Adult/parent not present
+                               5  Minor not present
+                               6  Sample not tested/lost/not enough DBS
+                           (m) 9  Missing
+                          (na)    Not applicable
+HA62                   Bar code for HIV blood sample                   2311    5   AN    I    6    0   No   No
+                               99992  Woman's interview incomplete or woman is not de-facto
+                               99993  Sample damaged/insufficient/not found in lab
+                               99994  Not present
+                               99995  Refused
+                               99996  Other
+                               ?      Missing
+HA63                   NA - Result of measurement - HIV                2341    1    N    I    6    0   No   No
+                               1  Blood taken
+                               2  Not present
+                               3  Refused
+                               4  Sample not tested/lost/damaged/insufficient
+                               5  Not enough DBS to complete protocol
+                               6  Other
+                           (m) 9  Missing
+                          (na)    Not applicable
+HA64                   NA - Consent for additional tests               2347    1    N    I    6    0   No   No
+                               1  Granted
+                               2  Parent/other responsible refused
+                               3  Respondent refused
+                               6  Sample not tested/lost/not enough DBS
+                           (m) 9  Missing
+                          (na)    Not applicable
+HA65                   Result of woman's individual interview          2353    1    N    I    6    0   No   No
+                               1  Completed
+                               2  Not at home
+                               3  Postponed
+                               4  Refused
+                               5  Partly completed
+                               6  Incapacitated
+                               7  Other
+                          (na)    Not applicable
+HA66                   Woman's highest educational level               2359    1    N    I    6    0   No   No
+                               0  No education
+                               1  Primary
+                               2  Secondary
+                               3  Higher
+                               8  Don't know
+                           (m) 9  Missing
+HA67                   Woman's highest year of education               2365    2    N    I    6    0   No   No
+                               0:18  
+                               98    Don't know
+                           (m) 99    Missing
+                          (na)       Not applicable
+HA68                   Woman's highest educational level (for prelimin 2377    1    N    I    6    0   No   No
+                               0  No education
+                               1  Primary incomplete
+                               2  Primary complete
+                               3  Secondary incomplete
+                               4  Secondary complete or higher
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HA69                   NA - HIV weight (6 decimals)                    2383    8    N    I    6    0   No   No
+HA70                   NA - Interviewer that took blood for HIV testin 2431    5    N    I    6    0   No   No
+HC0                    Index to Household Schedule                     2461    2    N    I    6    0   No   No
+                               1:90  
+HC1                    Child's age in months                           2473    2    N    I    6    0   No   No
+                               0:60  
+HC1A                   Child's age in days                             2485    5    N    I    6    0   No   No
+                               0:2500  
+HC2                    Child's weight in kilograms (1 decimal)         2515    4    N    I    6    0   No   No
+                               10:9990  
+                               9994     Not present
+                               9995     Refused
+                               9996     Other
+                           (m) 9999     Missing
+                          (na)          Not applicable
+HC3                    Child's height in centimeters (1 decimal)       2539    4    N    I    6    0   No   No
+                               100:2000  
+                               9994      Not present
+                               9995      Refused
+                               9996      Other
+                           (m) 9999      Missing
+                          (na)           Not applicable
+HC4                    Height/Age percentile                           2563    4    N    I    6    0   No   No
+                               0:9997  
+                               9998    Flagged cases
+                           (m) 9999    Missing
+                          (na)         Not applicable
+HC5                    Height/Age standard deviation                   2587    4    N    I    6    0   No   No
+                               -600:600  
+                               9998      Flagged cases
+                           (m) 9999      Missing
+                          (na)           Not applicable
+HC6                    Height/Age percent of ref. median               2611    5    N    I    6    0   No   No
+                               7500:15000  
+                               99998       Flagged cases
+                           (m) 99999       Missing
+                          (na)             Not applicable
+HC7                    Weight/Age percentile                           2641    4    N    I    6    0   No   No
+                               0:9997  
+                               9998    Flagged cases
+                           (m) 9999    Missing
+                          (na)         Not applicable
+HC8                    Weight/Age standard deviation                   2665    4    N    I    6    0   No   No
+                               -600:600  
+                               9998      Flagged cases
+                           (m) 9999      Missing
+                          (na)           Not applicable
+HC9                    Weight/Age percent of ref. median               2689    5    N    I    6    0   No   No
+                               4000:19000  
+                               99998       Flagged cases
+                           (m) 99999       Missing
+                          (na)             Not applicable
+HC10                   Weight/Height percentile                        2719    4    N    I    6    0   No   No
+                               0:9997  
+                               9998    Flagged cases
+                           (m) 9999    Missing
+                          (na)         Not applicable
+HC11                   Weight/Height standard deviation                2743    4    N    I    6    0   No   No
+                               -600:600  
+                               9998      Flagged cases
+                           (m) 9999      Missing
+                          (na)           Not applicable
+HC12                   Weight/Height percent of ref. median            2767    5    N    I    6    0   No   No
+                               5500:19000  
+                               99998       Flagged cases
+                           (m) 99999       Missing
+                          (na)             Not applicable
+HC13                   Result of measurement - height/weight           2797    1    N    I    6    0   No   No
+                               0  Measured
+                               3  Not present
+                               4  Refused
+                               6  Other
+                           (m) 9  Missing
+HC15                   Height: lying or standing                       2803    1    N    I    6    0   No   No
+                               0  Not measured
+                               1  Lying
+                               2  Standing
+                           (m) 9  Missing
+                          (na)    Not applicable
+HC16                   Day of birth                                    2809    2    N    I    6    0   No   No
+                               1:31  
+                               97    Inconsistent
+                               98    Don't know
+                           (m) 99    Missing
+HC17                   Date measured (day)                             2821    2    N    I    6    0   No   No
+                               1:31  
+                          (na)       Not applicable
+HC18                   Date measured (month)                           2833    2    N    I    6    0   No   No
+                               1:12  
+                          (na)       Not applicable
+HC19                   Date measured (year)                            2845    4    N    I    6    0   No   No
+                               2017:2018  
+                          (na)            Not applicable
+HC20                   Century Day Code (CDC) of measurement           2869    5    N    I    6    0   No   No
+HC21                   Fieldworker measurer code                       2899    5    N    I    6    0   No   No
+HC27                   Sex                                             2929    1    N    I    6    0   No   No
+                               1  Male
+                               2  Female
+                           (m) 9  Missing
+HC30                   Month of birth                                  2935    2    N    I    6    0   No   No
+                               1:12  
+                               97    Inconsistent
+                               98    Don't know
+                           (m) 99    Missing
+                          (na)       Not applicable
+HC31                   Year of birth                                   2947    4    N    I    6    0   No   No
+                               2012:2018  
+                               9997       Inconsistent
+                               9998       Don't know
+                           (m) 9999       Missing
+                          (na)            Not applicable
+HC32                   Date of birth (CMC)                             2971    4    N    I    6    0   No   No
+HC32A                  Century Day Code (CDC) of birth                 2995    5    N    I    6    0   No   No
+HC33                   Completeness of HC32 information                3025    1    N    I    6    0   No   No
+                               0  Month, year and day
+                               1  Month and year - information complete
+                               2  Month and age - year imputed
+                               3  Year and age - month imputed
+                               5  Year - age/month imputed
+                               6  Age - year/month imputed
+                               7  Month - age/year imputed
+                               8  None - all imputed
+                          (na)    Not applicable
+HC51                   NA - Line number of parent/caretaker            3031    2    N    I    6    0   No   No
+                               0     Not in household
+                               1:50  
+                           (m) 99    Missing
+                          (na)       Not applicable
+HC52                   NA - Read consent statement - hemoglobin        3043    1    N    I    6    0   No   No
+                               1  Granted
+                               2  Refused
+                               3  Not present/other
+                           (m) 9  Missing
+                          (na)    Not applicable
+HC53                   NA - Hemoglobin level (g/dl - 1 decimal)        3049    3    N    I    6    0   No   No
+                               10:990  
+                               994     Not present
+                               995     Refused
+                               996     Other
+                           (m) 999     Missing
+                          (na)         Not applicable
+HC55                   NA - Result of measurement - hemoglobin         3067    1    N    I    6    0   No   No
+                               0  Measured
+                               3  Not present/other
+                               4  Refused
+                               6  Other
+                           (m) 9  Missing
+                          (na)    Not applicable
+HC56                   NA - Hemoglobin level adjusted for altitude (g/ 3073    3    N    I    6    0   No   No
+                               997  Inconsistent
+                           (m) 999  Missing
+                          (na)      Not applicable
+HC57                   NA - Anemia level                               3091    1    N    I    6    0   No   No
+                               1  Severe
+                               2  Moderate
+                               3  Mild
+                               4  Not anemic
+                           (m) 9  Missing
+                          (na)    Not applicable
+HC58                   NA - Agrees to referral - anemia                3097    1    N    I    6    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+HC60                   Mother's line number (woman's questionnaire)    3103    3    N    I    6    0   No   No
+                               1:50  
+                               993   Mother not de facto
+                               994   Incomplete woman's interview
+                               995   Not in household
+                           (m) 999   Missing
+                          (na)       Not applicable
+HC61                   Mother's highest educational level              3121    1    N    I    6    0   No   No
+                               0  No education
+                               1  Primary
+                               2  Secondary
+                               3  Higher
+                               8  Don't know
+                           (m) 9  Missing
+HC62                   Mother's highest year of education              3127    2    N    I    6    0   No   No
+                               0:18  
+                               98    Don't know
+                           (m) 99    Missing
+                          (na)       Not applicable
+HC63                   Preceding birth interval (months)               3139    3    N    I    6    0   No   No
+                           (m) 999  Missing
+                          (na)      Not applicable
+HC64                   Birth order number                              3157    2    N    I    6    0   No   No
+                               1:20  
+                           (m) 99    Missing
+HC68                   Mother's highest educational level (for prelimi 3169    1    N    I    6    0   No   No
+                               0  No education
+                               1  Primary incomplete
+                               2  Primary complete
+                               3  Secondary incomplete
+                               4  Secondary complete or higher
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    Not applicable
+HC70                   Height/Age standard deviation (new WHO)         3175    4    N    I    6    0   No   No
+                               -600:600  
+                               9996      Height out of plausible limits
+                               9997      Age in days out of plausible limits
+                               9998      Flagged cases
+                           (m) 9999      Missing
+                          (na)           Not applicable
+HC71                   Weight/Age standard deviation (new WHO)         3199    4    N    I    6    0   No   No
+                               -600:500  
+                               9996      Height out of plausible limits
+                               9997      Age in days out of plausible limits
+                               9998      Flagged cases
+                           (m) 9999      Missing
+                          (na)           Not applicable
+HC72                   Weight/Height standard deviation (new WHO)      3223    4    N    I    6    0   No   No
+                               -600:500  
+                               9996      Height out of plausible limits
+                               9997      Age in days out of plausible limits
+                               9998      Flagged cases
+                           (m) 9999      Missing
+                          (na)           Not applicable
+HC73                   BMI standard deviation (new WHO)                3247    4    N    I    6    0   No   No
+                               -600:500  
+                               9996      Height out of plausible limits
+                               9997      Age in days out of plausible limits
+                               9998      Flagged cases
+                           (m) 9999      Missing
+                          (na)           Not applicable
+SB301                  Index to household schedule                     3271    2    N    I   14    0   No   No
+                               1:50  
+SB302                  Sex of household member                         3299    1    N    I   14    0   No   No
+                               1  Male
+                               2  Female
+                           (m) 9  Missing
+SB303                  Age of respondent                               3313    2    N    I   14    0   No   No
+                               18:94  
+                               95     95+
+                               98     DK
+                           (m) 99     Missing
+                          (na)        Not applicable
+SB303C                 Calculated age of respondent                    3341    2    N    I   14    0   No   No
+                               15:94  
+                               95     95+
+SB304                  Marital Status - Women                          3369    1    N    I   14    0   No   No
+                               1  Never married
+                               2  Currently married/Divorced/Separated/Deserted/Widowed
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB304A                 Check age - Women                               3383    1    N    I   14    0   No   No
+                               1  Age is 50+
+                               2  Age is 18-49
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB304B                 Pregnancy status                                3397    1    N    I   14    0   No   No
+                               0  No, not pregnant
+                               1  Yes, pregnant
+                               8  DK
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB304C                 Weight in kilograms                             3411    4    N    I   14    0   No   No
+                               200:2500  
+                               9994      Not present
+                               9995      Refused
+                               9996      Other
+                           (m) 9999      Missing
+                          (na)           Not applicable
+SB304D                 Height in centimeters                           3467    4    N    I   14    0   No   No
+                               200:2500  
+                               9994      Not present
+                               9995      Refused
+                               9996      Other
+                           (m) 9999      Missing
+                          (na)           Not applicable
+SB304E                 Measurer number                                 3523    4    N    I   14    0   No   No
+                           (m) 9999  Missing
+                          (na)       Not applicable
+SB306                  Highest level of education                      3579    1    N    I   14    0   No   No
+                               0  No education
+                               1  Primary
+                               2  Secondary
+                               3  College or higher
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB307                  Currently working                               3593    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB308                  Occupation type                                 3607    2    N    I   14    0   No   No
+                               0   Not working
+                               11  Land Owner
+                               12  Farmer
+                               13  Agricultural Worker
+                               14  Fisherman
+                               15  Poultry raising, Cattle raising
+                               16  Home-based Manufacturing (Handicraft, Food products)
+                               21  Rickshaw driver, Brick breaking, Road building, Construction worker, Boatma
+                               22  Domestic servant
+                               23  Non-agricultural worker (Factory worker, blue collar service)
+                               31  Carpenter, Mason, Bus/taxi driver, Construction supervisor, Seamstresses/Ta
+                               41  Doctor, Lawyer, Dentist, Accountant, Teacher, Nurse, Family welfare visitor
+                               51  Big businessman
+                               52  Small business/trader
+                               61  Unemployed/student
+                               62  Retired
+                               96  Others
+                               98  Don't know
+                           (m) 99  Missing
+                          (na)     Not applicable
+SB310                  Consent for blood pressure measurement          3635    1    N    I   14    0   No   No
+                               1  Granted
+                               2  Respondent refused
+                               3  Respondent not present
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB311A                 Eaten anything                                  3649    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB311B                 Had caffeinated drink                           3663    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB311C                 Smoked                                          3677    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB312                  Arm circumference                               3691    2    N    I   14    0   No   No
+                               5:98  
+                           (m) 99    Missing
+                          (na)       Notappl
+SB313                  Arm Circumference measurement for blood pressur 3719    1    N    I   14    0   No   No
+                               1  Small
+                               2  Medium
+                               3  Large
+                               4  Extra large
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB314                  Time for first blood pressure test              3733    4    N    I   14    0   No   No
+                               500:2330  
+                           (m) 9999      Missing
+SB314A                 Permission to take BP                           3789    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB315A                 Systolic blood pressure measurement             3803    3    N    I   14    0   No   No
+                               30:300  
+                               994     Refused
+                               995     Technical problems
+                               996     Other
+                           (m) 999     Missing
+                          (na)         Not applicable
+SB315B                 Diastolic blood pressure measurement            3845    3    N    I   14    0   No   No
+                               0:160  
+                               994    Refused
+                               995    Technical problems
+                               996    Other
+                           (m) 999    Missing
+                          (na)        Not applicable
+SB316                  Blood pressure ever checked                     3887    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                               7  Refused
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB317                  Last time for BP measure                        3901    3    N    I   14    0   No  Yes
+                               100      Days ago: 00
+                               101:190  Days ago: 01 - 90
+                               201:220  Weeks ago: 01 - 20
+                               301:320  Months ago: 01 - 20
+                               401:450  Years ago: 01 - 50
+                               499      Years ago: Missing
+                           (m) 999      Missing
+SB317A                 Place for BP measurement                        3943    2    N    I   14    0   No   No
+                               1   Medical college hospital
+                               2   Specialized government hospital
+                               3   District hospital
+                               4   MCWC
+                               5   Upazila health complex
+                               6   UH & family welfare center
+                               7   Community clinic
+                               8   Satellite clinic/epi outreach
+                               9   Government field worker (FWA)
+                               10  Other public sector
+                               21  NGO static clinic
+                               22  NGO satellite clinic
+                               23  NGO depo holder
+                               24  NGO field worker
+                               25  Other NGO sector
+                               31  Private medical college hospital
+                               32  Private hospital/clinic
+                               33  Private clinic
+                               34  Qualified doctor's chamber
+                               35  Non-qualified doctor's chamber
+                               37  Pharmacy/drug store
+                               36  Other private medical sector
+                               41  Home
+                               42  Workplace
+                               43  Shop
+                               44  Traditional practitioner
+                               96  Other
+                           (m) 99  Missing
+                          (na)     Not applicable
+SB317B                 Told by a doctor to have high blood pressure    3971    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB317CA                Who told they have high BP-qualified doctor     3985    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB317CB                Who told they have high BP-nurse/midwife/parame 3999    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB317CC                Who told they have high BP-family welfare visit 4013    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB317CD                Who told they have high BP-community skilled bi 4027    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB317CE                Who told they have high BP-sub-assistant commun 4041    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB317CF                Who told they have high BP-community health car 4055    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB317CG                Who told they have high BP-health assistant (HA 4069    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB317CH                Who told they have high BP-family welfare assis 4083    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB317CI                Who told they have high BP-NGO worker           4097    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB317CJ                Who told they have high BP-trained TBA (TTBA)   4111    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB317CK                Who told they have high BP-untrained TBA (UTBA) 4125    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB317CL                Who told they have high BP-unqualified doctor   4139    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB317CM                Who told they have high BP-relatives            4153    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB317CN                Who told they have high BP-neighbors/friends    4167    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB317CX                Who told they have high BP-other                4181    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB318A                 Taking prescribed medicine to lower blood press 4195    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB318B                 Advised to reduce salt for high BP              4209    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB318C                 Advised to lose weight for high BP              4223    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB318D                 Advised to stop smoking for high BP             4237    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB318E                 Advised to exercise more                        4251    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB319                  Taking natural remedies for high BP             4265    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB321                  Time for second blood pressure test             4279    4    N    I   14    0   No   No
+                               500:2330  
+                           (m) 9999      Missing
+SB322                  Consent for second blood pressure test          4335    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB323A                 Systolic blood pressure                         4349    3    N    I   14    0   No   No
+                               30:300  
+                               994     Refused
+                               995     Technical problems
+                               996     Other
+                           (m) 999     Missing
+                          (na)         Not applicable
+SB323B                 Diastolic blood pressure                        4391    3    N    I   14    0   No   No
+                               0:160  
+                               994    Refused
+                               995    Technical problems
+                               996    Other
+                           (m) 999    Missing
+                          (na)        Not applicable
+SB324                  Heard of illness diabetes                       4433    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                               7  Refused
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB325                  Glucose measured before                         4447    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                               4  Refused
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB326                  When glucose was checked                        4461    3    N    I   14    0   No  Yes
+SB326A                 Where glucose was checked                       4503    2    N    I   14    0   No   No
+                               1   Medical college hospital
+                               2   Specialized government hospital
+                               3   District hospital
+                               4   MCWC
+                               5   Upazila health complex
+                               6   UH & family welfare center
+                               7   Community clinic
+                               8   Satellite clinic/epi outreach
+                               9   Government field worker (FWA)
+                               10  Other public sector
+                               21  NGO static clinic
+                               22  NGO satellite clinic
+                               23  NGO depo holder
+                               24  NGO field worker
+                               25  Other NGO sector
+                               31  Private medical college hospital
+                               32  Private hospital/clinic
+                               33  Private clinic
+                               34  Qualified doctor's chamber
+                               35  Non-qualified doctor's chamber
+                               37  Pharmacy/drug store
+                               36  Other private medical sector
+                               41  Home
+                               42  Workplace
+                               43  Shop
+                               44  Traditional practitioner
+                               96  Other
+                           (m) 99  Missing
+                          (na)     Not applicable
+SB326B                 Ever told by a doctor/nurse to have diabetes    4531    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB326CA                Person who told has high blood glucose/diabetes 4545    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB326CB                Person who told has high blood glucose/diabetes 4559    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB326CC                Person who told has high blood glucose/diabetes 4573    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB326CD                Person who told has high blood glucose/diabetes 4587    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB326CE                Person who told has high blood glucose/diabetes 4601    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB326CF                Person who told has high blood glucose/diabetes 4615    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB326CG                Person who told has high blood glucose/diabetes 4629    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB326CH                Person who told has high blood glucose/diabetes 4643    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB326CI                Person who told has high blood glucose/diabetes 4657    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB326CJ                Person who told has high blood glucose/diabetes 4671    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB326CK                Person who told has high blood glucose/diabetes 4685    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB326CL                Person who told has high blood glucose/diabetes 4699    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB326CM                Person who told has high blood glucose/diabetes 4713    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB326CN                Person who told has high blood glucose/diabetes 4727    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB326CX                Person who told has high blood glucose/diabetes 4741    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB327A                 Taking medication for the diabetes              4755    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB327B                 Advised diet for high blood glucose             4769    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB327C                 Advised to lose weight for high blood glucose   4783    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB327D                 Advised to stop smoking                         4797    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB327E                 Advised to start/do more exercise               4811    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB328                  Taking natural remedies for high blood glucose  4825    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB330                  Time for third blood pressure test              4839    4    N    I   14    0   No   No
+                               500:2330  
+                           (m) 9999      Missing
+SB331                  Consent for third blood pressure test           4895    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB332A                 Systolic blood pressure                         4909    3    N    I   14    0   No   No
+                               30:300  
+                               994     Refused
+                               995     Technical problems
+                               996     Other
+                           (m) 999     Missing
+                          (na)         Not applicable
+SB332B                 Diastolic blood pressure                        4951    3    N    I   14    0   No   No
+                               0:160  
+                               994    Refused
+                               995    Technical problems
+                               996    Other
+                           (m) 999    Missing
+                          (na)        Not applicable
+SB333AA                Average of systolic                             4993    3    N    I   14    0   No   No
+                               30:300  
+                               994     Refused
+                               995     Technical problems
+                               996     Other
+                           (m) 999     Missing
+                          (na)         Not applicable
+SB333AB                Average of diastolic                            5035    3    N    I   14    0   No   No
+                               0:160  
+                               994    Refused
+                               995    Technical problems
+                               996    Other
+                           (m) 999    Missing
+                          (na)        Not applicable
+SB333B                 Referral number based on BP                     5077    1    N    I   14    0   No   No
+                               1  Systolic < 130 & Diastolic < 85
+                               2  Systolic < 140 & Diastolic < 90
+                               3  Systolic < 160 & Diastolic < 100
+                               4  Systolic < 180 & Diastolic < 110
+                               5  Systolic < 210 & Diastolic < 120
+                               6  Systolic >= 210 or Diastolic >= 120
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB334BA                First appointment permission                    5091    1    N    I   14    0   No   No
+                               1  Granted
+                               2  Refused
+                               3  Respondent not present
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB334BB                Second appointment permission                   5105    1    N    I   14    0   No   No
+                               1  Granted
+                               2  Refused
+                               3  Respondent not present
+                               7  No second visit
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB334BC                Third appointment permission                    5119    1    N    I   14    0   No   No
+                               1  Granted
+                               2  Refused
+                               3  Respondent not present
+                               7  No third visit
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB1D                   First appointment day                           5133    2    N    I   14    0   No  Yes
+                               1:31  
+                           (m) 99    Missing
+                          (na)       Not applicable
+SB1MO                  First appointment month                         5161    2    N    I   14    0   No  Yes
+                               0:12  
+                           (m) 99    Missing
+                          (na)       Not applicable
+SB1Y                   First appointment year                          5189    4    N    I   14    0   No  Yes
+                               2017:2018  
+                           (m) 9999       Missing
+                          (na)            Not applicable
+SB1H                   First appointment hour                          5245    2    N    I   14    0   No  Yes
+                               6:22  
+                           (m) 99    Missing
+                          (na)       Notappl
+SB1M                   First appointment minutes                       5273    2    N    I   14    0   No  Yes
+                               0:59  
+                           (m) 99    Missing
+                          (na)       Notappl
+SB2D                   Second appointment day                          5301    2    N    I   14    0   No  Yes
+                               1:31  
+                           (m) 99    Missing
+                          (na)       Not applicable
+SB2MO                  Second appointment month                        5329    2    N    I   14    0   No  Yes
+                               0:12  
+                           (m) 99    Missing
+                          (na)       Not applicable
+SB2Y                   Second appointment year                         5357    4    N    I   14    0   No  Yes
+                               2017:2018  
+                           (m) 9999       Missing
+                          (na)            Not applicable
+SB2H                   Second appointment hour                         5413    2    N    I   14    0   No  Yes
+                               6:22  
+                           (m) 99    Missing
+                          (na)       Notappl
+SB2M                   Second appointment minutes                      5441    2    N    I   14    0   No  Yes
+                               0:59  
+                           (m) 99    Missing
+                          (na)       Notappl
+SB3D                   Third appointment day                           5469    2    N    I   14    0   No  Yes
+                               1:31  
+                           (m) 99    Missing
+                          (na)       Not applicable
+SB3MO                  Third appointment month                         5497    2    N    I   14    0   No  Yes
+                               0:12  
+                           (m) 99    Missing
+                          (na)       Not applicable
+SB3Y                   Third appointment year                          5525    4    N    I   14    0   No  Yes
+                               2017:2018  
+                           (m) 9999       Missing
+                          (na)            Not applicable
+SB3H                   Third appointment hour                          5581    2    N    I   14    0   No  Yes
+                               6:22  
+                           (m) 99    Missing
+                          (na)       Notappl
+SB3M                   Third appointment minutes                       5609    2    N    I   14    0   No  Yes
+                               0:59  
+                           (m) 99    Missing
+                          (na)       Notappl
+SB334EA                1st appointment permission for glucose test     5637    1    N    I   14    0   No   No
+                               1  Granted
+                               2  Refused
+                               3  Respondent not present
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB334EB                2nd appointment permission for glucose test     5651    1    N    I   14    0   No   No
+                               1  Granted
+                               2  Refused
+                               3  Respondent not present
+                               7  No second visit
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB334EC                3rd appointment permission for glucose test     5665    1    N    I   14    0   No   No
+                               1  Granted
+                               2  Refused
+                               3  Respondent not present
+                               7  No third visit
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB334FA                Last time ate-first appointment                 5679    4    N    I   14    0   No  Yes
+                               0:2399  
+                           (m) 9999    Missing
+SB334FB                Last time ate-second appointment                5735    4    N    I   14    0   No  Yes
+                               0:2399  
+                           (m) 9999    Missing
+SB334FC                Last time ate-third appointment                 5791    4    N    I   14    0   No  Yes
+                               0:2399  
+                           (m) 9999    Missing
+SB334GA                Last time drank-first appointment               5847    4    N    I   14    0   No  Yes
+                               0:2399  
+                               9595    Never
+                           (m) 9999    Missing
+SB334GB                Last time drank-second appointment              5903    4    N    I   14    0   No  Yes
+                               0:2399  
+                               9595    Never
+                           (m) 9999    Missing
+SB334GC                Last time drank-third appointment               5959    4    N    I   14    0   No  Yes
+                               0:2399  
+                               9595    Never
+                           (m) 9999    Missing
+SB334H                 Last time ate                                   6015    1    N    I   14    0   No   No
+                               1  8 hours or more
+                               2  Less than 8 hours
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB335AD                Date for glucose testing Day                    6029    2    N    I   14    0   No  Yes
+                               1:31  
+                           (m) 99    Missing
+                          (na)       Notappl
+SB335AM                Date for glucose testing Month                  6057    2    N    I   14    0   No  Yes
+                               0:12  
+                           (m) 99    Missing
+                          (na)       Notappl
+SB335AY                Date for glucose testing Year                   6085    4    N    I   14    0   No  Yes
+                               2017:2018  
+                           (m) 9999       Missing
+                          (na)            Notappl
+SB335AT                Time for glucose testing                        6141    4    N    I   14    0   No   No
+                               0:2359  
+                           (m) 9999    Missing
+SB335B                 Plasma blood glucose (mmol/dl) - 1 implied deci 6197    3    N    I   14    0   No   No
+                               0:990  
+                               994    Not present
+                               995    Refused
+                               996    Other
+                           (m) 999    Missing
+                          (na)        Notappl
+SBPC1                  Height/Age Percentile                           6239    4    N    I   14    0   No   No
+                               0:9997  
+                               9998    Flagged cases
+                           (m) 9999    Missing
+                          (na)         Not applicable
+SBSD1                  Height/Age Standard deviations                  6295    4    N    I   14    0   No   No
+                               -600:600  
+                               9998      Flagged cases
+                           (m) 9999      Missing
+                          (na)           Not applicable
+SBRM1                  Height/Age Percent reference median             6351    5    N    I   14    0   No   No
+                               7500:12050  
+                               99998       Flagged cases
+                           (m) 99999       Missing
+                          (na)             Not applicable
+SBRM3                  Weight/Height Percent reference median (DHS)    6421    5    N    I   14    0   No   No
+                               5500:25000  
+                               99998       Flagged cases
+                           (m) 99999       Missing
+                          (na)             Not applicable
+SBRM4                  Weight/Height Percent reference median (Fog)    6491    5    N    I   14    0   No   No
+                               5500:30000  
+                               99998       Flagged cases
+                           (m) 99999       Missing
+                          (na)             Not applicable
+SBRM5                  Weight/Height Percent reference median (WHO)    6561    5    N    I   14    0   No   No
+                               5500:30000  
+                               99998       Flagged cases
+                           (m) 99999       Missing
+                          (na)             Not applicable
+SBSD3                  Weight/Height Standard deviations (DHS)         6631    4    N    I   14    0   No   No
+                               -400:600  
+                               9998      Flagged cases
+                           (m) 9999      Missing
+                          (na)           Not applicable
+SBWH                   Result of measurement height-weight             6687    1    N    I   14    0   No   No
+                               0  Measured
+                               3  Not present
+                               4  Refused
+                               6  Other
+                           (m) 9  Missing
+SBBM                   Body mass index for respondent                  6701    4    N    I   14    0   No   No
+                               1200:6000  
+                               9998       Flagged cases
+                           (m) 9999       Missing
+                          (na)            Not applicable
+SBRI                   Rohrer's index for respondent                   6757    4    N    I   14    0   No   No
+                               600:7000  
+                               9998      Flagged cases
+                           (m) 9999      Missing
+                          (na)           Not applicable
+SBCMC                  CMC of birth of member                          6813    4    N    I   14    0   No   No
+                          (na)       Not applicable
+SBFLG                  Date flag for member's date of birth            6869    1    N    I   14    0   No   No
+                               1  Month and year
+                               2  Month and age -y imp
+                               3  Year and age - m imp
+                               4  Y & age - y ignored
+                               5  Year - a, m imp
+                               6  Age - y, m imp
+                               7  Month - a, y imp
+                               8  None - all imp
+                          (na)    Not applicable
+SBRESI                 Result of individual interview                  6883    1    N    I   14    0   No   No
+                               1  Completed
+                               2  Not at home
+                               3  Postponed
+                               4  Refused
+                               5  Partly completed
+                               6  Incapacitated
+                               7  Other
+                          (na)    Not applicable
+SBED1                  Member's highest educational level              6897    1    N    I   14    0   No   No
+                               0  No education
+                               1  Primary
+                               2  Secondary
+                               3  Higher
+                               6  Pre-primary
+                               8  Don't know
+                           (m) 9  Missing
+SBED2                  Member's highest year of education              6911    2    N    I   14    0   No   No
+                               0      No education
+                               1:5    Primary
+                               6:10   Secondary
+                               11:18  College
+                               98     Don't know
+                           (m) 99     Missing
+                          (na)        NotAppl
+SBED3                  Highest educational level (CS for preliminary & 6939    1    N    I   14    0   No   No
+                               0  No education
+                               1  Primary incomplete
+                               2  Primary complete
+                               3  Secondary incomplete
+                               4  Secondary complete or higher
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB3PRG                 Respondent pregnancy status                     6953    1    N    I   14    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    Not applicable
+SB3MOS                 Months of pregnancy                             6967    2    N    I   14    0   No   No
+                               0:10  
+                          (na)       Not applicable
+--------------------------------------------------------------------------------------------------------------
+Relation Name         Primary               Linked by             Secondary             Linked by
+--------------------------------------------------------------------------------------------------------------

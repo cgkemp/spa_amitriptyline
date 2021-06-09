@@ -48,6 +48,13 @@ afghanistan <- df %>%
     v903_16== 5 ~ 0,
     v903_16== 2 ~ 1,
     v903_16== 1 ~ 0)) %>%
+  mutate(diazepam = case_when(
+    v906_07== 0 ~ 0,
+    v906_07== 3 ~ 0,
+    v906_07== 4 ~ 0,
+    v906_07== 5 ~ 0,
+    v906_07== 2 ~ 1,
+    v906_07== 1 ~ 0)) %>%
   mutate(total_staff = v102dt) %>%
   mutate(power = case_when(
     v120a== 0 ~ 0, #not connected
@@ -108,10 +115,11 @@ afghanistan <- df %>%
   dplyr::rename(province = v001,
                 district = v002,
                 facility_number = v004,
+                facility_weight = v005,
                 ownership = v008,
                 month = v081,
                 year = v082) %>%
-  dplyr::select(province, district, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
+  dplyr::select(province, district, rural, facility_number, facility_weight, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, diazepam,
          total_staff, power, improved_water, improved_sanitation, email, computer, general_opd_private_room, ncd_private_room, country, worldbank)
 
 #Import SPA lat/long

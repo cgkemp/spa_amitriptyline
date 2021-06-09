@@ -52,6 +52,13 @@ haiti <- df %>%
     V903_16== 5 ~ 0,
     V903_16== 2 ~ 1,
     V903_16== 1 ~ 0)) %>%
+  mutate(diazepam = case_when(
+    V906_07== 0 ~ 0,
+    V906_07== 3 ~ 0,
+    V906_07== 4 ~ 0,
+    V906_07== 5 ~ 0,
+    V906_07== 2 ~ 1,
+    V906_07== 1 ~ 0)) %>%
   mutate(total_staff = V102DT) %>%
   mutate(power = case_when(
     V120A== 0 ~ 0, #not connected
@@ -112,10 +119,11 @@ haiti <- df %>%
   dplyr::rename(province = V001,
                 district = V002,
                 facility_number = V004,
+                facility_weight = V005,
                 ownership = V008,
                 month = V081,
                 year = V082) %>%
-  dplyr::select(province, district, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
+  dplyr::select(province, district, rural, facility_number, facility_weight, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, diazepam,
          total_staff, power, improved_water, improved_sanitation, email, computer, general_opd_private_room, ncd_private_room, country, worldbank)
 
 #Import SPA lat/long

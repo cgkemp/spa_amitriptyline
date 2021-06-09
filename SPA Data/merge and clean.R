@@ -91,10 +91,11 @@ df <- df %>%
   group_by(country) %>%
   mutate(travel_quartile = ntile(travel_time, 4),
          hhwealth_quartile = ntile(hh.wealthindex.mean, 4),
+         travel_hours = travel_time/60,
+         travel_hours_cat = cut(travel_hours, breaks=c(-Inf, 5, 10, Inf)),
          travel_decile = ntile(travel_time, 10),
          hhwealth_decile = ntile(hh.wealthindex.mean, 10))
   
-
 library(foreign)
 write.dta(df, "clean_stata.dta")
 

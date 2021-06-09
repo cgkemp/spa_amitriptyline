@@ -26,12 +26,12 @@ senegal2012 <- df2012 %>%
     V007== 1 ~ "hospital", 
     V007== 2 ~ "primary",
     V007== 3 ~ "primary",
-    V007== 4 ~ "other",)) %>%
+    V007== 4 ~ "primary",)) %>%
   mutate(primary = case_when(
     V007== 1 ~ 0, 
     V007== 2 ~ 1,
     V007== 3 ~ 1,
-    V007== 4 ~ 0,)) %>%
+    V007== 4 ~ 1,)) %>%
   mutate(store_meds = case_when(
     V035==0 ~ 0,
     V035==1 ~ 1)) %>%
@@ -45,6 +45,13 @@ senegal2012 <- df2012 %>%
     V903_16== 5 ~ 0,
     V903_16== 2 ~ 1,
     V903_16== 1 ~ 0)) %>%
+  mutate(diazepam = case_when(
+    V906_07== 0 ~ 0,
+    V906_07== 3 ~ 0,
+    V906_07== 4 ~ 0,
+    V906_07== 5 ~ 0,
+    V906_07== 2 ~ 1,
+    V906_07== 1 ~ 0)) %>%
   mutate(total_staff = V102DT) %>%
   mutate(power = case_when(
     V120A== 0 ~ 0, #not connected
@@ -105,10 +112,11 @@ senegal2012 <- df2012 %>%
   dplyr::rename(province = V001,
                 district = V002,
                 facility_number = V004,
+                facility_weight = V005,
                 ownership = V008,
                 month = V081,
                 year = V082) %>%
-  dplyr::select(province, district, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
+  dplyr::select(province, district, rural, facility_number, facility_weight, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, diazepam,
          total_staff, power, improved_water, improved_sanitation, email, computer, general_opd_private_room, ncd_private_room, country, worldbank)
 
 library(foreign)
@@ -136,12 +144,12 @@ senegal2014 <- df2014 %>%
   FACTYPE== 1 ~ "hospital", 
 FACTYPE== 2 ~ "primary",
 FACTYPE== 3 ~ "primary",
-FACTYPE== 4 ~ "other")) %>%
+FACTYPE== 4 ~ "primary")) %>%
   mutate(primary = case_when(
     FACTYPE== 1 ~ 0, 
     FACTYPE== 2 ~ 1,
     FACTYPE== 3 ~ 1,
-    FACTYPE== 4 ~ 0)) %>%
+    FACTYPE== 4 ~ 1)) %>%
   mutate(store_meds = case_when(
     Q210==0 ~ 0,
     Q210==1 ~ 1)) %>%
@@ -149,15 +157,24 @@ FACTYPE== 4 ~ "other")) %>%
     Q102_14==0 ~ 0,
     Q102_14==1 ~ 1)) %>%
   mutate(amitriptyline = case_when(
-    Q903_16== 2 ~ 0,
-    Q903_16== 3 ~ 0,
-    Q903_16== 4 ~ 0,
-    Q903_16== 5 ~ 0,
-    Q903_16== 1 ~ 1)) %>%
+    Q903_01== 2 ~ 0,
+    Q903_01== 3 ~ 0,
+    Q903_01== 4 ~ 0,
+    Q903_01== 5 ~ 0,
+    Q903_01== 1 ~ 1)) %>%
+  mutate(diazepam = case_when(
+    Q903_08== 2 ~ 0,
+    Q903_08== 3 ~ 0,
+    Q903_08== 4 ~ 0,
+    Q903_08== 5 ~ 0,
+    Q903_08== 1 ~ 1)) %>%
   mutate(total_staff = Q400AT) %>%
   mutate(power = case_when(
-    Q340== 1 ~ 1,
-    Q340== 2 ~ 0)) %>%
+    Q340==2 ~ 0,
+    Q340==8 ~ 0,
+    Q341== 1 ~ 1,
+    Q341== 2 ~ 0,
+    Q341== 8 ~ 0)) %>%
   mutate(improved_water = case_when(
     Q330== 1 ~ 1,
     Q330== 2 ~ 1,
@@ -189,11 +206,13 @@ FACTYPE== 4 ~ "other")) %>%
     Q620== 51 ~ 0,
     Q620== 61 ~ 0)) %>%
   mutate(email = case_when(
-    Q322== 1 ~ 1, #yes
-    Q322== 2 ~ 0)) %>%
+    Q322==2 ~ 0,
+    Q323== 1 ~ 1,
+    Q323== 2 ~ 0)) %>%
   mutate(computer = case_when(
-    Q319== 1 ~ 1, #yes
-    Q319== 2 ~ 0)) %>%
+    Q319== 2 ~ 0, 
+    Q321== 1 ~ 1, #yes
+    Q321== 2 ~ 0)) %>%
   mutate(general_opd_private_room = case_when(
     Q1952== 1 ~ 1, #yes
     Q1952== 2 ~ 1, #other room, but yes
@@ -208,10 +227,11 @@ FACTYPE== 4 ~ "other")) %>%
          worldbank = "Lower Middle Income") %>%
   dplyr::rename(province = REGION,
                 facility_number = FACIL,
+                facility_weight = FACWT,
                 ownership = MGA,
                 month = MONTH,
                 year = YEAR) %>%
-  dplyr::select(province, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
+  dplyr::select(province, rural, facility_number, facility_weight, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, diazepam,
          total_staff, power, improved_water, improved_sanitation, email, computer, general_opd_private_room, ncd_private_room, country, worldbank)
 
 #Import SPA lat/long
@@ -236,12 +256,12 @@ senegal2015 <- df2015 %>%
     FACTYPE== 1 ~ "hospital", 
     FACTYPE== 2 ~ "primary",
     FACTYPE== 3 ~ "primary",
-    FACTYPE== 4 ~ "other")) %>%
+    FACTYPE== 4 ~ "primary")) %>%
   mutate(primary = case_when(
     FACTYPE== 1 ~ 0, 
     FACTYPE== 2 ~ 1,
     FACTYPE== 3 ~ 1,
-    FACTYPE== 4 ~ 0)) %>%
+    FACTYPE== 4 ~ 1)) %>%
   mutate(store_meds = case_when(
     Q210==0 ~ 0,
     Q210==1 ~ 1)) %>%
@@ -249,15 +269,24 @@ senegal2015 <- df2015 %>%
     Q102_14==0 ~ 0,
     Q102_14==1 ~ 1)) %>%
   mutate(amitriptyline = case_when(
-    Q903_16== 2 ~ 0,
-    Q903_16== 3 ~ 0,
-    Q903_16== 4 ~ 0,
-    Q903_16== 5 ~ 0,
-    Q903_16== 1 ~ 1)) %>%
+    Q903_01== 2 ~ 0,
+    Q903_01== 3 ~ 0,
+    Q903_01== 4 ~ 0,
+    Q903_01== 5 ~ 0,
+    Q903_01== 1 ~ 1)) %>%
+  mutate(diazepam = case_when(
+    Q903_08== 2 ~ 0,
+    Q903_08== 3 ~ 0,
+    Q903_08== 4 ~ 0,
+    Q903_08== 5 ~ 0,
+    Q903_08== 1 ~ 1)) %>%
   mutate(total_staff = Q400AT) %>%
   mutate(power = case_when(
-    Q340== 1 ~ 1,
-    Q340== 2 ~ 0)) %>%
+    Q340==2 ~ 0,
+    Q340==8 ~ 0,
+    Q341== 1 ~ 1,
+    Q341== 2 ~ 0,
+    Q341== 8 ~ 0)) %>%
   mutate(improved_water = case_when(
     Q330== 1 ~ 1,
     Q330== 2 ~ 1,
@@ -289,11 +318,13 @@ senegal2015 <- df2015 %>%
     Q620== 51 ~ 0,
     Q620== 61 ~ 0)) %>%
   mutate(email = case_when(
-    Q322== 1 ~ 1, #yes
-    Q322== 2 ~ 0)) %>%
+    Q322==2 ~ 0,
+    Q323== 1 ~ 1,
+    Q323== 2 ~ 0)) %>%
   mutate(computer = case_when(
-    Q319== 1 ~ 1, #yes
-    Q319== 2 ~ 0)) %>%
+    Q319== 2 ~ 0, 
+    Q321== 1 ~ 1, #yes
+    Q321== 2 ~ 0)) %>%
   mutate(general_opd_private_room = case_when(
     Q1952== 1 ~ 1, #yes
     Q1952== 2 ~ 1, #other room, but yes
@@ -308,10 +339,11 @@ senegal2015 <- df2015 %>%
          worldbank = "Lower Middle Income") %>%
   dplyr::rename(province = REGION,
                 facility_number = FACIL,
+                facility_weight = FACWT,
                 ownership = MGA,
                 month = MONTH,
                 year = YEAR) %>%
-  dplyr::select(province, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
+  dplyr::select(province, rural, facility_number, facility_weight, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, diazepam,
          total_staff, power, improved_water, improved_sanitation, email, computer, general_opd_private_room, ncd_private_room, country, worldbank)
 
 #Import SPA lat/long
@@ -335,12 +367,12 @@ senegal2016 <- df2016 %>%
     FACTYPE== 1 ~ "hospital", 
     FACTYPE== 2 ~ "primary",
     FACTYPE== 3 ~ "primary",
-    FACTYPE== 4 ~ "other")) %>%
+    FACTYPE== 4 ~ "primary")) %>%
   mutate(primary = case_when(
     FACTYPE== 1 ~ 0, 
     FACTYPE== 2 ~ 1,
     FACTYPE== 3 ~ 1,
-    FACTYPE== 4 ~ 0)) %>%
+    FACTYPE== 4 ~ 1)) %>%
   mutate(store_meds = case_when(
     Q210==0 ~ 0,
     Q210==1 ~ 1)) %>%
@@ -348,15 +380,24 @@ senegal2016 <- df2016 %>%
     Q102_14==0 ~ 0,
     Q102_14==1 ~ 1)) %>%
   mutate(amitriptyline = case_when(
-    Q903_16== 2 ~ 0,
-    Q903_16== 3 ~ 0,
-    Q903_16== 4 ~ 0,
-    Q903_16== 5 ~ 0,
-    Q903_16== 1 ~ 1)) %>%
+    Q903_01== 2 ~ 0,
+    Q903_01== 3 ~ 0,
+    Q903_01== 4 ~ 0,
+    Q903_01== 5 ~ 0,
+    Q903_01== 1 ~ 1)) %>%
+  mutate(diazepam = case_when(
+    Q903_08== 2 ~ 0,
+    Q903_08== 3 ~ 0,
+    Q903_08== 4 ~ 0,
+    Q903_08== 5 ~ 0,
+    Q903_08== 1 ~ 1)) %>%
   mutate(total_staff = Q400AT) %>%
   mutate(power = case_when(
-    Q340== 1 ~ 1,
-    Q340== 2 ~ 0)) %>%
+    Q340==2 ~ 0,
+    Q340==8 ~ 0,
+    Q341== 1 ~ 1,
+    Q341== 2 ~ 0,
+    Q341== 8 ~ 0)) %>%
   mutate(improved_water = case_when(
     Q330== 1 ~ 1,
     Q330== 2 ~ 1,
@@ -388,11 +429,13 @@ senegal2016 <- df2016 %>%
     Q620== 51 ~ 0,
     Q620== 61 ~ 0)) %>%
   mutate(email = case_when(
-    Q322== 1 ~ 1, #yes
-    Q322== 2 ~ 0)) %>%
+    Q322==2 ~ 0,
+    Q323== 1 ~ 1,
+    Q323== 2 ~ 0)) %>%
   mutate(computer = case_when(
-    Q319== 1 ~ 1, #yes
-    Q319== 2 ~ 0)) %>%
+    Q319== 2 ~ 0, 
+    Q321== 1 ~ 1, #yes
+    Q321== 2 ~ 0)) %>%
   mutate(general_opd_private_room = case_when(
     Q1952== 1 ~ 1, #yes
     Q1952== 2 ~ 1, #other room, but yes
@@ -407,10 +450,11 @@ senegal2016 <- df2016 %>%
          worldbank = "Lower Middle Income") %>%
   dplyr::rename(province = REGION,
                 facility_number = FACIL,
+                facility_weight = FACWT,
                 ownership = MGA,
                 month = MONTH,
                 year = YEAR) %>%
-  dplyr::select(province, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
+  dplyr::select(province, rural, facility_number, facility_weight, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, diazepam,
          total_staff, power, improved_water, improved_sanitation, email, computer, general_opd_private_room, ncd_private_room, country, worldbank)
 
 #Import SPA lat/long
@@ -434,12 +478,12 @@ senegal2017 <- df2017 %>%
     FACTYPE== 1 ~ "hospital", 
     FACTYPE== 2 ~ "primary",
     FACTYPE== 3 ~ "primary",
-    FACTYPE== 4 ~ "other")) %>%
+    FACTYPE== 4 ~ "primary")) %>%
   mutate(primary = case_when(
     FACTYPE== 1 ~ 0, 
     FACTYPE== 2 ~ 1,
     FACTYPE== 3 ~ 1,
-    FACTYPE== 4 ~ 0)) %>%
+    FACTYPE== 4 ~ 1)) %>%
   mutate(store_meds = case_when(
     Q210==0 ~ 0,
     Q210==1 ~ 1)) %>%
@@ -447,15 +491,24 @@ senegal2017 <- df2017 %>%
     Q102_14==0 ~ 0,
     Q102_14==1 ~ 1)) %>%
   mutate(amitriptyline = case_when(
-    Q903_16== 2 ~ 0,
-    Q903_16== 3 ~ 0,
-    Q903_16== 4 ~ 0,
-    Q903_16== 5 ~ 0,
-    Q903_16== 1 ~ 1)) %>%
+    Q903_01== 2 ~ 0,
+    Q903_01== 3 ~ 0,
+    Q903_01== 4 ~ 0,
+    Q903_01== 5 ~ 0,
+    Q903_01== 1 ~ 1)) %>%
+  mutate(diazepam = case_when(
+    Q903_08== 2 ~ 0,
+    Q903_08== 3 ~ 0,
+    Q903_08== 4 ~ 0,
+    Q903_08== 5 ~ 0,
+    Q903_08== 1 ~ 1)) %>%
   mutate(total_staff = Q400AT) %>%
   mutate(power = case_when(
-    Q340== 1 ~ 1,
-    Q340== 2 ~ 0)) %>%
+    Q340==2 ~ 0,
+    Q340==8 ~ 0,
+    Q341== 1 ~ 1,
+    Q341== 2 ~ 0,
+    Q341== 8 ~ 0)) %>%
   mutate(improved_water = case_when(
     Q330== 1 ~ 1,
     Q330== 2 ~ 1,
@@ -487,11 +540,13 @@ senegal2017 <- df2017 %>%
     Q620== 51 ~ 0,
     Q620== 61 ~ 0)) %>%
   mutate(email = case_when(
-    Q322== 1 ~ 1, #yes
-    Q322== 2 ~ 0)) %>%
+    Q322==2 ~ 0,
+    Q323== 1 ~ 1,
+    Q323== 2 ~ 0)) %>%
   mutate(computer = case_when(
-    Q319== 1 ~ 1, #yes
-    Q319== 2 ~ 0)) %>%
+    Q319== 2 ~ 0, 
+    Q321== 1 ~ 1, #yes
+    Q321== 2 ~ 0)) %>%
   mutate(general_opd_private_room = case_when(
     Q1952== 1 ~ 1, #yes
     Q1952== 2 ~ 1, #other room, but yes
@@ -506,10 +561,11 @@ senegal2017 <- df2017 %>%
          worldbank = "Lower Middle Income") %>%
   dplyr::rename(province = REGION,
                 facility_number = FACIL,
+                facility_weight = FACWT,
                 ownership = MGA,
                 month = MONTH,
                 year = YEAR) %>%
-  dplyr::select(province, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
+  dplyr::select(province, rural, facility_number, facility_weight, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, diazepam,
          total_staff, power, improved_water, improved_sanitation, email, computer, general_opd_private_room, ncd_private_room, country, worldbank)
 
 #NO GEO DATA
@@ -526,12 +582,12 @@ senegal2018 <- df2018 %>%
     FACTYPE== 1 ~ "hospital", 
     FACTYPE== 2 ~ "primary",
     FACTYPE== 3 ~ "primary",
-    FACTYPE== 4 ~ "other")) %>%
+    FACTYPE== 4 ~ "primary")) %>%
   mutate(primary = case_when(
     FACTYPE== 1 ~ 0, 
     FACTYPE== 2 ~ 1,
     FACTYPE== 3 ~ 1,
-    FACTYPE== 4 ~ 0)) %>%
+    FACTYPE== 4 ~ 1)) %>%
   mutate(store_meds = case_when(
     Q210==0 ~ 0,
     Q210==1 ~ 1)) %>%
@@ -539,15 +595,24 @@ senegal2018 <- df2018 %>%
     Q102_14==0 ~ 0,
     Q102_14==1 ~ 1)) %>%
   mutate(amitriptyline = case_when(
-    Q903_16== 2 ~ 0,
-    Q903_16== 3 ~ 0,
-    Q903_16== 4 ~ 0,
-    Q903_16== 5 ~ 0,
-    Q903_16== 1 ~ 1)) %>%
+    Q903_01== 2 ~ 0,
+    Q903_01== 3 ~ 0,
+    Q903_01== 4 ~ 0,
+    Q903_01== 5 ~ 0,
+    Q903_01== 1 ~ 1)) %>%
+  mutate(diazepam = case_when(
+    Q903_08== 2 ~ 0,
+    Q903_08== 3 ~ 0,
+    Q903_08== 4 ~ 0,
+    Q903_08== 5 ~ 0,
+    Q903_08== 1 ~ 1)) %>%
   mutate(total_staff = Q400AT) %>%
   mutate(power = case_when(
-    Q340== 1 ~ 1,
-    Q340== 2 ~ 0)) %>%
+    Q340==2 ~ 0,
+    Q340==8 ~ 0,
+    Q341== 1 ~ 1,
+    Q341== 2 ~ 0,
+    Q341== 8 ~ 0)) %>%
   mutate(improved_water = case_when(
     Q330== 1 ~ 1,
     Q330== 2 ~ 1,
@@ -579,11 +644,13 @@ senegal2018 <- df2018 %>%
     Q620== 51 ~ 0,
     Q620== 61 ~ 0)) %>%
   mutate(email = case_when(
-    Q322== 1 ~ 1, #yes
-    Q322== 2 ~ 0)) %>%
+    Q322==2 ~ 0,
+    Q323== 1 ~ 1,
+    Q323== 2 ~ 0)) %>%
   mutate(computer = case_when(
-    Q319== 1 ~ 1, #yes
-    Q319== 2 ~ 0)) %>%
+    Q319== 2 ~ 0, 
+    Q321== 1 ~ 1, #yes
+    Q321== 2 ~ 0)) %>%
   mutate(general_opd_private_room = case_when(
     Q1952== 1 ~ 1, #yes
     Q1952== 2 ~ 1, #other room, but yes
@@ -598,10 +665,11 @@ senegal2018 <- df2018 %>%
          worldbank = "Lower Middle Income") %>%
   dplyr::rename(province = REGION,
                 facility_number = FACIL,
+                facility_weight = FACWT,
                 ownership = MGA,
                 month = MONTH,
                 year = YEAR) %>%
-  dplyr::select(province, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
+  dplyr::select(province, rural, facility_number, facility_weight, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, diazepam,
          total_staff, power, improved_water, improved_sanitation, email, computer, general_opd_private_room, ncd_private_room, country, worldbank)
 
 #NO GEO DATA
@@ -618,12 +686,12 @@ senegal2019 <- df2019 %>%
     FACTYPE== 1 ~ "hospital", 
     FACTYPE== 2 ~ "primary",
     FACTYPE== 3 ~ "primary",
-    FACTYPE== 4 ~ "other")) %>%
+    FACTYPE== 4 ~ "primary")) %>%
   mutate(primary = case_when(
     FACTYPE== 1 ~ 0, 
     FACTYPE== 2 ~ 1,
     FACTYPE== 3 ~ 1,
-    FACTYPE== 4 ~ 0)) %>%
+    FACTYPE== 4 ~ 1)) %>%
   mutate(store_meds = case_when(
     Q210==0 ~ 0,
     Q210==1 ~ 1)) %>%
@@ -631,15 +699,24 @@ senegal2019 <- df2019 %>%
     Q102_14==0 ~ 0,
     Q102_14==1 ~ 1)) %>%
   mutate(amitriptyline = case_when(
-    Q903_16== 2 ~ 0,
-    Q903_16== 3 ~ 0,
-    Q903_16== 4 ~ 0,
-    Q903_16== 5 ~ 0,
-    Q903_16== 1 ~ 1)) %>%
+    Q903_01== 2 ~ 0,
+    Q903_01== 3 ~ 0,
+    Q903_01== 4 ~ 0,
+    Q903_01== 5 ~ 0,
+    Q903_01== 1 ~ 1)) %>%
+  mutate(diazepam = case_when(
+    Q903_08== 2 ~ 0,
+    Q903_08== 3 ~ 0,
+    Q903_08== 4 ~ 0,
+    Q903_08== 5 ~ 0,
+    Q903_08== 1 ~ 1)) %>%
   mutate(total_staff = Q400AT) %>%
   mutate(power = case_when(
-    Q340== 1 ~ 1,
-    Q340== 2 ~ 0)) %>%
+    Q340==2 ~ 0,
+    Q340==8 ~ 0,
+    Q341== 1 ~ 1,
+    Q341== 2 ~ 0,
+    Q341== 8 ~ 0)) %>%
   mutate(improved_water = case_when(
     Q330== 1 ~ 1,
     Q330== 2 ~ 1,
@@ -671,11 +748,13 @@ senegal2019 <- df2019 %>%
     Q620== 51 ~ 0,
     Q620== 61 ~ 0)) %>%
   mutate(email = case_when(
-    Q322== 1 ~ 1, #yes
-    Q322== 2 ~ 0)) %>%
+    Q322==2 ~ 0,
+    Q323== 1 ~ 1,
+    Q323== 2 ~ 0)) %>%
   mutate(computer = case_when(
-    Q319== 1 ~ 1, #yes
-    Q319== 2 ~ 0)) %>%
+    Q319== 2 ~ 0, 
+    Q321== 1 ~ 1, #yes
+    Q321== 2 ~ 0)) %>%
   mutate(general_opd_private_room = case_when(
     Q1952== 1 ~ 1, #yes
     Q1952== 2 ~ 1, #other room, but yes
@@ -690,10 +769,11 @@ senegal2019 <- df2019 %>%
          worldbank = "Lower Middle Income") %>%
   dplyr::rename(province = REGION,
                 facility_number = FACIL,
+                facility_weight = FACWT,
                 ownership = MGA,
                 month = MONTH,
                 year = YEAR) %>%
-  dplyr::select(province, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
+  dplyr::select(province, rural, facility_number, facility_weight, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, diazepam,
          total_staff, power, improved_water, improved_sanitation, email, computer, general_opd_private_room, ncd_private_room, country, worldbank)
 
 saveRDS(senegal2019, "senegal2019.rds")

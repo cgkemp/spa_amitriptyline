@@ -15,7 +15,7 @@ library(rje)
 library(malariaAtlas)
 library(raster)
 library(devtools)
-install_github("ropensci/rdhs")
+#install_github("ropensci/rdhs")
 library(rdhs)
 
 setwd("~/GitHub/spa_amitriptyline/SPA Data")
@@ -32,26 +32,26 @@ bangladesh <- df %>%
   FACTYPE== 3 ~ "other",
   FACTYPE== 4 ~ "primary",
   FACTYPE== 5 ~ "primary",
-  FACTYPE== 6 ~ "other",
+  FACTYPE== 6 ~ "primary",
   FACTYPE== 7 ~ "other",
   FACTYPE== 8 ~ "primary",
   FACTYPE== 9 ~ "primary",
   FACTYPE== 10 ~ "hospital",
   FACTYPE== 11 ~ "hospital",
-  FACTYPE== 12 ~ "other",
+  FACTYPE== 12 ~ "primary",
   FACTYPE== 1 ~ "hospital")) %>%
   mutate(primary = case_when(
   FACTYPE== 2 ~ 1, 
   FACTYPE== 3 ~ 0,
   FACTYPE== 4 ~ 1,
   FACTYPE== 5 ~ 1,
-  FACTYPE== 6 ~ 0,
+  FACTYPE== 6 ~ 1,
   FACTYPE== 7 ~ 0,
   FACTYPE== 8 ~ 1,
   FACTYPE== 9 ~ 1,
   FACTYPE== 10 ~ 0,
   FACTYPE== 11 ~ 0,
-  FACTYPE== 12 ~ 0,
+  FACTYPE== 12 ~ 1,
   FACTYPE== 1 ~ 0)) %>%
   mutate(store_meds = case_when(
     Q210==0 ~ 0,
@@ -60,15 +60,24 @@ bangladesh <- df %>%
     Q102_14==0 ~ 0,
     Q102_14==1 ~ 1)) %>%
   mutate(amitriptyline = case_when(
-    Q903_16== 2 ~ 0,
-    Q903_16== 3 ~ 0,
-    Q903_16== 4 ~ 0,
-    Q903_16== 5 ~ 0,
-    Q903_16== 1 ~ 1)) %>%
+    Q903_01== 2 ~ 0,
+    Q903_01== 3 ~ 0,
+    Q903_01== 4 ~ 0,
+    Q903_01== 5 ~ 0,
+    Q903_01== 1 ~ 1)) %>%
+  mutate(diazepam = case_when(
+    Q903_08== 2 ~ 0,
+    Q903_08== 3 ~ 0,
+    Q903_08== 4 ~ 0,
+    Q903_08== 5 ~ 0,
+    Q903_08== 1 ~ 1)) %>%
   mutate(total_staff = Q400AT) %>%
   mutate(power = case_when(
-      Q340== 1 ~ 1,
-      Q340== 2 ~ 0)) %>%
+    Q340==2 ~ 0,
+    Q340==8 ~ 0,
+    Q341== 1 ~ 1,
+    Q341== 2 ~ 0,
+    Q341== 8 ~ 0)) %>%
   mutate(improved_water = case_when(
     Q330== 1 ~ 1,
     Q330== 2 ~ 1,
@@ -100,11 +109,13 @@ bangladesh <- df %>%
     Q620== 51 ~ 0,
     Q620== 61 ~ 0)) %>%
   mutate(email = case_when(
-    Q322== 1 ~ 1, #yes
-    Q322== 2 ~ 0)) %>%
+    Q322==2 ~ 0,
+    Q323== 1 ~ 1,
+    Q323== 2 ~ 0)) %>%
   mutate(computer = case_when(
-    Q319== 1 ~ 1, #yes
-    Q319== 2 ~ 0)) %>%
+    Q319== 2 ~ 0, 
+    Q321== 1 ~ 1, #yes
+    Q321== 2 ~ 0)) %>%
   mutate(general_opd_private_room = case_when(
     Q1952== 1 ~ 1, #yes
     Q1952== 2 ~ 1, #other room, but yes
@@ -120,10 +131,11 @@ bangladesh <- df %>%
   dplyr::rename(province = REGION,
                 district = DISTRICT,
                 facility_number = FACIL,
+                facility_weight = FACWT,
                 ownership = MGA,
                 month = MONTH,
                 year = YEAR) %>%
-  dplyr::select(province, district, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
+  dplyr::select(province, district, rural, facility_number, facility_weight, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, diazepam,
          total_staff, power, improved_water, improved_sanitation, email, computer, general_opd_private_room, ncd_private_room, country, worldbank)
 
 library(foreign)

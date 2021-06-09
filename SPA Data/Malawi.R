@@ -36,9 +36,9 @@ malawi <- df %>%
   V007== 4 ~ "hospital",
   V007== 5 ~ "primary",
   V007== 6 ~ "other",
-  V007== 7 ~ "other",
+  V007== 7 ~ "primary",
   V007== 8 ~ "primary",
-  V007== 9 ~ "other",
+  V007== 9 ~ "primary",
   V007== TRUE ~ "hospital")) %>%
   mutate(primary = case_when(
   V007== 2 ~ 0, 
@@ -46,9 +46,9 @@ malawi <- df %>%
   V007== 4 ~ 0,
   V007== 5 ~ 1,
   V007== 6 ~ 0,
-  V007== 7 ~ 0,
+  V007== 7 ~ 1,
   V007== 8 ~ 1,
-  V007== 9 ~ 0,
+  V007== 9 ~ 1,
   TRUE ~ 0)) %>%
   mutate(store_meds = case_when(
     V035==0 ~ 0,
@@ -63,6 +63,13 @@ malawi <- df %>%
     V903_16== 5 ~ 0,
     V903_16== 2 ~ 1,
     V903_16== 1 ~ 0)) %>%
+  mutate(diazepam = case_when(
+    V906_07== 0 ~ 0,
+    V906_07== 3 ~ 0,
+    V906_07== 4 ~ 0,
+    V906_07== 5 ~ 0,
+    V906_07== 2 ~ 1,
+    V906_07== 1 ~ 0)) %>%
   mutate(total_staff = V102DT) %>%
   mutate(power = case_when(
     V120A== 0 ~ 0, #not connected
@@ -123,9 +130,10 @@ malawi <- df %>%
   dplyr::rename(province = V001,
                 district = V002,
                 facility_number = V004,
+                facility_weight = V005,
                 month = V081,
                 year = V082) %>%
-  dplyr::select(province, district, rural, facility_number, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, 
+  dplyr::select(province, district, rural, facility_number, facility_weight, month, year, ownership, facility_type, primary, store_meds, ncd_services, amitriptyline, diazepam,
          total_staff, power, improved_water, improved_sanitation, email, computer, general_opd_private_room, ncd_private_room, country, worldbank)
 
 #Import SPA lat/long
